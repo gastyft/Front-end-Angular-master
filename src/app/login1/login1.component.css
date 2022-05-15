@@ -1,0 +1,24 @@
+*{
+
+    font: white; 
+}
+
+  .form { 
+position:absolute;
+top:0;
+left:60;
+    margin-left:155px;
+    margin-top:200px;
+    padding-left:20px;
+    z-index:1;
+  }
+
+
+  .rounded{
+      position: absolute;
+      margin-top:-110px;
+    margin-left:500px;
+  
+  }
+
+  
