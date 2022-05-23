@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
+import{FormBuilder, FormGroup} from '@angular/forms'
 @Component({
   selector: 'app-login1',
   templateUrl: './login1.component.html',
   styleUrls: ['./login1.component.css']
 })
 export class Login1Component implements OnInit {
+form: FormGroup;
 
-  constructor() { }
+constructor(private formBuilder: FormBuilder ) { 
+ 
+//creamos el grupo de controles para el formulario
+this.form= this.formBuilder.group({
+  password:['',[]],
+  mail:['',[]]
+})
+}
 
-  ngOnInit(): void {
-  }
+
+  ngOnInit(): void {}
+
 
 }

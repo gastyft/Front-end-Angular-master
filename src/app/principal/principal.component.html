@@ -23,8 +23,8 @@
           
             <ul   style="list-style-type:none;">
               
-              <li>Gastón Manuel </li> 
-              <li>Ftacla</li>
+            <span> {{miPorfolio.nombres.nombre}}</span>
+              <li> {{miPorfolio.nombres.apellido}} </li>
               
               <button id="boton-nombre">
               <img  Id="lapiz-nombre" src="assets\icons8-lápiz-64.png">
@@ -37,17 +37,17 @@
            <ul Id="Edad"> 
              
             <li>
-            Edad: 25 años 
+            Edad:{{miPorfolio.edad}} años 
           </li>
              
              <li>
-               Ciudad: Mar del Plata
+               Ciudad: {{miPorfolio.ciudad}}
              </li>
              <li> 
-               Nacionalidad: Argentina
+               Nacionalidad: {{miPorfolio.nacionalidad}}
              </li>
              <li>  
-              Estado civil: Soltero
+              Estado civil: {{miPorfolio.estadocivil}}
              </li>
              <li> </li>
             </ul>
@@ -74,8 +74,8 @@
           <ul class="estudioss" >
            
            <li>
-              6 temporadas en "Helados Gianelli" de Mar del Plata <br> 
-             Desde temporada 2015-2016 hasta temporada 2021-2022
+             {{miPorfolio.laboral.experiencialaboral}} <br> 
+             {{miPorfolio.laboral.desde}}
            </li>
             
            
@@ -91,18 +91,21 @@
           
            <li> 
              
-             Primaria y secundaria: Instituto San Antonio María Gianelli
-           <br> Egresado en 2014.
+             Primaria: {{miPorfolio.estudios.primaria}} <br>
+            
+           <br> 
            </li>
-       
+       <li>
+        Secundaria: {{miPorfolio.estudios.secundaria}}
+       </li>
              
            <li>
-              2 años de ingeniería mecánica en la UNMDP. 5 años cursados. <br>
-              Desde 2015 hasta 2020. 
+              {{miPorfolio.estudios.uni}} <br>
+            {{miPorfolio.estudios.desdeuni}} 
            </li> 
            
            <li>
-              Actualmente cursando primer año de programación en UTN Mar del Plata</li>
+             {{miPorfolio.estudios.actual}}</li>
          </ul>
          
          <span >

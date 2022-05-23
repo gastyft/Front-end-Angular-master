@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EquipoService } from '../equipo.service';
+
 
 @Component({
   selector: 'app-principal',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
+  
+miPorfolio: any;
 
-  constructor() { }
+  constructor(private datosPorfolio:EquipoService) { }
+
+
 
   ngOnInit(): void {
+    this.datosPorfolio.ObtenerDatos().subscribe( data =>{
+      console.log(data)
+      this.miPorfolio=data;
+    })
   }
 
 }

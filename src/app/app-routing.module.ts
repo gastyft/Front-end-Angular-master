@@ -4,7 +4,9 @@ import { PrincipalComponent } from './principal/principal.component';
 import { Login1Component } from './login1/login1.component';
 import { HeaderComponent } from './header/header.component';
 import { Error404Component } from './error404/error404.component';
+//import { AuthGuard } from './auth.guard';
 const routes : Routes = [
+
   {path: 'principal', 
   component:PrincipalComponent},
   {path: 'login1', 
@@ -15,7 +17,10 @@ const routes : Routes = [
   component: HeaderComponent},
   {path: '', 
   redirectTo: "/principal", pathMatch:'full'},
-
+  
+ /* { path: 'principal', component: PrincipalComponent
+ canActivate: [AuthGuard], // visit ´principal only if authenticated 
+}, */
 ];
 
 @NgModule({

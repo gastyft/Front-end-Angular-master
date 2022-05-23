@@ -149,7 +149,7 @@ background:transparent;
   height:50px;
   
   margin-left:1700px;
-  margin-top:150px;
+  margin-top:200px;
   background:transparent;
 
 }
@@ -1342,7 +1342,7 @@ margin-top:700px;
    #boton-graficos{
        width:20px;
        height:20px;
-       margin-right:30px;
+       margin-right:120px;
    }
    
 
@@ -1464,7 +1464,7 @@ margin-top:700px;
           
            display:flex;
             margin-left:500px;
-            margin-top:90px;
+            margin-top:140px;
      
          }
          .Intereses-estudios{
@@ -1786,9 +1786,10 @@ margin-top:700px;
         padding-left: 100px;
        }
        #boton-graficos{
-         margin-left:20px;
+        
            width:15px;
            height:15px;
+       margin-left:0;
 
        }
        
@@ -1915,14 +1916,14 @@ margin-top:700px;
                height:10px;
                border-radius: 10px; 
              }
-             #lapiz-edad1{
+             #lapiz-edad{
                width:10px;
                height:10px;
                position:absolute;
               
-               display:flex;
-                margin-left:320px;
-                margin-top:100px;
+          
+                margin-left:60px;
+                margin-top:10px;
          
              }
              .Intereses-estudios{
@@ -2039,7 +2040,7 @@ margin-top:700px;
             
 
             
-        @media only screen and (max-width:368px) /* Para pantalla al 500% en crhome */
+        @media only screen and (max-width:400px) /* Para pantalla al 500% en crhome */
 
         {
         
@@ -2164,7 +2165,7 @@ margin-top:700px;
                position:absolute;
               
                display:flex;
-                margin-left:120px;
+                margin-left:70px;
                 margin-top:150px;
          
              }
@@ -2194,14 +2195,14 @@ margin-top:700px;
                width: 6px;
                height:6px;
              margin-top:10px;
-               margin-left: -190px;
+               margin-left: -210px;
              }
              
              .lapiz-estudios1{  
                 width:6px;
                 height:6px;
               margin-top:15px;
-              margin-left:-490px;
+              margin-left:-520px;
     
     
                 
@@ -2240,7 +2241,7 @@ margin-top:700px;
             padding-left: 30px;
            }
            #boton-graficos{
-             margin-left:-90px;
+             margin-left:-120px;
              margin-top:-5px;
                width:6px;
                height:6px;

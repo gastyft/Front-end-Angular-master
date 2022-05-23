@@ -1,9 +1,13 @@
 h1 {
-    top:60px;
-    font-size: 60px;
+ gap:1rem;
+    width:1rem;
+}
+h4{
+    width:10em;
+    gap:1rem;
 }
 .conteiner-fluid{
-    position:absolute;
+
     top:160px;
     display:flex;
     background-color:aquamarine;

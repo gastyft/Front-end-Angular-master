@@ -1,0 +1,57 @@
+{
+
+
+"nombres":{
+    "nombre": "Gastón Manuel ",
+"apellido": "Ftacla"
+
+},
+"edad": "25",
+"ciudad": "Mar del Plata",
+"nacionalidad": "Argentina",
+"estadocivil": "Soltero",
+
+"laboral":
+{
+"experiencialaboral": "6 temporadas en Helados Gianelli de Mar del Plata" ,
+"Desde" : "temporada 2015 al 2022"
+},
+"estudios":
+{
+"primaria": "Instituto San Antonio Maria Gianelli",
+"secundaria": "Instituto San Antonio Maria Gianelli",
+"uni": " 2 años de ingeniería mecánica en la UNMDP.",
+"desdeuni": " 2017-2020. ",
+"actual":  "Actualmente cursando primer año de programación en UTN Mar del Plata"
+},
+"grafico":
+{
+"frontend": "60%",
+"backend":"20%",
+"base_de_datos":"20%"
+},
+"skills":{
+    "compañero": "34%",
+
+    "resolucion":"33%",
+    "comunicacion":"33%"
+
+
+},
+"idiomas": {
+    "ingles": "90%",
+    "italiano":"10%"
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,7 +11,8 @@ import { Login1Component } from './login1/login1.component';
 import { HeaderComponent } from './header/header.component';
 import { Error404Component } from './error404/error404.component';
 
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { Error404Component } from './error404/error404.component';
     Login1Component,
     HeaderComponent,
     Error404Component,
- 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-  
+  FormsModule,
+  ReactiveFormsModule,
+  HttpClientModule
   ],
   providers: [
     EquipoService,
