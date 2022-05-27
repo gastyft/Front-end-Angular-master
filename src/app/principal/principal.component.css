@@ -472,11 +472,28 @@ border-radius: 50px; }
  
 .progress{
  margin-top:30px;
-
+ border-radius: 30px;
 font-size: 30px;
 height: 50px;
 }
+.progress-bar{
+background-color: aquamarine;
 
+}
+.proyects{
+  margin-top:30px;
+
+  font-size: 30px;
+  height: 50px;
+ 
+}
+.proyectos{
+  margin-top:30px;
+margin-left: 250px;
+  font-size: 30px;
+  height: 50px;
+ 
+}
 
 @keyframes fondoanimado{
 
@@ -691,8 +708,11 @@ margin-top:1250px;
    }
    
 #boton-graficos{
+  
     width:40px;
     height:40px;
+
+    
 }
 }
 
@@ -853,7 +873,7 @@ bottom:0;
        width: 40px;
        height:40px;
      
-       margin-left: 190px;
+       margin-left: 10px;
      }
      
      .lapiz-estudios1{  
@@ -901,6 +921,23 @@ margin-top:820px;
    height: 40px;
    width:110%;
    }
+   .progress-bar{
+     width:100%;
+   }
+   .proyects{
+    margin-top:20px;
+  
+    font-size: 30px;
+    height: 50px;
+   
+  }
+  .proyectos{
+    margin-top:30px;
+  margin-left: 250px;
+    font-size: 20px;
+    height: 50px;
+   
+  }
    .mas-info {
        font-size: 20px;
        border: 1px solid #1C6EA4;
@@ -911,7 +948,7 @@ margin-top:820px;
     padding-left: 150px;
    }
    #boton-graficos{
-     margin-left:150px;
+     margin-right:100px;
        width:40px;
        height:40px;
 
@@ -1110,16 +1147,49 @@ margin-top:750px;
     gap:10px, 10px,10px,10px;
 }
   .descript{ 
-       font-size: 20px;
+       font-size: 15px;
 
 }   
+
 .progress{
-    margin-top:30px;
-  
-   font-size: 15px;
-   height: 20px;
-   width:100%;
-   }
+  margin-top:50px;
+
+ font-size: 50px;
+ height: 10px;
+ width:200px;
+
+ }
+.descript{
+  font-size:15px;
+}
+ #boton-graficos{
+     width:20px;
+     height:20px;
+     margin-right:120px;
+ }
+ .progress-bar{
+  width:100%;
+}
+.proyects{
+ margin-top:20px;
+
+ font-size: 15px;
+
+
+}
+.type{
+font-size:15px;
+margin-left:-50px;
+}
+.proyectos{
+ margin-top:30px;
+margin-left: 190px;
+margin-right: -100px;
+ font-size:15px;
+
+
+}
+
    .mas-info{
        font-size: 20px;
        border: 1px solid #1C6EA4;
@@ -1136,7 +1206,7 @@ margin-top:750px;
 
 
 
-     @media only screen and (max-width:992px) /* Para pantalla al 150% crhome */
+     @media only screen and (max-width:992px) /* Para pantalla al 175% crhome */
 
 {
 
@@ -1331,20 +1401,42 @@ margin-top:700px;
 .progress{
     margin-top:50px;
   
-   font-size: 5px;
+   font-size: 50px;
    height: 10px;
-   width:100%;
+   width:200px;
+  
    }
-   .mas-info{
-       font-size: 10px;
-       border: 1px solid #1C6EA4;
-   }
+  .descript{
+    font-size:10px;
+  }
    #boton-graficos{
        width:20px;
        height:20px;
        margin-right:120px;
    }
-   
+   .progress-bar{
+    width:100%;
+  }
+  .proyects{
+   margin-top:20px;
+ 
+   font-size: 10px;
+ 
+  
+ }
+.type{
+  font-size:10px;
+  margin-left:-50px;
+
+}
+ .proyectos{
+   margin-top:30px;
+ margin-left: 60px;
+
+   font-size:10px;
+
+  
+ }
 
     }
     @media only screen and (max-width:768px) /* Para pantalla al 200% en crhome */
@@ -1547,8 +1639,8 @@ margin-top:700px;
       
     .progress{
         margin-top:20px;
-      margin-left:00px;
-       font-size: 5px;
+      margin-left:-60px;
+       font-size: 9px;
        height: 10px;
        width:100%;
        }
@@ -1562,12 +1654,32 @@ margin-top:700px;
         padding-left: 150px;
        }
        #boton-graficos{
-         margin-left:200px;
+         margin-left:120px;
            width:15px;
            height:15px;
 
        }
-       
+       .progress-bar{
+        width:100%;
+      }
+      .proyects{
+       margin-top:20px;
+     
+       font-size: 9px;
+     
+      
+     }
+    .type{
+      font-size:9px;
+      margin-left:-50px;
+    }
+     .proyectos{
+       margin-top:30px;
+     margin-left: 20px;
+       font-size:9px;
+    
+      
+     }
     
         }
 
@@ -1687,8 +1799,8 @@ margin-top:700px;
            position:absolute;
           
            display:flex;
-            margin-left:480px;
-            margin-top:90px;
+            margin-left:420px;
+            margin-top:160px;
      
          }
          .Intereses-estudios{
@@ -1770,14 +1882,14 @@ margin-top:700px;
       
     .progress{
         margin-top:10px;
-      margin-left:00px;
-       font-size: 5px;
+      left:50px;
+       font-size: 7px;
        height: 10px;
-       width:80%;
+       width:100%;
        }
        .mas-info {
          padding-top: 20px;
-           font-size: 5px;
+           font-size: 7px;
            border: 1px solid #1C6EA4;
            
        }
@@ -1792,7 +1904,27 @@ margin-top:700px;
        margin-left:0;
 
        }
-       
+       .progress-bar{
+        width:100%;
+      }
+      .proyects{
+       margin-top:20px;
+     
+       font-size: 10px;
+     
+      
+     }
+    .type{
+      font-size:7px;
+      padding-left:0px;
+    }
+     .proyectos{
+       margin-top:30px;
+     margin-left: 20px;
+       font-size:7px;
+    
+      
+     }
     
         }
 
@@ -1916,14 +2048,14 @@ margin-top:700px;
                height:10px;
                border-radius: 10px; 
              }
-             #lapiz-edad{
+             #lapiz-edad1{
                width:10px;
                height:10px;
                position:absolute;
               
           
-                margin-left:60px;
-                margin-top:10px;
+                margin-left:300px;
+                margin-top:110px;
          
              }
              .Intereses-estudios{
@@ -2032,7 +2164,27 @@ margin-top:700px;
                height:10px;
     
            }
-           
+           .progress-bar{
+            width:100%;
+          }
+          .proyects{
+           margin-top:20px;
+         
+           font-size: 5px;
+         
+          
+         }
+        .type{
+          font-size:5px;
+          margin-left:-30px;
+        }
+         .proyectos{
+           margin-top:30px;
+         margin-left: 20px;
+           font-size:5px;
+        
+          
+         }
         
             }
    
@@ -2248,5 +2400,25 @@ margin-top:700px;
     
            }
            
+           .progress-bar{
+            width:100%;
+          }
+          .proyects{
+           margin-top:20px;
+         
+           font-size: 6px;
+         
+          
+         }
+        .type{
+          font-size:6px;
+          margin-left:-30px;
+        }
+         .proyectos{
+           margin-top:30px;
+         margin-left: 20px;
+           font-size:6px;
         
+          
+         }
             }

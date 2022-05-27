@@ -27,17 +27,10 @@
 "grafico":
 {
 "frontend": "60%",
-"backend":"20%",
-"base_de_datos":"20%"
+"backend":"50%",
+"base_de_datos":"85%"
 },
-"skills":{
-    "compañero": "34%",
 
-    "resolucion":"33%",
-    "comunicacion":"33%"
-
-
-},
 "idiomas": {
     "ingles": "90%",
     "italiano":"10%"
