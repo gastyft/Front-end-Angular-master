@@ -4,11 +4,14 @@ import { PrincipalComponent } from './principal/principal.component';
 import { Login1Component } from './login1/login1.component';
 import { HeaderComponent } from './header/header.component';
 import { Error404Component } from './error404/error404.component';
+import { BotonEstudiosComponent } from './boton-estudios/boton-estudios.component';
 //import { AuthGuard } from './auth.guard';
 const routes : Routes = [
 
   {path: 'principal', 
   component:PrincipalComponent},
+  {path:'boton-estudios',
+  component:BotonEstudiosComponent },
   {path: 'login1', 
   component: Login1Component},
   { path: '**',  

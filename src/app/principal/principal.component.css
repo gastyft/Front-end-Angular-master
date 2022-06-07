@@ -220,6 +220,7 @@ from{
 
   }
   
+  
   .Foto-profile {  display: grid;
     grid-template-columns: 0.1fr 0.5fr 0.2fr;
     grid-template-rows: 1fr 1fr 0.3fr;
@@ -716,7 +717,7 @@ margin-top:1250px;
 }
 }
 
-@media only screen and (max-width:1920px) /* Para pantalla al 90% en crhome */
+@media only screen and (max-width:1920px) /* Para pantalla al 80% en crhome */
 
 {
 

@@ -8,7 +8,7 @@ import{HttpClientModule, HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
- uri = 'https://localhost:3000/api';
+ uri = 'https://localhost:4200/principal';
 
   token: any; 
 

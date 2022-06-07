@@ -23,3 +23,10 @@ miPorfolio: any;
   }
 
 }
+/*
+Editar_foto(){
+
+getElementbyClass("foto-perfil").innerHTML
+
+}
+*/

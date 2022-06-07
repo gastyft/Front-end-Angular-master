@@ -16,5 +16,5 @@ export class EquipoService {
 ObtenerDatos(): Observable <any> {
   return  this.http.get('./assets/data/data.json')
 }
-
 }
+

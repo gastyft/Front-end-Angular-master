@@ -1,0 +1,25 @@
+
+
+  <app-header></app-header>
+<div class="container">
+
+
+    <div class="form-group">
+      <label for="form-group">Primaria: </label>
+      <input type="text" class="form-control" id="primaria"  placeholder="Complete sus estudios" [(ngModel)]="miPortfolio.estudios.primaria">
+    </div>
+    <div class="form-group">
+      <label for="form-group">Secundaria: </label>
+      <input  class="form-control" id="secundaria"  placeholder="Complete sus estudios" [(ngModel)]="miPortfolio.estudios.secundaria">
+    </div>
+    <div class="form-group">
+      <label for="form-group">Universitario/terciario: </label>
+      <input  class="form-control" id="uni"  placeholder="Complete sus estudios"[(ngModel)]="miPortfolio.estudios.uni">
+    </div>
+    <div class="form-group">
+      <label for="form-group">Actual: </label>
+      <input  type="text" class="form-control" id="secundaria" placeholder="Complete sus estudios" [(ngModel)]="miPortfolio.estudios.actual" >
+      
+    </div>
+    <input class="btn btn-primary" type="submit" value="Guardar Cambios">
+  </div>

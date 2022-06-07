@@ -1,71 +1,72 @@
 
-  <app-header></app-header>
+  <app-header> </app-header>
 
     <div class="container-fluid">
       <div class="Fondo">
     
     
+      </div>
+   
+    
+    <div class="Profile">
+      <img Id="lapiz-edad1"  type="button" src="assets\icons8-lápiz-64.png">
+      <img  Id="lapiz-foto" type="button" src="assets\icons8-lápiz-64.png">
+      
+    
+    
+      <div class="Foto-profile">
+        
+         
+        <img src="assets\Foto perfil.jpg" alt="profilee pcture" class="foto-perfil">
+        
+        
+        
+          <ul   style="list-style-type:none;">
+            
+          <span> {{miPorfolio.nombres.nombre}}</span>
+            <li> {{miPorfolio.nombres.apellido}} </li>
+            
+            <button id="boton-nombre"  
+             >
+            <img  Id="lapiz-nombre" src="assets\icons8-lápiz-64.png">
+            
+            </button>
+          
+            
+         </ul>
+        
+         <ul Id="Edad"> 
+           
+          <li>
+          Edad:{{miPorfolio.edad}} años 
+        </li>
+           
+           <li>
+             Ciudad: {{miPorfolio.ciudad}}
+           </li>
+           <li> 
+             Nacionalidad: {{miPorfolio.nacionalidad}}
+           </li>
+           <li>  
+            Estado civil: {{miPorfolio.estadocivil}}
+           </li>
+           <li> </li>
+          </ul>
+          
+      </div>
+      <div class="botones-profile">
+        
+        <div class="boton-edit-name">
+          
+        
+          <div class="boton-cambiar-foto">
+            
+          </div>
         </div>
      
-      
-      <div class="Profile">
-        <img Id="lapiz-edad1"  type="button" src="assets\icons8-lápiz-64.png">
-        <img  Id="lapiz-foto" type="button" src="assets\icons8-lápiz-64.png">
-        
-      
-      
-        <div class="Foto-profile">
-          
-           
-          <img src="assets\Foto perfil.jpg" alt="profilee pcture" class="foto-perfil">
-          
-          
-          
-            <ul   style="list-style-type:none;">
-              
-            <span> {{miPorfolio.nombres.nombre}}</span>
-              <li> {{miPorfolio.nombres.apellido}} </li>
-              
-              <button id="boton-nombre">
-              <img  Id="lapiz-nombre" src="assets\icons8-lápiz-64.png">
-              
-              </button>
-            
-              
-           </ul>
-          
-           <ul Id="Edad"> 
-             
-            <li>
-            Edad:{{miPorfolio.edad}} años 
-          </li>
-             
-             <li>
-               Ciudad: {{miPorfolio.ciudad}}
-             </li>
-             <li> 
-               Nacionalidad: {{miPorfolio.nacionalidad}}
-             </li>
-             <li>  
-              Estado civil: {{miPorfolio.estadocivil}}
-             </li>
-             <li> </li>
-            </ul>
-            
-        </div>
-        <div class="botones-profile">
-          
-          <div class="boton-edit-name">
-            
-          
-            <div class="boton-cambiar-foto">
-              
-            </div>
-          </div>
-       
-        </div>
-       
       </div>
+     
+    </div>
       
       <div class="Intereses-estudios">
         <p> 
@@ -77,7 +78,7 @@
              {{miPorfolio.laboral.experiencialaboral}} <br> 
              {{miPorfolio.laboral.desde}}
            </li>
-            
+          
            
           </ul>
           
@@ -109,7 +110,7 @@
          </ul>
          
          <span >
-           <img  class="lapiz-estudios" type="button" src="assets\icons8-lápiz-64.png">  
+           <img  class="lapiz-estudios" type="button" src="assets\icons8-lápiz-64.png" routerLink="/boton-estudios">  
           </span>
         
         <div class="Boton-editar-estudios">
