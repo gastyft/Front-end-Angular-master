@@ -2,7 +2,7 @@ import { Component, Injectable, OnInit } from '@angular/core';
 
 
 import { EquipoService} from '../equipo.service';
-import {FormsModule, } from '@angular/forms'
+import {FormsModule, } from '@angular/forms';
 
 
 @Component({
@@ -27,11 +27,7 @@ binding:string ="";
       console.log(data)
       this.miPortfolio=data;
   })
-
-
+ 
 }
 
-
 }
-
-

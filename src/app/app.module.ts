@@ -16,6 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BotonEstudiosComponent } from './boton-estudios/boton-estudios.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
+import { BotonProfileComponent } from './boton-profile/boton-profile.component';
+import { BotonEdadComponent } from './boton-edad/boton-edad.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     Error404Component,
     BotonEstudiosComponent,
     DashbordComponent,
+    BotonProfileComponent,
+    BotonEdadComponent,
     
   ],
   imports: [

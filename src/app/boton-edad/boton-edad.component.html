@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+    <div class="all">
+         <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese Edad" [(ngModel)]="miPortfolio.edad">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese ciudad de residencia"  [(ngModel)]="miPortfolio.ciudad">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nacionalidad</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese Nacionalidad" [(ngModel)]="miPortfolio.nacionalidad">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Estado civil</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese Estado civil"  [(ngModel)]="miPortfolio.estadocivil">
+      </div>
+      <input class="btn btn-primary" type="submit" value="Guardar Cambios" routerLink="/principal">
+    </div>
+</div>

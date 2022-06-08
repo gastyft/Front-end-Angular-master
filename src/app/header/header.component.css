@@ -87,7 +87,7 @@ line-height: 130px;
         padding: 0.5rem 1rem;
         display:block;
         transition: all 0.4s linear;
-
+        
 
 
       }
@@ -95,6 +95,9 @@ line-height: 130px;
         background: aquamarine;
       
       }  
+.iconos-head{
+  fill:white;
+}
 
 
 @media only screen and (max-width:1920px) /* Para pantalla al 90% en crhome */
