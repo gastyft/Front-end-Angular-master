@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { EquipoService } from '../equipo.service';
 import { FormsModule } from '@angular/forms';
 
@@ -10,22 +10,25 @@ import { FormsModule } from '@angular/forms';
 export class BotonEdadComponent implements OnInit {
 
 
-  primaria:string="";
-
 miPortfolio: any;
 
-binding:string ="";
+
 
   constructor( 
     private datosPorfolio: EquipoService
-  ) { }
+  ) {
+
+   }
 
   ngOnInit() {
     this.datosPorfolio.ObtenerDatos().subscribe( (data: any) =>{
       console.log(data)
       this.miPortfolio=data;
-  })
  
-}
+ 
+ 
+    })
 
+
+}
 }

@@ -56,12 +56,21 @@
                 </svg>
               </a>  
             </li>
-              <li><a routerLink="/login1" > 
+              <li>   <a routerLink="/login1" > 
                 <button type="button" class="btn btn-outline-info" >Login</button>
-              </a>  </li>
-             
+              </a> 
+           <!--  <a routerLink="/principal" routerLinkActive="active" *ngIf="authService.logIn">
+              <button type="button" class="btn btn-outline-info" >perfil</button>
+             </a>
+               <a routerLink="/login1" routerLinkActive="active"  *ngIf="!authService.logIn">
+                <button type="button" class="btn btn-outline-info" >Login</button>
+               </a>  
+               <a class="nav-link" (click)="Logout()" href="#" *ngIf="authService.logIn">
+                <button type="button" class="btn btn-outline-info" >Logout</button>
+               </a> 
+              </li> 
   <li>   
-    <!-- <fa-icon class="prueba" [icon]="faCoffee"></fa-icon> -->
+     <fa-icon class="prueba" [icon]="faCoffee"></fa-icon> -->
   </li>
   
   

@@ -1,15 +1,18 @@
 <app-header></app-header>
 <div class="container">
-    <div class="all">
+    <form class="all  " >
          <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nombre/s</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese Nombre/s" [(ngModel)]="miPortfolio.nombres.nombre">
+        <input type="text" class="form-control" id="form-nombre" placeholder="Ingrese Nombre/s" value="{{miPortfolio.nombres.nombre}}" >
+   
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Apellido</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese Apellido"  [(ngModel)]="miPortfolio.nombres.apellido">
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese Apellido"  value="{{miPortfolio.nombres.apellido}}" >
       </div>
 
-      <input class="btn btn-primary" type="submit" value="Guardar Cambios" routerLink="/principal">
-    </div>
+      <input class="btn btn-primary" type="submit" value="Guardar Cambios" >
+
+      <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal" >
+    </form>
 </div>

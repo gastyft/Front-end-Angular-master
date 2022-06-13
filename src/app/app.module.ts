@@ -18,6 +18,8 @@ import { BotonEstudiosComponent } from './boton-estudios/boton-estudios.componen
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { BotonProfileComponent } from './boton-profile/boton-profile.component';
 import { BotonEdadComponent } from './boton-edad/boton-edad.component';
+import { BotonExperienciaLaboralComponent } from './boton-experiencia-laboral/boton-experiencia-laboral.component';
+import { AgregarExperienciaComponent } from './boton-experiencia-laboral/agregar-experiencia/agregar-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { BotonEdadComponent } from './boton-edad/boton-edad.component';
     DashbordComponent,
     BotonProfileComponent,
     BotonEdadComponent,
+    BotonExperienciaLaboralComponent,
+    AgregarExperienciaComponent,
     
   ],
   imports: [

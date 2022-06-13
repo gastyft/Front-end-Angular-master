@@ -1,9 +1,14 @@
 
 .all{
-
+font: black;
     margin-top:150px;
 }
 .btn-primary{
+    margin:10px 10px 10px 0;
+
+}
+
+.btn-secondary{
     margin:10px 10px 10px 0;
 
 }

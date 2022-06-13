@@ -1,6 +1,6 @@
 
 
-<div class="container">
+
 <!--<svg id="visual" viewBox="0 0 900 450" width="100%" height="auto" repeatCount="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="900" height="450" fill="#6600FF"></rect><defs><linearGradient id="grad1_0" x1="50%" y1="0%" x2="100%" y2="100%"><stop offset="10%" stop-color="#6600ff" stop-opacity="1"></stop><stop offset="90%" stop-color="#6600ff" stop-opacity="1"></stop></linearGradient></defs><defs><linearGradient id="grad2_0" x1="0%" y1="0%" x2="50%" y2="100%"><stop offset="10%" stop-color="#6600ff" stop-opacity="1"></stop><stop offset="90%" stop-color="#6600ff" stop-opacity="1"></stop></linearGradient></defs><g transform="translate(900, 0)"><path d="M0 245C-17.7 227.1 -35.3 209.2 -54.1 201.9C-72.9 194.5 -92.8 197.7 -112.5 194.9C-132.2 192 -151.7 183 -171.1 171.1C-190.6 159.2 -210 144.4 -214.3 123.8C-218.7 103.1 -208 76.5 -204.8 54.9C-201.5 33.3 -205.8 16.6 -210 0L0 0Z" fill="#FFFFFF"></path></g><g transform="translate(0, 450)"><path d="M0 -247.5C22.9 -246.6 45.8 -245.7 62.1 -231.8C78.4 -217.9 88.1 -191 102 -176.7C115.9 -162.4 133.9 -160.7 153.4 -153.4C172.9 -146.2 193.9 -133.5 200.1 -115.5C206.2 -97.5 197.5 -74.2 201.9 -54.1C206.2 -34 223.6 -17 241 0L0 0Z" fill="#FFFFFF"></path></g></svg>
 -->
      <!-- 
@@ -25,26 +25,35 @@
       
    
  -->
-<!---->
+<!--   -->
 
-<div class="mb-3 row">
-  <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-  <div class="col-sm-10">
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="gastyftacla1@hotmail.com">
-  </div>
-</div>
-<div class="mb-3 row">
-  <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-  <div class="col-sm-10">
-    <input type="password" placeholder="Ingrese contraseña" class="form-control" id="inputPassword">
-  </div>
-</div>
-<input type="submit" class="btn btn-primary" routerLink="/principal" value="Ingresar" >
+
+
+
+<div class="container">
+  <h2>Ingrese la contraseña</h2>
+  
+  <form action="/action_page.php" class="was-validated">
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter username" value= "gastyftacla1@hotmail.com" name="uname" required>
+      <div class="valid-feedback">Valido.</div>
+      <div class="invalid-feedback">Complete este campo.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+      <div class="valid-feedback">Valido.</div>
+      <div class="invalid-feedback">Complete este campo con contraseña.</div>
+    </div>
+    
 <div>
-<img  class="rounded"  src="assets\fondo2.jpg"  width='600' />
+      <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal" >
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div> 
+  </form>
+  <img  class="rounded"  src="assets\fondo2.jpg"  width='600' />
 </div>
 
 
-
-
-</div>

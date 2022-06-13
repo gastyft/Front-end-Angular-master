@@ -7,11 +7,17 @@ import { Error404Component } from './error404/error404.component';
 import { BotonEstudiosComponent } from './boton-estudios/boton-estudios.component';
 import { BotonProfileComponent } from './boton-profile/boton-profile.component';
 import { BotonEdadComponent } from './boton-edad/boton-edad.component';
+import{ BotonExperienciaLaboralComponent } from './boton-experiencia-laboral/boton-experiencia-laboral.component';
+import { AgregarExperienciaComponent} from './boton-experiencia-laboral/agregar-experiencia/agregar-experiencia.component'
 //import { AuthGuard } from './auth.guard';
 const routes : Routes = [
 
   {path: 'principal', 
   component:PrincipalComponent},
+  {path:'boton-experiencia-laboral',
+  component:BotonExperienciaLaboralComponent },
+  {path:'agregar-experiencia',
+  component:AgregarExperienciaComponent },
   {path:'boton-estudios',
   component:BotonEstudiosComponent },
   {path:'boton-edad',

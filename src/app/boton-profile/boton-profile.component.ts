@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EquipoService} from '../equipo.service';
-import {FormsModule, } from '@angular/forms';
+import {FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-boton-profile',
   templateUrl: './boton-profile.component.html',
@@ -24,5 +24,5 @@ export class BotonProfileComponent implements OnInit {
     })
    
   }
-  
-  }
+
+}
