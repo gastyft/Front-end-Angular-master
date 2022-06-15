@@ -11,14 +11,26 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EquipoService {
-
-private apiUrl =' http://localhost:4200/principal'
+miPorfolio: any;
+private apiUrl ='src\assets\data\data.json'
   constructor( private http: HttpClient ) { }
 
 ObtenerDatos(): Observable <any> {
-  return  this.http.get('./assets/data/data.json')
+  return  this.http.get(this.apiUrl)
+}
+EditarDatos(){
+  
+  return this.http.put(this.apiUrl,this.miPorfolio)
+
+}
+BorrarDatos(): Observable<any> {
+  return this.http.delete(this.apiUrl)
 }
 
+GuardarDatos(){
 
+  return this.http.post(this.apiUrl, this.miPorfolio)
+
+}
 }
 
