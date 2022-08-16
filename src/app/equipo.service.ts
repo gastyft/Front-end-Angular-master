@@ -11,13 +11,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EquipoService {
-miPorfolio: any;
-private apiUrl ='src\assets\data\data.json'
+  EditarDatos() {
+    throw new Error('Method not implemented.');
+  }
+private ApiURL='./assets/data/data.json'
+
   constructor( private http: HttpClient ) { }
 
-ObtenerDatos(): Observable <any> {
-  return  this.http.get(this.apiUrl)
+ObtenerDatos(): Observable<any> {
+  return  this.http.get(this.ApiURL)
 }
+}
+/*
 EditarDatos(){
   
   return this.http.put(this.apiUrl,this.miPorfolio)
@@ -32,5 +37,4 @@ GuardarDatos(){
   return this.http.post(this.apiUrl, this.miPorfolio)
 
 }
-}
-
+*/

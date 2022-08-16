@@ -17,7 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BotonEstudiosComponent } from './boton-estudios/boton-estudios.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { BotonProfileComponent } from './boton-profile/boton-profile.component';
-import { BotonEdadComponent } from './boton-edad/boton-edad.component';
+
 import { BotonExperienciaLaboralComponent } from './boton-experiencia-laboral/boton-experiencia-laboral.component';
 import { AgregarExperienciaComponent } from './boton-experiencia-laboral/agregar-experiencia/agregar-experiencia.component';
 
@@ -31,7 +31,7 @@ import { AgregarExperienciaComponent } from './boton-experiencia-laboral/agregar
     BotonEstudiosComponent,
     DashbordComponent,
     BotonProfileComponent,
-    BotonEdadComponent,
+ 
     BotonExperienciaLaboralComponent,
     AgregarExperienciaComponent,
     

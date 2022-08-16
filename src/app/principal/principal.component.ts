@@ -11,7 +11,9 @@ export class PrincipalComponent implements OnInit {
   
 miPorfolio: any;
 
-  constructor(private datosPorfolio:EquipoService) { }
+  constructor(private datosPorfolio:EquipoService) {
+    
+   }
 
 
 
@@ -30,3 +32,6 @@ getElementbyClass("foto-perfil").innerHTML
 
 }
 */
+
+
+

@@ -2426,3 +2426,99 @@ margin-top:700px;
           
          }
             }
+
+
+
+
+
+
+
+
+            .body-progress{
+              margin-top: 40px;
+              margin-right: 1px;
+              margin-bottom: 5px;
+              margin-left: 1px;
+              padding: 5px;
+          
+          
+            }
+            .circle-wrap {
+              margin: 85px auto;
+              width: 86px;
+              height: 86px;
+              background: #f0f9f5;
+              border-radius: 50%;
+              border: 1px solid #cdcbd0;
+          }
+            
+            .circle-wrap .circle .mask,
+            .circle-wrap .circle .fill {
+              width: 85px;
+              height: 85px;
+              position: absolute;
+              border-radius: 50%;
+            }
+            
+            .circle-wrap .circle .mask {
+              clip: rect(0px, 90px, 90px, 45px);
+            }
+            
+            .circle-wrap .inside-circle {
+              width:71px;
+              height: 71px;
+              border-radius: 50%;
+              background: #d2eaf1;
+              line-height: 70px;
+              text-align: center;
+              margin-top: 7px;
+              margin-left: 7px;
+              color: #174d4d;
+              position: absolute;
+              z-index: 60px;
+              font-weight: 700px;
+              font-size: 1em;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+          }
+            
+            /* color animation */
+            
+            /* 3rd progress bar */
+            .mask .fill {
+              clip: rect(0px, 50px, 85px, 0px);
+              background-color: #174d4d;
+            }
+            
+            .mask.full,
+            .circle .fill {
+              animation: fill ease-in-out 5s;
+              transform: rotate(135deg);
+          }
+            
+            @keyframes fill{
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(135deg);
+              }
+            }
+          
+            img.skills{
+              width: 80px;
+              height: 85px;
+              border-radius: 40%;
+          }
+          
+          #botonIcono{
+            color: #174d4d;
+            display: float;
+            float: right;
+          }
+          
+          #botonIcono:hover{
+            color: #f0f9f5;
+          }

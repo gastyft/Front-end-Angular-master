@@ -8,11 +8,28 @@
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Apellido</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese Apellido"  value="{{miPortfolio.nombres.apellido}}" >
+        <input type="text" class="form-control" id="form-apellido" placeholder="Ingrese Apellido"  value="{{miPortfolio.nombres.apellido}}" >
       </div>
 
-      <input class="btn btn-primary" type="submit" value="Guardar Cambios" >
-
+    
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="form-edad" placeholder="Ingrese Edad"  value="{{miPortfolio.edad}}">
+      </div>
+      <div class="mb-3">
+        <label  for="formGroupExampleInput2" class="form-label">Ciudad</label>
+        <input  type="text" class="form-control" id="form-ciudad" placeholder="Ingrese ciudad de residencia"  value="{{miPortfolio.ciudad}}">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nacionalidad</label>
+        <input type="text" class="form-control" id="form-nacionalidad" placeholder="Ingrese Nacionalidad" value="{{miPortfolio.nacionalidad}}">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Estado civil</label>
+        <input type="text" class="form-control" id="form-estado" placeholder="Ingrese Estado civil"  value="{{miPortfolio.estadocivil}}">
+      </div>
+      <input class="btn btn-primary" type="submit"  value="Guardar Cambios" routerLink="/principal">
       <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal" >
+    
     </form>
 </div>

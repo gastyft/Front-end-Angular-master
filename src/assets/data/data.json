@@ -1,9 +1,5 @@
 
-
-
 {
-    
-
 "nombres":{
     "nombre": "Gastón Manuel ",
 "apellido": "Ftacla"
@@ -23,8 +19,8 @@
 {
 "primaria": "Instituto San Antonio Maria Gianelli",
 "secundaria": "Instituto San Antonio Maria Gianelli",
-"uni": " 2 años de ingeniería mecánica en la UNMDP.",
-"desdeuni": " 2017-2020. ",
+"uni": " 2 años de ingeniería mecánica en la UNMDP. Conocimiento de Análisis matemático A,B,C y Física 1 y 2.",
+"desdeuni": " 2015-2020. ",
 "actual":  "Actualmente cursando primer año de programación en UTN Mar del Plata"
 },
 "grafico":
@@ -37,10 +33,14 @@
 "idiomas": {
     "ingles": "90%",
     "italiano":"10%"
-}
+},
+
+"proyectos":{
+    "proyecto1": "Portfolio web de Argentina Programa "
+
 }
 
-
+}
 
 
 
