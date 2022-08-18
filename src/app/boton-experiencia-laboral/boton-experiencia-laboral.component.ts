@@ -20,5 +20,14 @@ export class BotonExperienciaLaboralComponent implements OnInit {
     })
    
   }
+contador(cont:any, i:any){
+
+  i=0;
+  cont=0;
+  for(i=0; i<10; i++){
+  cont=i+1;
+}
+  return cont;
+}
 
 }

@@ -6,12 +6,20 @@ import { HeaderComponent } from './header/header.component';
 import { Error404Component } from './error404/error404.component';
 import { BotonEstudiosComponent } from './boton-estudios/boton-estudios.component';
 import { BotonProfileComponent } from './boton-profile/boton-profile.component';
-
+import{ EditarExperienciaComponent } from "./boton-experiencia-laboral/editar-experiencia/editar-experiencia.component";
 import{ BotonExperienciaLaboralComponent } from './boton-experiencia-laboral/boton-experiencia-laboral.component';
-import { AgregarExperienciaComponent} from './boton-experiencia-laboral/agregar-experiencia/agregar-experiencia.component'
+import { AgregarExperienciaComponent} from './boton-experiencia-laboral/agregar-experiencia/agregar-experiencia.component';
+import { BotonProyectosComponent } from './boton-proyectos/boton-proyectos.component';
+import { EditarProyectosComponent } from './boton-proyectos/editar-proyectos/editar-proyectos.component';
+import {AgregarProyectosComponent } from './boton-proyectos/agregar-proyectos/agregar-proyectos.component';
 //import { AuthGuard } from './auth.guard';
 const routes : Routes = [
-
+  {path: 'agregar-proyectos',
+component: AgregarProyectosComponent},
+  {path: 'editar-proyectos',
+component: EditarProyectosComponent},
+{path:'boton-proyectos',
+component: BotonProyectosComponent},
   {path: 'principal', 
   component:PrincipalComponent},
   {path:'boton-experiencia-laboral',
@@ -20,7 +28,8 @@ const routes : Routes = [
   component:AgregarExperienciaComponent },
   {path:'boton-estudios',
   component:BotonEstudiosComponent },
- 
+  {path:'editar-experiencia',
+  component: EditarExperienciaComponent},
   {path:'boton-profile',
   component:BotonProfileComponent},
   {path: 'login1', 

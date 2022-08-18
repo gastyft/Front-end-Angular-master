@@ -20,6 +20,10 @@ import { BotonProfileComponent } from './boton-profile/boton-profile.component';
 
 import { BotonExperienciaLaboralComponent } from './boton-experiencia-laboral/boton-experiencia-laboral.component';
 import { AgregarExperienciaComponent } from './boton-experiencia-laboral/agregar-experiencia/agregar-experiencia.component';
+import { EditarExperienciaComponent } from './boton-experiencia-laboral/editar-experiencia/editar-experiencia.component';
+import { BotonProyectosComponent } from './boton-proyectos/boton-proyectos.component';
+import { AgregarProyectosComponent } from './boton-proyectos/agregar-proyectos/agregar-proyectos.component';
+import { EditarProyectosComponent } from './boton-proyectos/editar-proyectos/editar-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,10 @@ import { AgregarExperienciaComponent } from './boton-experiencia-laboral/agregar
  
     BotonExperienciaLaboralComponent,
     AgregarExperienciaComponent,
+    EditarExperienciaComponent,
+    BotonProyectosComponent,
+    AgregarProyectosComponent,
+    EditarProyectosComponent,
     
   ],
   imports: [

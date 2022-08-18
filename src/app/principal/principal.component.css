@@ -446,6 +446,22 @@ border-radius: 50px; }
   #boton-graficos:active {
   background: #1C6EA4; 
   border-radius: 50px; }
+
+  #boton-proyectos{  
+    margin-left: 1000px;
+    margin-top: -32px;
+     width:40px;
+    height:40px;
+    position:absolute;
+
+  }
+  #boton-proyectos:hover {
+    background: aquamarine; 
+  border-radius: 50px; }
+    #boton-proyectos:active {
+    background: #1C6EA4; 
+    border-radius: 50px; }
+    
   
 
 
@@ -712,6 +728,12 @@ margin-top:1250px;
     width:40px;
     height:40px;
 
+}
+#boton-proyectos{
+  
+  width:40px;
+  height:40px;
+
     
 }
 }
@@ -953,9 +975,13 @@ margin-top:820px;
        height:40px;
 
    }
-   
+   #boton-proyectos{
+    margin-right:100px;
+      width:40px;
+      height:40px;
 
     }
+  }
 @media only screen and (max-width: 1366px)       /* Para pantalla al 100% crhome*/
 {
 
@@ -1198,9 +1224,14 @@ margin-right: -100px;
        width:30px;
        height:30px;
    }
+
+   #boton-proyectos{
+    margin-left:500px;                           /*200% zoom SEFAEFwefw3fesefsefsefWEFDFEWFEFSFWEFSE*/
+      width:30px;
+      height:30px;
      }
 
-
+    }
 
 
 
@@ -1434,7 +1465,11 @@ margin-top:700px;
  margin-left: 60px;
 
    font-size:10px;
-
+ }
+   #boton-proyectos{
+    margin-left:500px;                           
+      width:25px;
+      height:25px;
   
  }
 
@@ -1657,7 +1692,12 @@ margin-top:700px;
          margin-left:120px;
            width:15px;
            height:15px;
-
+       }
+       #boton-proyectos{
+        margin-left:500px;                       
+          width:15px;
+          height:15px;
+        margin-top:-70px;
        }
        .progress-bar{
         width:100%;
@@ -1927,6 +1967,11 @@ margin-top:700px;
     
       
      }
+     #boton-proyectos{
+      margin-left:320px;                           
+        width:15px;
+        height:15px;
+     }
     
         }
 
@@ -2189,6 +2234,11 @@ margin-top:700px;
         
           
          }
+         #boton-proyectos{
+          margin-left:220px;                           /*400% zoom */
+            width:10px;
+            height:10px;
+         }
         
             }
    
@@ -2425,6 +2475,11 @@ margin-top:700px;
         
           
          }
+         #boton-proyectos{
+          margin-left:190px;                           /*200% zoom SEFAEFwefw3fesefsefsefWEFDFEWFEFSFWEFSE*/
+            width:7px;
+            height:7px;
+        }
             }
 
 
@@ -2483,7 +2538,8 @@ margin-top:700px;
               -ms-border-radius: 50%;
               -o-border-radius: 50%;
           }
-            
+         
+       
             /* color animation */
             
             /* 3rd progress bar */
