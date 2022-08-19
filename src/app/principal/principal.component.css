@@ -18,7 +18,7 @@
     
   }
   *{
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS";
  
   letter-spacing: 2px;
   word-spacing: 2px;
@@ -58,7 +58,7 @@ height:130px;
   h1{
    display:flex;
       font-size: 25px;
-      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-family: "Comic Sans MS";
       letter-spacing: 2px;
       word-spacing: 2px;
       color: whitesmoke;
@@ -141,27 +141,9 @@ background:transparent;
     border-radius: 70px; }
 
     
-#lapiz-edad1{
 
-  border-radius: 50px; 
-  position:absolute;
-  width: 50px;
-  height:50px;
-  
-  margin-left:1700px;
-  margin-top:200px;
-  background:transparent;
-
-}
-#lapiz-edad1:hover {
-  background: aquamarine; 
-border-radius: 50px; }
-  #lapiz-edad1:active {
-  background: #1C6EA4; 
-  border-radius: 50px; }
-  
 .Info{  
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS";
   font-size: 25px;
   letter-spacing: 2px;
   word-spacing: 2px;
@@ -273,10 +255,7 @@ from{
 
 
   
-  .nombres-relleno { grid-area: nombres-relleno;
-    
-
-}
+  
   .botones-profile{  
     margin-left: 200px;
     align-self:flex-start;
@@ -284,13 +263,7 @@ from{
   margin-top: 90px;
 
   }
-  .boton-edit-name{ grid-area: boton-edit; 
 
-    
-   
-
-}
-  
   .Intereses-estudios {  display: grid;
     grid-template-columns: 0.2fr 0.5fr 0.5fr;
     grid-template-rows: 1fr 1fr 0.5fr;
@@ -320,7 +293,7 @@ from{
 .span{
   font-size:20px;
  
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS";
   
   letter-spacing: 2px;
   word-spacing: 2px;
@@ -331,7 +304,7 @@ from{
 .p{
   font-size: 20px;
  
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS";
   
   letter-spacing: 2px;
   word-spacing: 2px;
@@ -342,7 +315,7 @@ from{
 
 .Foto-profile ul{
   font-size: 50px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS";
   margin-top: 65px;
   padding-top: 20px;
   letter-spacing: 2px;
@@ -356,7 +329,7 @@ from{
   
  
 }
-.descript{   font-family: "Comic Sans MS", cursive, sans-serif;
+.descript{   font-family: "Comic Sans MS";
   
   letter-spacing: 2px;
   word-spacing: 2px;
@@ -373,25 +346,7 @@ from{
     margin-right:250px;
 }
 
-.foto-exp{
-    position:absolute;
-    margin-top: 80px;
-    margin-left:210px;
-}
-.foto-est1{
-    position:absolute;
-    margin-left:600px;
-    margin-top: 700px;
-    gap:10px, 10px,10px,10px;
-}
-.foto-est2{
-position:absolute;
-margin-left:600px;
 
-margin-top:1100px;
-    
-    gap:10px, 10px,10px,10px;
-}
 .Intereses-estudios  ul li{
  
   margin-top:50px;
@@ -425,7 +380,7 @@ border-radius: 50px; }
 
 
 #Edad {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS";
   font-size: 30px;
   letter-spacing: 2px;
   word-spacing: 2px;
@@ -481,7 +436,7 @@ border-radius: 50px; }
     -webkit-border-radius: 0px 0px 27px 27px;
     border-radius: 27px 27px 27px 27px;
     border: 4px solid #1C6EA4;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS";
     padding-top: 27px;
     color:whitesmoke;
   }
@@ -529,58 +484,8 @@ margin-left: 250px;
 
 @media only screen and (max-width:600px){ /*para pantalla a 75% ??*/
  
-  .header{
-    height: 30px;
-    width:100%;
-top:0;
-bottom:0;
-  }
- #LOGO{
-   width:100%;
-   height:30px;
-  
-margin-bottom:30px;
- }
-
- .Fondo{
-height:150px;
-width:100%;
-
-gap:0;
-
- }
- .botones-head ul{
-  font-size:5px;
-  margin:0; 
-  padding-top:5px;
  
-width:100%;
 
-  }
-
-  .btn-outline-info{
-
-font-size: 5px;
-height:5px;
-width:100%;
-
-margin-top:0;
-padding-top: 0px;
-
-  }
-  h1{
-    display:flex;
-       font-size: 5px;
-   font:bold;
-   line-height:30px;
-    
-}
-.conteiner-fluid{
-  padding-top: 0px;
-  margin-top:0px;
-  top:0;
-  bottom:0;
-}
 .Profile{
   border-radius: 27px 27px 27px 27px;
     border: 1px solid #1C6EA4;
@@ -633,14 +538,7 @@ margin-left:70px;
   height:10px;
   border-radius: 10px; 
 }
-#lapiz-edad{
-  width: 10px;
-  height:10px;
-  position:absolute;
-  display:flex;
-  margin-left:300px;
-margin-top:100px;
-}
+
 .Intereses-estudios{
 
   font-size: 7px;
@@ -683,31 +581,6 @@ margin-top:100px;
 
 }
      
-.foto-exp{
-    position:absolute;
-    width:100px;
-    height:100px;
-    margin-top: 120px;
-    margin-left:210px;
-}
-.foto-est1{
-    position:absolute;
-    width:100px;
-    height:100px;
-    margin-left:430px;
-    margin-top: 800px;
-    gap:10px, 10px,10px,10px;
-}
-.foto-est2{
-position:absolute;
-width:100px;
-height:100px;
-margin-left:430px;
-
-margin-top:1250px;
-    
-    gap:10px, 10px,10px,10px;
-}
   .descript{ 
        font-size: 20px;
 
@@ -910,31 +783,6 @@ bottom:0;
 
 
   
-.foto-exp{
-    position:absolute;
-    width:150px;
-    height:150px;
-    margin-top: 70px;
-    margin-left:150px;
-}
-.foto-est1{
-    position:absolute;
-    width:150px;
-    height:150px;
-    margin-left:320px;
-    margin-top: 550px;
-    gap:10px, 10px,10px,10px;
-}
-.foto-est2{
-position:absolute;
-width:150px;
-height:150px;
-margin-left:320px;
-
-margin-top:820px;
-    
-    gap:10px, 10px,10px,10px;
-}
   
 .progress{
     margin-top:20px;
@@ -1092,16 +940,7 @@ bottom:0;
        height:25px;
        border-radius: 25px; 
      }
-     #lapiz-edad1{
-       width: 25px;
-       height:25px;
-       position:absolute;
-      
-       display:flex;
-margin-left:900px;
-margin-top:200px;
- 
-     }
+
      .Intereses-estudios{
      
        font-size: 15px;
@@ -1146,32 +985,7 @@ margin-top:200px;
       width:100%;
      
      }
-     
-.foto-exp{
-    position:absolute;
-    width:100px;
-    height:100px;
-    margin-top: 120px;
-    margin-left:210px;
-}
-.foto-est1{
-    position:absolute;
-    width:100px;
-    height:100px;
-    margin-left:430px;
-    margin-top: 500px;
-    gap:10px, 10px,10px,10px;
-}
-.foto-est2{
-position:absolute;
-width:100px;
-height:100px;
-margin-left:430px;
-
-margin-top:750px;
-    
-    gap:10px, 10px,10px,10px;
-}
+ 
   .descript{ 
        font-size: 15px;
 
@@ -1203,10 +1017,7 @@ margin-top:750px;
 
 
 }
-.type{
-font-size:15px;
-margin-left:-50px;
-}
+
 .proyectos{
  margin-top:30px;
 margin-left: 190px;
@@ -1226,7 +1037,7 @@ margin-right: -100px;
    }
 
    #boton-proyectos{
-    margin-left:500px;                           /*200% zoom SEFAEFwefw3fesefsefsefWEFDFEWFEFSFWEFSE*/
+    margin-left:500px;                         
       width:30px;
       height:30px;
      }
@@ -1347,16 +1158,7 @@ bottom:0;
        height:20px;
        border-radius: 10px; 
      }
-     #lapiz-edad1{
-       width: 20px;
-       height:20px;
-       position:absolute;
-      
-       display:flex;
-        margin-left:700px;
-        margin-top:100px;
- 
-     }
+    
      .Intereses-estudios{
      padding-top: 2px;
      padding-left:10px;
@@ -1403,32 +1205,6 @@ bottom:0;
 
 
   
-.foto-exp{
-    position:absolute;
-    width:80px;
-    height:80px;
-    margin-top: 90px;
-    margin-left:140px;
-}
-.foto-est1{
-    position:absolute;
-    width:80px;
-    height:80px;
-    margin-left:220px;
-    margin-top: 500px;
-    gap:10px, 10px,10px,10px;
-}
-.foto-est2{
-position:absolute;
-width:80px;
-height:80px;
-margin-left:220px;
-
-margin-top:700px;
-    
-    gap:10px, 10px,10px,10px;
-}
-  
 .progress{
     margin-top:50px;
   
@@ -1455,11 +1231,7 @@ margin-top:700px;
  
   
  }
-.type{
-  font-size:10px;
-  margin-left:-50px;
 
-}
  .proyectos{
    margin-top:30px;
  margin-left: 60px;
@@ -1584,16 +1356,7 @@ margin-top:700px;
            height:15px;
            border-radius: 10px; 
          }
-         #lapiz-edad1{
-           width:15px;
-           height:15px;
-           position:absolute;
-          
-           display:flex;
-            margin-left:500px;
-            margin-top:140px;
-     
-         }
+       
          .Intereses-estudios{
          padding-top: 2px;
          padding-left:10px;
@@ -1645,32 +1408,7 @@ margin-top:700px;
           }
     
     
-      
-    .foto-exp{
-        position:absolute;
-        width:60px;
-        height:60px;
-        margin-top: 70px;
-        margin-left:110px;
-    }
-    .foto-est1{
-        position:absolute;
-        width:60px;
-        height:60px;
-        margin-left:220px;
-        margin-top: 450px;
-        gap:10px, 10px,10px,10px;
-    }
-    .foto-est2{
-    position:absolute;
-    width:60px;
-    height:60px;
-    margin-left:220px;
     
-    margin-top:620px;
-        
-        gap:10px, 10px,10px,10px;
-    }
       
     .progress{
         margin-top:20px;
@@ -1709,10 +1447,7 @@ margin-top:700px;
      
       
      }
-    .type{
-      font-size:9px;
-      margin-left:-50px;
-    }
+  
      .proyectos{
        margin-top:30px;
      margin-left: 20px;
@@ -1727,61 +1462,7 @@ margin-top:700px;
 
     {
     
-        .header{
-            height: 30px;
-        width:100%;
-    top:0;
-    bottom:0;
-        }
-    
-    
-        #LOGO{
-            width:100%;
-            height:30px;
-           display:flex;
-         padding-bottom:0px;
-            margin-bottom:0px;
-            
-        }
-         
-          .Fondo{
-         height:160px;
-         width:100%;
-         
-         gap:0;
-         
-          }
-          .botones-head ul{
-           font-size:6px;
-           margin:0; 
-           padding-top:0px;
-          
-         width:100%;
-         
-           }
-         
-           .btn-outline-info{
-         
-         font-size: 5px;
-       
-         width:100%;
-         margin-top:0;
-         padding-top: 0px;
-         
-           }
-           h1{
-             display:flex;
-                font-size: 7px;
-            font:bold;
-            line-height:30px;
-             
-         }
-         .conteiner-fluid{
-           padding-top: 0px;
-           margin-top:0px;
-           top:0;
-           bottom:0;
-         }
+     
          .Profile{
            border-radius: 27px 27px 27px 27px;
              border: 1px solid #1C6EA4;
@@ -1835,16 +1516,7 @@ margin-top:700px;
            height:15px;
            border-radius: 10px; 
          }
-         #lapiz-edad1{
-           width:15px;
-           height:15px;
-           position:absolute;
-          
-           display:flex;
-            margin-left:420px;
-            margin-top:160px;
-     
-         }
+        
          .Intereses-estudios{
          padding-top: 2px;
          padding-left:-10px;
@@ -1896,31 +1568,7 @@ margin-top:700px;
     
     
       
-    .foto-exp{
-        position:absolute;
-        width:50px;
-        height:50px;
-        margin-top: 70px;
-        margin-left:60px;
-    }
-    .foto-est1{
-        position:absolute;
-        width:60px;
-        height:60px;
-        margin-left:220px;
-        margin-top: 450px;
-        gap:10px, 10px,10px,10px;
-    }
-    .foto-est2{
-    position:absolute;
-    width:60px;
-    height:60px;
-    margin-left:220px;
-    
-    margin-top:620px;
-        
-        gap:10px, 10px,10px,10px;
-    }
+   
       
     .progress{
         margin-top:10px;
@@ -1956,10 +1604,7 @@ margin-top:700px;
      
       
      }
-    .type{
-      font-size:7px;
-      padding-left:0px;
-    }
+    
      .proyectos{
        margin-top:30px;
      margin-left: 20px;
@@ -1980,61 +1625,6 @@ margin-top:700px;
 
         {
         
-            .header{
-                height: 25px;
-            width:100%;
-        top:0;
-        bottom:0;
-            }
-        
-        
-            #LOGO{
-                width:100%;
-                height:25px;
-               display:flex;
-             padding-bottom:0px;
-                margin-bottom:0px;
-                
-            }
-             
-              .Fondo{
-             height:100px;
-             width:100%;
-             
-             gap:0;
-             
-              }
-              .botones-head ul{
-               font-size:6px;
-               margin:0; 
-               padding-top:0px;
-              
-             width:100%;
-             
-               }
-             
-               .btn-outline-info{
-             
-             font-size: 5px;
-           
-             width:100%;
-             margin-top:0;
-             padding-top: 0px;
-             
-               }
-               h1{
-                 display:flex;
-                    font-size: 5px;
-                font:bold;
-                line-height:25px;
-                 
-             }
-             .conteiner-fluid{
-               padding-top: 0px;
-               margin-top:0px;
-               top:0;
-               bottom:0;
-             }
              .Profile{
                border-radius: 27px 27px 27px 27px;
                  border: 1px solid #1C6EA4;
@@ -2097,16 +1687,7 @@ margin-top:700px;
                height:10px;
                border-radius: 10px; 
              }
-             #lapiz-edad1{
-               width:10px;
-               height:10px;
-               position:absolute;
-              
-          
-                margin-left:300px;
-                margin-top:110px;
-         
-             }
+           
              .Intereses-estudios{
              padding-top: 2px;
              padding-left:-10px;
@@ -2161,32 +1742,7 @@ margin-top:700px;
               }
         
         
-          
-        .foto-exp{
-            position:absolute;
-            width:40px;
-            height:40px;
-            margin-top: 70px;
-            margin-left:40px;
-        }
-        .foto-est1{
-            position:absolute;
-            width:40px;
-            height:40px;
-            margin-left:90px;
-            margin-top: 430px;
-            gap:10px, 10px,10px,10px;
-        }
-        .foto-est2{
-        position:absolute;
-        width:40px;
-        height:40px;
-        margin-left:90px;
-        
-        margin-top:590px;
-            
-            gap:10px, 10px,10px,10px;
-        }
+         
           
         .progress{
             margin-top:10px;
@@ -2223,10 +1779,7 @@ margin-top:700px;
          
           
          }
-        .type{
-          font-size:5px;
-          margin-left:-30px;
-        }
+       
          .proyectos{
            margin-top:30px;
          margin-left: 20px;
@@ -2235,7 +1788,7 @@ margin-top:700px;
           
          }
          #boton-proyectos{
-          margin-left:220px;                           /*400% zoom */
+          margin-left:220px;                         
             width:10px;
             height:10px;
          }
@@ -2246,65 +1799,10 @@ margin-top:700px;
             
 
             
-        @media only screen and (max-width:400px) /* Para pantalla al 500% en crhome */
+        @media only screen and (max-width:400px) 
 
         {
         
-            .header{
-                height: 20px;
-            width:100%;
-        top:0;
-        bottom:0;
-            }
-        
-        
-            #LOGO{
-                width:100%;
-                height:20px;
-               display:flex;
-             padding-bottom:0px;
-                margin-bottom:0px;
-                
-            }
-             
-              .Fondo{
-             height:100px;
-             width:100%;
-             
-             gap:0;
-             
-              }
-              .botones-head ul{
-               font-size:2px;
-               margin-top:0px; 
-               padding-top:0px;
-              
-             width:100%;
-             
-               }
-             
-               .btn-outline-info{
-             
-             font-size: 2px;
-           
-             width:100%;
-            
-             
-             
-               }
-               h1{
-                 display:flex;
-                    font-size: 2px;
-                font:bold;
-                line-height:20px;
-                 
-             }
-             .conteiner-fluid{
-               padding-top: 0px;
-               margin-top:0px;
-               top:0;
-               bottom:0;
-             }
              .Profile{
                border-radius: 27px 27px 27px 27px;
                  border: 1px solid #1C6EA4;
@@ -2365,16 +1863,7 @@ margin-top:700px;
                height:5px;
                border-radius: 10px; 
              }
-             #lapiz-edad1{
-               width:5px;
-               height:5px;
-               position:absolute;
-              
-               display:flex;
-                margin-left:70px;
-                margin-top:150px;
-         
-             }
+            
    
              .descript{
                  font-size: 6px;
@@ -2464,10 +1953,7 @@ margin-top:700px;
          
           
          }
-        .type{
-          font-size:6px;
-          margin-left:-30px;
-        }
+        
          .proyectos{
            margin-top:30px;
          margin-left: 20px;
@@ -2476,7 +1962,7 @@ margin-top:700px;
           
          }
          #boton-proyectos{
-          margin-left:190px;                           /*200% zoom SEFAEFwefw3fesefsefsefWEFDFEWFEFSFWEFSE*/
+          margin-left:190px;                           
             width:7px;
             height:7px;
         }
@@ -2488,93 +1974,3 @@ margin-top:700px;
 
 
 
-
-            .body-progress{
-              margin-top: 40px;
-              margin-right: 1px;
-              margin-bottom: 5px;
-              margin-left: 1px;
-              padding: 5px;
-          
-          
-            }
-            .circle-wrap {
-              margin: 85px auto;
-              width: 86px;
-              height: 86px;
-              background: #f0f9f5;
-              border-radius: 50%;
-              border: 1px solid #cdcbd0;
-          }
-            
-            .circle-wrap .circle .mask,
-            .circle-wrap .circle .fill {
-              width: 85px;
-              height: 85px;
-              position: absolute;
-              border-radius: 50%;
-            }
-            
-            .circle-wrap .circle .mask {
-              clip: rect(0px, 90px, 90px, 45px);
-            }
-            
-            .circle-wrap .inside-circle {
-              width:71px;
-              height: 71px;
-              border-radius: 50%;
-              background: #d2eaf1;
-              line-height: 70px;
-              text-align: center;
-              margin-top: 7px;
-              margin-left: 7px;
-              color: #174d4d;
-              position: absolute;
-              z-index: 60px;
-              font-weight: 700px;
-              font-size: 1em;
-              -webkit-border-radius: 50%;
-              -moz-border-radius: 50%;
-              -ms-border-radius: 50%;
-              -o-border-radius: 50%;
-          }
-         
-       
-            /* color animation */
-            
-            /* 3rd progress bar */
-            .mask .fill {
-              clip: rect(0px, 50px, 85px, 0px);
-              background-color: #174d4d;
-            }
-            
-            .mask.full,
-            .circle .fill {
-              animation: fill ease-in-out 5s;
-              transform: rotate(135deg);
-          }
-            
-            @keyframes fill{
-              0% {
-                transform: rotate(0deg);
-              }
-              100% {
-                transform: rotate(135deg);
-              }
-            }
-          
-            img.skills{
-              width: 80px;
-              height: 85px;
-              border-radius: 40%;
-          }
-          
-          #botonIcono{
-            color: #174d4d;
-            display: float;
-            float: right;
-          }
-          
-          #botonIcono:hover{
-            color: #f0f9f5;
-          }

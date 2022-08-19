@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/proyecto",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
