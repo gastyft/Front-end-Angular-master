@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { EquipoService} from '../equipo.service';
+import { proyectos } from '../model/proyectos';
+import{ ProyectosService } from '../proyectos.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-boton-proyectos',
   templateUrl: './boton-proyectos.component.html',
@@ -7,17 +10,42 @@ import { EquipoService} from '../equipo.service';
 })
 export class BotonProyectosComponent implements OnInit {
 
-  miPortfolio: any;
-  
-  constructor( 
-    private datosPorfolio: EquipoService
-  ) { }  
+  miPorfolio3: any;
 
-  ngOnInit() {
-    this.datosPorfolio.ObtenerDatos().subscribe( (data: any) =>{
-      console.log(data)
-      this.miPortfolio=data;
-  })
+ data3: any; 
  
+ proyectos: proyectos[]= [] ;
+
+    constructor( 
+      public datosProyectos: ProyectosService,
+      private router: Router,
+    ) { }
+  
+    ngOnInit() {
+      this.cargarDatos();
+    
+    }
+    cargarDatos(){
+      this.datosProyectos.lista().subscribe( data3 =>{
+        console.log(data3)
+        this.miPorfolio3= data3;
+        
+      }) } 
+
+      
+  deleteProyecto(id_proyecto?: number){
+    if(id_proyecto != undefined){
+      this.datosProyectos.delete(id_proyecto).subscribe(
+                data => {
+     this.cargarDatos();
+      
+          
+        })
+        alert("Se ha eliminado proyecto");
+      // this.router.navigate(['']);
+      location.reload();
+    }
+  }
 }
-}
+
+

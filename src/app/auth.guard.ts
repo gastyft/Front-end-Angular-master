@@ -6,18 +6,20 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class AuthGuard /* implements CanActivate  */ {
 
-  constructor(  private authService: AuthService, private router: Router ) {}
+  constructor(   private authService: AuthService, private rutas: Router) {}
 
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
 
-      if (!this.authService.isLoggedIn()) {
-        this.router.navigate(['/login1']); // go to login if not authenticated
-        return false;
-      }
+ /*   canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean> | UrlTree | Promise<boolean> | boolean {
+      let currentUser= this.authService.UsuarioAutenticado;
+      if(currentUser && currentUser.accessToken){
     return true;
-  }
+      }
+     else
+      this.rutas.navigate(['/login1']);
+      return false; 
+  } */
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { EquipoService} from '../.././equipo.service';
-
-
+import { Router } from '@angular/router';
+import { ExperienciaService } from 'src/app/experiencia.service';
+import { experiencia} from 'src/app/model/experiencia';
+import{ FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-agregar-experiencia',
   templateUrl: './agregar-experiencia.component.html',
@@ -9,20 +10,34 @@ import { EquipoService} from '../.././equipo.service';
 })
 export class AgregarExperienciaComponent implements OnInit {
 
-  miPortfolio: any;
   
+  experiencia_laboral: String = '' ;
 
-  
     constructor( 
-      private datosPortfolio: EquipoService
-    ) { }
+    
+private datosExperiencia: ExperienciaService,
+private router: Router,
+
+    ) { 
+      
+
+    }
   
     ngOnInit() {
-      this.datosPortfolio.ObtenerDatos().subscribe( (data: any) =>{
-        console.log(data)
-        this.miPortfolio=data;
-    })
-   
+    
   }
+  
 
-}
+    AgregarExperiencia():void{
+      const exp = new experiencia(this.experiencia_laboral);
+      this.datosExperiencia.save(exp).subscribe( data=> {
+       
+      },
+       err => {
+        alert("Agregada");
+        this.router.navigate(['boton-experiencia-laboral']);
+      }
+      )
+     }
+    }
+

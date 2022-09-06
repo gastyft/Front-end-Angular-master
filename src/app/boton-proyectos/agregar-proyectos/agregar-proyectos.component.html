@@ -3,14 +3,19 @@
 <div class="container">
 <div class="all">
 
-<div class="form-group">
-    <label for="comment">Agregar Proyectos:</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
+  <form (ngSubmit)="AgregarProyectos()" novalidate #f="ngForm">
+<div class="form-group" >
+    <label for="comment"><h2> Agregar Proyectos:</h2> </label>
+    <input  type="text"   class="form-control"  id="proyectos" name="proyectos" [(ngModel)]="proyectos" rows="3">  
+
   </div>
   <a routerLink="/boton-proyectos" > 
     <input class="btn btn-danger" type="button" value="Volver">
     </a>
-    
-    <input class="btn btn-primary" type="submit" value="Guardar Cambios">
-</div>
+ 
+    <input class="btn btn-primary" type="submit" value="Guardar Cambios" >
+
+  </form>
+  </div>
+
 </div>

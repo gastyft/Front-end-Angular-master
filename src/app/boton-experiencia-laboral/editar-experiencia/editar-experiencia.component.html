@@ -1,1 +1,25 @@
-<p>editar-experiencia works!</p>
+
+
+<app-header></app-header>
+<div class="container">
+<div class="all">
+
+  <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+<div class="form-group" >
+    <label for="comment"><h2> Editar Experiencia Laboral:</h2> </label>
+    <input  type="text"   class="form-control"  id="experiencia_laboral"  name="experiencia_laboral" [(ngModel)]="experiencia" required >  
+
+  </div>
+  <a routerLink="/boton-experiencia-laboral" > 
+    <input class="btn btn-danger" type="button" value="Volver">
+    </a>
+ 
+    <input class="btn btn-primary" type="submit" value="Guardar Cambios" >
+
+  </form>
+  </div>
+
+</div>
+
+
+

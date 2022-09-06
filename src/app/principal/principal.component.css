@@ -103,17 +103,6 @@ height:130px;
           background: aquamarine;
         
         }  
-#boton-nombre{
-  display:flex;
-  background:transparent;
-    border-radius: 70px; 
-  border-color: transparent; }
-  #boton-nombre:hover {
-    background: aquamarine; 
-  border-radius: 70px; }
-    #boton-nombre:active {
-    background: #1C6EA4; 
-    border-radius: 70px; }
 
 #lapiz-nombre{
   display:flex;
@@ -121,16 +110,23 @@ width: 50px;
 height:50px;
 border-radius: 70px; 
 
-}
+border-color: transparent; }
+#lapiz-nombre:hover {
+  background: aquamarine; 
+border-radius: 70px; }
+  #laíz-nombre:active {
+  background: #1C6EA4; 
+  border-radius: 70px; }
+
 #lapiz-foto{
   border-radius: 70px; 
   position:absolute;
-  width:50px;
+  width:50px;  
   height:50px;
+ margin-left:155px;
+  margin-top:350px;
+  background:transparent;
   
-margin-left:155px;
-margin-top:350px;
-background:transparent;
 }
 
   #lapiz-foto:hover {
@@ -278,7 +274,7 @@ from{
     -webkit-border-radius: 0px 0px 27px 27px;
     border-radius: 27px 27px 27px 27px;
     border: 4px solid #1C6EA4;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS";
     padding-top: 27px;
     color:whitesmoke;
   }
@@ -388,6 +384,8 @@ border-radius: 50px; }
   font-weight: 700;
   list-style:none ;
   padding-top: 40px;
+  margin-right:50px;
+  left:50;
 }
 #boton-graficos{  
   margin-left: 300px;
@@ -460,10 +458,14 @@ background-color: aquamarine;
 }
 .proyectos{
   margin-top:30px;
-margin-left: 250px;
+margin-left: 200px;
   font-size: 30px;
   height: 50px;
+  padding-left: 50px;
  
+}
+.proyectos-datos{
+  margin-left: -150px;
 }
 
 @keyframes fondoanimado{
@@ -654,7 +656,7 @@ bottom:0;
    
      width:100%;
      margin-top:0;
-     padding-top: px;
+     
      
        }
        h1{
@@ -1017,7 +1019,10 @@ bottom:0;
 
 
 }
-
+.type{
+  font-size:15px;
+  margin-left:-50px;
+  }
 .proyectos{
  margin-top:30px;
 margin-left: 190px;
@@ -1244,67 +1249,81 @@ bottom:0;
       height:25px;
   
  }
+ .type{
+  font-size:10px;
+  margin-left:-50px;
+
+}
 
     }
     @media only screen and (max-width:768px) /* Para pantalla al 200% en crhome */
 
     {
+      
+  .iconos-head{
+    width:12px;
+    height:12px;
     
-        .header{
-            height: 30px;
-        width:100%;
-    top:0;
-    bottom:0;
-        }
-    
-    
-        #LOGO{
-            width:100%;
-            height:30px;
-           display:flex;
-         padding-bottom:0px;
-            margin-bottom:0px;
-            
-        }
-         
-          .Fondo{
-         height:160px;
-         width:100%;
-         
-         gap:0;
-         
+      }
+          .header{
+              height: 30px;
+              width:100%;
+      top:0;
+      bottom:0;
+     
+    left:0;
+    right:0;
           }
-          .botones-head ul{
-           font-size:6px;
-           margin:0; 
-           padding-top:0px;
-          
-         width:100%;
-         
-           }
-         
-           .btn-outline-info{
-         
-         font-size: 5px;
-       
-         width:100%;
-         margin-top:0;
-         padding-top: 0px;
-         
-           }
-           h1{
-             display:flex;
-                font-size: 7px;
-            font:bold;
-            line-height:30px;
-             
-         }
-         .conteiner-fluid{
-           padding-top: 0px;
+      
+      
+          #LOGO{
+              width:100%;
+              height:30px;
+           
+           padding-bottom:0px;
+              margin-bottom:0px;
+              
+          }
+           
+            .Fondo{
+           height:160px;
+           width:100%;
+           
+           gap:0;
+           
+            }
+            .botones-head ul{
+             font-size:6px;
+             margin:0; 
+             padding-top:0px;
+            
+           width:100%;
+           
+             }
+           
+             .btn-outline-info{
+           
+           font-size: 4px;
+           line-height:3px;
+           width:100%;
            margin-top:0px;
-           top:0;
-           bottom:0;
-         }
+           padding-top: 0px;
+           
+             }
+             h1{
+               display:flex;
+                  font-size: 7px;
+              font:bold;
+              line-height:30px;
+               
+           }
+           .conteiner-fluid{
+             padding-top: 0px;
+             margin-top:0px;
+             top:0;
+             bottom:0;
+           }
+         
          .Profile{
            border-radius: 27px 27px 27px 27px;
              border: 1px solid #1C6EA4;
@@ -1407,7 +1426,10 @@ bottom:0;
             
           }
     
-    
+          .type{
+            font-size:9px;
+            margin-left:-50px;
+          }
     
       
     .progress{
@@ -1424,7 +1446,7 @@ bottom:0;
        }
        .mas-info ul {
         
-        padding-left: 150px;
+        padding-left: 100px;
        }
        #boton-graficos{
          margin-left:120px;
@@ -1432,10 +1454,10 @@ bottom:0;
            height:15px;
        }
        #boton-proyectos{
-        margin-left:500px;                       
+        margin-left:450px;                       
           width:15px;
           height:15px;
-        margin-top:-70px;
+        margin-top:-50px;
        }
        .progress-bar{
         width:100%;
@@ -1461,6 +1483,17 @@ bottom:0;
         @media only screen and (max-width:600px) /* Para pantalla al 250% en crhome */
 
     {
+     
+    
+        
+          .Fondo{
+         height:160px;
+         width:100%;
+         
+         gap:0;
+         
+          }
+          
     
      
          .Profile{
@@ -1567,12 +1600,15 @@ bottom:0;
           }
     
     
-      
+          .type{
+            font-size:7px;
+            padding-left:0px;
+          }
    
       
     .progress{
         margin-top:10px;
-      left:50px;
+      left:30px;
        font-size: 7px;
        height: 10px;
        width:100%;
@@ -1624,7 +1660,13 @@ bottom:0;
         @media only screen and (max-width:468px) /* Para pantalla al 300% en crhome */
 
         {
-        
+          .Fondo{
+            height:100px;
+            width:100%;
+            
+            gap:0;
+            
+             }
              .Profile{
                border-radius: 27px 27px 27px 27px;
                  border: 1px solid #1C6EA4;
@@ -1650,7 +1692,7 @@ bottom:0;
              }
              
              .Foto-profile ul{
-               font-size:10px;
+               font-size:12px;
                width: max-content;
                letter-spacing: 1px;
                word-spacing: 1px;
@@ -1660,18 +1702,19 @@ bottom:0;
               padding-left:10px;
               }
              #Edad{
-               font-size:4px;
+               font-size:8px;
                width:max-content;
              gap:0;
                letter-spacing: 1px;
                word-spacing: 1px;
               padding-top:0px;
              display:grid;
-             margin-left:-40px;
+             margin-left:-90px;
              }
              #lapiz-foto{
+        
                position:absolute;
-             
+               
                
              margin-top:150px;
              margin-left:50px;
@@ -1679,26 +1722,27 @@ bottom:0;
                height:10px;
                border-radius: 50px; 
               
-              display: flex;
+             
              }
              
              #lapiz-nombre{
                width: 10px;
                height:10px;
                border-radius: 10px; 
+              
              }
            
              .Intereses-estudios{
              padding-top: 2px;
              padding-left:-10px;
-               font-size: 5px;
+               font-size: 10px;
                border-radius: 27px 27px 27px 27px;
                  border: 1px solid #1C6EA4;
                  width:100%;
                  
              }
              .descript{
-                 font-size: 6px;
+                 font-size: 9px;
                margin-right: 10px;
                letter-spacing: 2px;
                word-spacing: 2px;
@@ -1728,14 +1772,15 @@ bottom:0;
                width: 10px;
                height:10px;
              
-               margin-left: -70px;
+               margin-left: -100px;
+               
              }
              
              .lapiz-estudios1{  
                 width:10px;
                 height:10px;
               margin-top:15px;
-              margin-left:-340px;
+              margin-left:-400px;
     
     
                 
@@ -1747,20 +1792,24 @@ bottom:0;
         .progress{
             margin-top:10px;
           margin-left:00px;
-           font-size: 5px;
+           font-size: 9px;
            height: 10px;
            width:80%;
            }
            .mas-info {
              padding-left:5px;
              padding-top: 20px;
-               font-size: 5px;
+               font-size: 9px;
                border: 1px solid #1C6EA4;
                
            }
+           .span{
+            padding-left:-100px;
+
+           }
            .mas-info ul {
-            
-            padding-left: 100px;
+            right:20px;
+            padding-left: 50px;
            }
            #boton-graficos{
              margin-left:-50px;
@@ -1771,19 +1820,24 @@ bottom:0;
            }
            .progress-bar{
             width:100%;
+           
           }
           .proyects{
            margin-top:20px;
          
-           font-size: 5px;
+           font-size: 9px;
          
           
          }
-       
+       .type{
+        margin-left: 5px;
+
+       }
+     
          .proyectos{
            margin-top:30px;
          margin-left: 20px;
-           font-size:5px;
+           font-size:9px;
         
           
          }
@@ -1802,7 +1856,14 @@ bottom:0;
         @media only screen and (max-width:400px) 
 
         {
-        
+          
+          .Fondo{
+            height:100px;
+            width:100%;
+            margin-top: -50px;
+            gap:0;
+            
+             }
              .Profile{
                border-radius: 27px 27px 27px 27px;
                  border: 1px solid #1C6EA4;
@@ -1810,8 +1871,8 @@ bottom:0;
              }
              .foto-perfil{
               
-             width:35px;
-             height:35px;
+             width:50px;
+             height:50px;
              margin-right:20px;
              margin-top:20px;
              
@@ -1826,7 +1887,7 @@ bottom:0;
              }
              
              .Foto-profile ul{
-               font-size:7px;
+               font-size:14px;
                width: max-content;
                letter-spacing: 1px;
                word-spacing: 1px;
@@ -1836,37 +1897,37 @@ bottom:0;
               padding-left:10px;
               }
              #Edad{
-               font-size:5px;
+               font-size:10px;
                width:max-content;
              gap:0;
                letter-spacing: 1px;
                word-spacing: 1px;
               margin-top:100px;
              display:grid;
-             margin-left:-230px;
+             margin-left:-260px;
              }
              #lapiz-foto{
                position:absolute;
              
                
-             margin-top:70px;
-             margin-left:40px;
-               width: 5px;
-               height:5px;
+             margin-top:80px;
+             margin-left:47px;
+               width: 10px;
+               height:10px;
                border-radius: 50px; 
               
               display: flex;
              }
              
              #lapiz-nombre{
-               width: 5px;
-               height:5px;
+               width: 10px;
+               height:10px;
                border-radius: 10px; 
              }
             
    
              .descript{
-                 font-size: 6px;
+                 font-size: 10px;
                margin-right: 10px;
                letter-spacing: 2px;
                word-spacing: 2px;
@@ -1874,7 +1935,9 @@ bottom:0;
             
                font-weight: 100;
              }
-          
+             .span{
+              font-size: 10px;
+             }
              .p{
             
                letter-spacing: 2px;
@@ -1887,15 +1950,15 @@ bottom:0;
              
              
              .lapiz-estudios{
-               width: 6px;
-               height:6px;
+               width: 10px;
+               height:10px;
              margin-top:10px;
                margin-left: -210px;
              }
              
              .lapiz-estudios1{  
-                width:6px;
-                height:6px;
+                width:10px;
+                height:10px;
               margin-top:15px;
               margin-left:-520px;
     
@@ -1920,7 +1983,7 @@ bottom:0;
         .progress{
             margin-top:30px;
           margin-left:-25px;
-           font-size: 5px;
+           font-size: 10px;
            height: 5px;
            width:80%;
            }
@@ -1937,9 +2000,9 @@ bottom:0;
            }
            #boton-graficos{
              margin-left:-120px;
-             margin-top:-5px;
-               width:6px;
-               height:6px;
+             margin-top:-20px;
+               width:10px;
+               height:10px;
     
            }
            
@@ -1949,22 +2012,27 @@ bottom:0;
           .proyects{
            margin-top:20px;
          
-           font-size: 6px;
+           font-size: 10px;
          
           
          }
-        
+         
+         .type{
+          font-size:10px;
+          margin-left:-25px;
+        }
          .proyectos{
            margin-top:30px;
-         margin-left: 20px;
-           font-size:6px;
+         margin-left: 80px;
+           font-size:10px;
         
           
          }
          #boton-proyectos{
-          margin-left:190px;                           
-            width:7px;
-            height:7px;
+          margin-left:100px;                           
+            width:10px;
+            height:10px;
+            margin-top:-10px;
         }
             }
 

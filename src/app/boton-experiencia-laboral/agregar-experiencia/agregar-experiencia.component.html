@@ -3,14 +3,19 @@
 <div class="container">
 <div class="all">
 
-<div class="form-group">
-    <label for="comment">Agregar Experiencia Laboral:</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
+  <form (ngSubmit)="AgregarExperiencia()" novalidate #f="ngForm">
+<div class="form-group" >
+    <label for="comment"><h2> Agregar Experiencia Laboral:</h2> </label>
+    <input  type="text"   class="form-control"  id="experiencia_laboral" name="experiencia_laboral" [(ngModel)]="experiencia_laboral" rows="3">  
+
   </div>
   <a routerLink="/boton-experiencia-laboral" > 
     <input class="btn btn-danger" type="button" value="Volver">
     </a>
-    
-    <input class="btn btn-primary" type="submit" value="Guardar Cambios">
-</div>
+ 
+    <input class="btn btn-primary" type="submit" value="Guardar Cambios" >
+
+  </form>
+  </div>
+
 </div>

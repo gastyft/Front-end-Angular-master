@@ -1,21 +1,43 @@
  import { Injectable } from '@angular/core';
 import { EmailValidator } from '@angular/forms';
 import { Router } from '@angular/router';
-
-import{HttpClientModule, HttpClient} from '@angular/common/http';
+import{ BehaviorSubject, Observable} from 'rxjs';
+import{ HttpClientModule, HttpClient} from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
- uri = 'https://localhost:4200/principal';
+ url = 'https://localhost:8080/';
 
   token: any; 
+  currentUserSubject: BehaviorSubject<any>;
+  
+  constructor(private http: HttpClient, private router: Router) {
+    console.log("El servicio de autenticación está corriendo");
+    this.currentUserSubject= new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')|| '{}'))
 
-  constructor(private http: HttpClient, private router: Router) { }
+   }
 
+
+IniciarSesion(credenciales:any):Observable<any> 
+{
+  return this.http.post(this.url, credenciales).pipe(map(data => {
+    sessionStorage.setItem('currentUser', JSON.stringify(data));
+    this.currentUserSubject.next(data);
+    return data;
+ }))
+ 
+}
+
+get UsuarioAutenticado()
+ {
+   return this.currentUserSubject.value;
+ }
+/*
   Login(email: string, password: string){
-    this.http.post(this.uri +'/authenticate', { email: email, password: password})
+    this.http.post(this.url +'/authenticate', { email: email, password: password})
     .subscribe(( resp: any) =>{
       //redirecciona al usuario a su perfil
       this.router.navigate(['profile']);
@@ -24,9 +46,9 @@ export class AuthService {
     
   })
 };
+*/
 
-
-
+/*
 isLoggedIn(): boolean {
 
 
@@ -44,5 +66,5 @@ logout(){
 //Servicio para verificar si existe la sesión
 public get logIn(): boolean {
   return (localStorage.getItem('token') !== null);
-}
+} */
 }

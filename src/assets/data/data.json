@@ -10,10 +10,9 @@
 "nacionalidad": "Argentina",
 "estadocivil": "Soltero",
 
-"laboral":
+"experiencias":
 {
-"experiencialaboral": "6 temporadas en Helados Gianelli de Mar del Plata" ,
-"Desde" : "temporada 2015 al 2022"
+"experiencia_laboral1": "6 temporadas en Helados Gianelli de Mar del Plata"
 },
 "estudios":
 {
@@ -39,7 +38,6 @@
     "proyecto1": "Portfolio web de Argentina Programa "
 
 }
-
 }
 
 

@@ -3,22 +3,22 @@
   <app-header></app-header>
 <div class="container">
 
-
+  <form (ngSubmit)="onUpdateEstudios()" class="form-Group" novalidate #f="ngForm" >
     <div class="form-group">
       <label for="form-group">Primaria: </label>
-      <input type="text" class="form-control" id="primaria"  placeholder="Complete sus estudios" [(ngModel)]="miPortfolio.estudios.primaria">
+      <input type="text" class="form-control"  placeholder="Complete sus estudios"  id="primaria" name="primaria" [(ngModel)]="Estudios.primaria" required>
     </div>
     <div class="form-group">
       <label for="form-group">Secundaria: </label>
-      <input  class="form-control" id="secundaria"  placeholder="Complete sus estudios" [(ngModel)]="miPortfolio.estudios.secundaria">
+      <input  class="form-control"  placeholder="Complete sus estudios"id="secundaria" name="secundaria" [(ngModel)]="Estudios.secundaria" required>
     </div>
     <div class="form-group">
       <label for="form-group">Universitario/terciario: </label>
-      <input  class="form-control" id="uni"  placeholder="Complete sus estudios"[(ngModel)]="miPortfolio.estudios.uni">
+      <input  class="form-control" id="universidad"  placeholder="Complete sus estudios" name="universidad" [(ngModel)]="Estudios.universidad" required>
     </div>
     <div class="form-group">
       <label for="form-group">Actual: </label>
-      <input  type="text" class="form-control" id="secundaria" placeholder="Complete sus estudios" [(ngModel)]="miPortfolio.estudios.actual" >
+      <input  type="text" class="form-control" id="actual" placeholder="Complete sus estudios" name="actual" [(ngModel)]="Estudios.actual" required >
       
     </div>
     <a routerLink="/principal" > 
@@ -28,5 +28,5 @@
     <input class="btn btn-primary" type="submit" value="Guardar Cambios">
 
     
-   
+  </form>
   </div>

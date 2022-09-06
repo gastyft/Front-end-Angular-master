@@ -1,7 +1,11 @@
-
-
+.container-fluid{
+  width:100%;
+}
+html{
+width:100%;
+}
 *{
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS",cursive;
 
 letter-spacing: 2px;
 word-spacing: 2px;
@@ -14,28 +18,29 @@ font-weight: 700;
     justify-content: center;
     align-content: center;
   }
-  .header{
-   
+  header{
+   display:flex;
     background-image: linear-gradient(135deg,#00b7d4,#505488, #2f3f80,#161569, #5a4894);
     background-size:200%;
-  animation: fondoanimado 15s infinite ;
+  animation: fondoanimado 12s infinite ;
 position: fixed;
 z-index:1;
 top: 0;
 width:100%;
 left:0;
+right:0;
 font-size: 20px;
 height:130px;
   }
 .conteiner-logo{
- display:flex;
- justify-content:space-between;
- align-content: center;
+
+width: 100%;
+ 
 }
 
 
 #LOGO{
-width: 212.55px ;
+width: 100%;
 height:130px;
 padding-bottom:-10px;
 padding-top: 0;
@@ -50,7 +55,7 @@ justify-content:flex-end;
 h1{
  display:flex;
     font-size: 25px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS";
     letter-spacing: 2px;
     word-spacing: 2px;
     color: whitesmoke;
@@ -103,7 +108,10 @@ line-height: 130px;
 @media only screen and (max-width:1920px) /* Para pantalla al 90% en crhome */
 
 {
-
+  .container{
+    width:100%;
+  }
+  
   .header{
       height: 100px;
   width:100%;
@@ -157,7 +165,10 @@ bottom:0;
   }
 @media only screen and (max-width: 1366px)       /* Para pantalla al 100% crhome*/
 {
-
+  .container{
+    width:100%;
+  }
+  
   .header{
       height: 60px;
   width:100%;
@@ -219,6 +230,10 @@ bottom:0;
    @media only screen and (max-width:992px) /* Para pantalla al 150% crhome */
 
 {
+  .container{
+  width:100%;
+}
+
 
   .header{
       height: 50px;
@@ -277,6 +292,7 @@ bottom:0;
   @media only screen and (max-width:768px) /* Para pantalla al 200% en crhome */
 
   {
+
   .iconos-head{
 width:12px;
 height:12px;
@@ -284,16 +300,19 @@ height:12px;
   }
       .header{
           height: 30px;
-      width:100%;
+          width:100%;
   top:0;
   bottom:0;
+ 
+left:0;
+right:0;
       }
   
   
       #LOGO{
           width:100%;
           height:30px;
-         display:flex;
+       
        padding-bottom:0px;
           margin-bottom:0px;
           
@@ -343,15 +362,22 @@ height:12px;
       @media only screen and (max-width:600px) /* Para pantalla al 250% en crhome */
 
   {
+    .container{
+      width:100%;
+    }
+    
   
       .header{
           height: 30px;
-      width:100%;
-  top:0;
-  bottom:0;
+          max-width:100%;
+        
+          display:hidden;
+
       }
   
-  
+  .conteiner-logo{
+    max-width: 100%;
+  }
       #LOGO{
           width:100%;
           height:30px;
@@ -412,10 +438,15 @@ height:12px;
       @media only screen and (max-width:412px) /* Para pantalla al 300% en crhome */
 
       {
-      
+        .container{
+          width:100%;
+        }
+        
           .header{
               height: 25px;
-          width:100%;
+              width:100%;
+              left:0;
+              right:0;
       top:0;
       bottom:0;
           }
@@ -474,10 +505,15 @@ height:12px;
       @media only screen and (max-width:368px) /* Para pantalla al 500% en crhome */
 
       {
-      
+        .container{
+          width:100%;
+        }
+        
           .header{
               height: 25px;
-          width:100%;
+              width:100%;
+              left:0;
+              right:0;
       top:0;
       bottom:0;
           }
@@ -540,6 +576,7 @@ height:12px;
 
           {
           
+            
               .header{
                   height: 25px;
               width:100%;
@@ -590,12 +627,7 @@ height:12px;
                   line-height:25px;
                    
                }
-               .conteiner-fluid{
-                 padding-top: 0px;
-                 margin-top:0px;
-                 top:0;
-                 bottom:0;
-               }
+             
               .iconos-head{
                 line-height:25px;
                 width: 5px;

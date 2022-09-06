@@ -12,11 +12,18 @@ import { AgregarExperienciaComponent} from './boton-experiencia-laboral/agregar-
 import { BotonProyectosComponent } from './boton-proyectos/boton-proyectos.component';
 import { EditarProyectosComponent } from './boton-proyectos/editar-proyectos/editar-proyectos.component';
 import {AgregarProyectosComponent } from './boton-proyectos/agregar-proyectos/agregar-proyectos.component';
-//import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './auth.guard';
+import { HttpClient, HttpClientModule } from '@angular/common/http' 
+
 const routes : Routes = [
+  {path: '', 
+  redirectTo: 'principal', pathMatch:'full'},
+ /* { path: 'principal', component: PrincipalComponent, 
+ canActivate: [AuthGuard] // visit ´principal only if authenticated 
+}, */
   {path: 'agregar-proyectos',
 component: AgregarProyectosComponent},
-  {path: 'editar-proyectos',
+  {path: 'editar-proyectos/:id_proyectos',
 component: EditarProyectosComponent},
 {path:'boton-proyectos',
 component: BotonProyectosComponent},
@@ -26,24 +33,22 @@ component: BotonProyectosComponent},
   component:BotonExperienciaLaboralComponent },
   {path:'agregar-experiencia',
   component:AgregarExperienciaComponent },
-  {path:'boton-estudios',
+  {path:'boton-estudios/:id_estudios',
   component:BotonEstudiosComponent },
-  {path:'editar-experiencia',
+  {path:'editar-experiencia/:id_exp',
   component: EditarExperienciaComponent},
-  {path:'boton-profile',
+  {path:'boton-profile/:id',
   component:BotonProfileComponent},
   {path: 'login1', 
   component: Login1Component},
-  { path: '**',  
-  component: Error404Component  },
+ 
   {path: 'Header', 
   component: HeaderComponent},
-  {path: '', 
-  redirectTo: "/principal", pathMatch:'full'},
   
- /* { path: 'principal', component: PrincipalComponent
- canActivate: [AuthGuard], // visit ´principal only if authenticated 
-}, */
+  
+ 
+{ path: '**',  
+component: Error404Component  },
 ];
 
 @NgModule({

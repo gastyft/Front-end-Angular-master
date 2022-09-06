@@ -1,33 +1,46 @@
 import { Component, OnInit } from '@angular/core';
- import { EquipoService} from '../equipo.service';
+import { ExperienciaService } from '../experiencia.service';
+import {  experiencia } from '../model/experiencia';
 @Component({
   selector: 'app-boton-experiencia-laboral',
   templateUrl: './boton-experiencia-laboral.component.html',
   styleUrls: ['./boton-experiencia-laboral.component.css']
 })
 export class BotonExperienciaLaboralComponent implements OnInit {
-  miPortfolio: any;
+
+  miPorfolio2: any;
+ data2: any;
  
-  
+ experiencia: experiencia[]= [] ;
+
     constructor( 
-      private datosPorfolio: EquipoService
+      public datosExperiencia: ExperienciaService,
+
     ) { }
   
     ngOnInit() {
-      this.datosPorfolio.ObtenerDatos().subscribe( (data: any) =>{
-        console.log(data)
-        this.miPortfolio=data;
-    })
-   
+      this.cargarDatos();
+    
+    }
+    cargarDatos(){
+      this.datosExperiencia.lista().subscribe( data2 =>{
+        console.log(data2)
+        this.miPorfolio2= data2;
+        
+      }) } 
+
+      
+  deleteExperiencia(id_exp?: number){
+    if(id_exp != undefined){
+      this.datosExperiencia.delete(id_exp).subscribe(
+                data => {
+     this.cargarDatos();
+      
+          
+        })
+        alert("Se ha eliminado experiencia");
+    
+      location.reload();
+    }
   }
-contador(cont:any, i:any){
-
-  i=0;
-  cont=0;
-  for(i=0; i<10; i++){
-  cont=i+1;
-}
-  return cont;
-}
-
 }

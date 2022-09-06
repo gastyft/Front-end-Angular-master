@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 //servicios
 import { EquipoService } from './equipo.service';
 import { AppRoutingModule } from './app-routing.module';
+import { InterceptorService } from './interceptor.service';
 //componente principal
 import { AppComponent } from './app.component';
 //componentes secundarios
@@ -12,10 +13,10 @@ import { HeaderComponent } from './header/header.component';
 import { Error404Component } from './error404/error404.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS, } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BotonEstudiosComponent } from './boton-estudios/boton-estudios.component';
-import { DashbordComponent } from './dashbord/dashbord.component';
+
 import { BotonProfileComponent } from './boton-profile/boton-profile.component';
 
 import { BotonExperienciaLaboralComponent } from './boton-experiencia-laboral/boton-experiencia-laboral.component';
@@ -25,6 +26,8 @@ import { BotonProyectosComponent } from './boton-proyectos/boton-proyectos.compo
 import { AgregarProyectosComponent } from './boton-proyectos/agregar-proyectos/agregar-proyectos.component';
 import { EditarProyectosComponent } from './boton-proyectos/editar-proyectos/editar-proyectos.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,15 +36,14 @@ import { EditarProyectosComponent } from './boton-proyectos/editar-proyectos/edi
     HeaderComponent,
     Error404Component,
     BotonEstudiosComponent,
-    DashbordComponent,
     BotonProfileComponent,
- 
     BotonExperienciaLaboralComponent,
     AgregarExperienciaComponent,
     EditarExperienciaComponent,
     BotonProyectosComponent,
     AgregarProyectosComponent,
     EditarProyectosComponent,
+   
     
   ],
   imports: [
@@ -54,7 +56,7 @@ import { EditarProyectosComponent } from './boton-proyectos/editar-proyectos/edi
 
   ],
   providers: [
-    EquipoService,
+    EquipoService,{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true},
   ],
   bootstrap: [AppComponent]
 })

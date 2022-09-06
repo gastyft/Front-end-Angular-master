@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { EquipoService} from  '../.././equipo.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ExperienciaService } from 'src/app/experiencia.service';
+import {  experiencia } from '../../model/experiencia';
 @Component({
   selector: 'app-editar-experiencia',
   templateUrl: './editar-experiencia.component.html',
@@ -7,19 +9,39 @@ import { EquipoService} from  '../.././equipo.service';
 })
 export class EditarExperienciaComponent implements OnInit {
 
-  miPortfolio: any;
-  
+experiencia: experiencia = null; 
+
+miPorfolio2: any;
+data2: any;
+
   constructor( 
-    private datosPorfolio: EquipoService
+   private datosExperiencia: ExperienciaService,
+   private activatedRoute: ActivatedRoute,
+    private router: Router
   ) { }  
 
   ngOnInit() {
-    this.datosPorfolio.ObtenerDatos().subscribe( (data: any) =>{
-      console.log(data)
-      this.miPortfolio=data;
-  })
+    {
+      this.datosExperiencia.lista().subscribe( data2 =>{
+        console.log(data2)
+        this.miPorfolio2= data2;
+        
+      }) } 
+
+
+}
+
+   onUpdate():void{
+    const id_exp = this.activatedRoute.snapshot.params['id_exp'];
+    this.datosExperiencia.update(id_exp, this.experiencia).subscribe(
+      data =>{
+       console.log(data);
+       alert("Experiencia actualizada");
+       this.router.navigate(['']);
+        
+      }
+    )
+   }
+    
  
-}
-
-
-}
+  }

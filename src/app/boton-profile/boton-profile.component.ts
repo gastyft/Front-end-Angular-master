@@ -1,6 +1,10 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { EquipoService} from '../equipo.service';
-import {FormsModule } from '@angular/forms';
+
+import {FormControl, FormGroup, FormsModule } from '@angular/forms';
+import { PersonaService } from '../persona.service';
+import { persona } from '../model/persona';
+import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-boton-profile',
   templateUrl: './boton-profile.component.html',
@@ -9,19 +13,46 @@ import {FormsModule } from '@angular/forms';
 export class BotonProfileComponent implements OnInit {
 
 
-  miPortfolio: any;
-  
-
-  
+  miPorfolio2: any;
+  data3: any;
+ 
+  persona: persona;
     constructor( 
-      private datosPorfolio: EquipoService
+      private router: Router,
+      private datosPorfolio: PersonaService,
+      private activatedRoute: ActivatedRoute
     ) { }
   
     ngOnInit() {
-      this.datosPorfolio.ObtenerDatos().subscribe( (data: any) =>{
-        console.log(data)
-        this.miPortfolio=data;
-      })
-      
+    /*  const id = this.activatedRoute.snapshot.params['id'];
+      this.datosPorfolio.getPersonaByID(id).subscribe(
+        data =>{
+          this.persona= data;
+         console.log(data);
+          
+        }) */
+
+      {
+        this.datosPorfolio.getPersona().subscribe( data3 => {
+          console.log(data3)
+          this.miPorfolio2= data3;
+          
+        }) } 
+
+      }
+
   
-    }}
+  onUpdatePersona():void{
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.datosPorfolio.updatePersona(id, this.persona).subscribe(
+      data =>{
+        
+       console.log(data);
+       alert("Datos de la persona actualizada");
+       this.router.navigate(['']);
+        
+      }
+    )
+   }
+}
+  

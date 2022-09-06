@@ -1,22 +1,33 @@
-
+<app-header></app-header>
 <div class="container">
-    <div class="all"     >
+<div class="all"     >
+<h1>Proyectos</h1>
+
+<div class="col lg 1"> </div>
+<div class="col-lg-11">
+  <table class="table">
+    <tbody>
+         <tr  *ngFor="let datosProyectos of miPorfolio3" > 
+               <td class="col-7">   {{datosProyectos.proyecto}}  </td>  
+
+               <td>   <input class="btn btn-dark" type="button"  value="editar" routerLink="/editar-proyectos/{{datosProyectos.id_proyectos}}">   
+                <input class="btn btn-danger" type="button"  value="Borrar" (click)="deleteProyecto(datosProyectos.id_proyectos)"  >  </td>
+
+ 
+         </tr>
+
+     
+      
+        
+     
+      </tbody>
+
+    </table>
     
+      <input class="btn btn-primary" type="edit" value="Agregar proyectos" routerLink="/agregar-proyectos"> 
     
-             <tr >
-                   <td  > 
-                    {{miPortfolio.proyectos.proyecto1}}    </td>  
-             </tr>
-    
-    
-            <a routerLink="/principal" >
-            <input class="btn btn-danger" type="button" value="Volver">
-            </a>
-            
-            <input class="btn btn-primary" type="submit" value="Guardar Cambios">
-            <input class="btn btn-secondary" type="edit" value="Agregar proyectos" routerLink="/agregar-proyectos">
-            <input class="btn btn-secondary" type="edit" value="editar (armar tabla crud e insertarle a cada valor el borrar y el editar)" routerLink="/editar-proyectos">
-    </div>
-    
-    </div>
-    
+    <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal">
+</div>
+</div>
+</div>
+

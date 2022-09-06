@@ -1,5 +1,5 @@
 
-  <app-header> </app-header>
+  <app-header>  </app-header>
 
     <div class="container-fluid">
       <div class="Fondo">
@@ -11,8 +11,7 @@
     <div class="Profile">
   
       
-      <img Id="lapiz-foto"  type="button"  src="assets\icons8-lápiz-64.png">     
-      
+     <input (change)="capturarFile($event)" Id="lapiz-foto"  type="file"  >      
 
       
 
@@ -23,20 +22,21 @@
       <div class="Foto-profile">
         
          
-        <img src="assets\Foto perfil.jpg" alt="profilee pcture" class="foto-perfil">
+        <img type="image" src="assets\Foto perfil.jpg" alt="profilee pcture" class="foto-perfil">
         
         
         
           <ul   style="list-style-type:none;">
             
-          <span> {{miPorfolio.nombres.nombre}}</span>
-            <li> {{miPorfolio.nombres.apellido}} </li>
+          <span > {{miPorfolio.nombre}}</span>
+            <li> {{miPorfolio.apellido}} 
+              
+            </li>
             
-            <button id="boton-nombre"  
-            routerLink="/boton-profile">
-            <img  Id="lapiz-nombre" src="assets\icons8-lápiz-64.png" >
             
-            </button>
+            <input type="image"  Id="lapiz-nombre" src="assets\icons8-lápiz-64.png" routerLink="/boton-profile/{{miPorfolio.id}}" >
+            
+          
           
             
          </ul>
@@ -44,7 +44,7 @@
          <ul Id="Edad"> 
            
           <li>
-          Edad:{{miPorfolio.edad}} años 
+          Edad: {{miPorfolio.edad}} años 
         </li>
            
            <li>
@@ -54,7 +54,7 @@
              Nacionalidad: {{miPorfolio.nacionalidad}}
            </li>
            <li>  
-            Estado civil: {{miPorfolio.estadocivil}}
+            Estado civil: {{miPorfolio.estado_civil}}
            </li>
            <li> </li>
           </ul>
@@ -74,18 +74,18 @@
      
     </div>
       
-      <div class="Intereses-estudios">
+      <div class="Intereses-estudios" >
         <p> 
           <span class="descript">Mi experiencia laboral:</span>
          
-          <ul class="estudioss" >
-           
-           <li>
-             {{miPorfolio.laboral.experiencialaboral}} <br> 
-             {{miPorfolio.laboral.desde}}
-           </li>
+          <ul class="estudioss"    >
+           <tr *ngFor="let datosExperiencia of miPorfolio2 " >
+            <td>  <li>
+           {{datosExperiencia.experiencia_laboral}}  <br> 
+            
+           </li>  </td>
           
-           
+          </tr>
           </ul>
           
           
@@ -94,34 +94,34 @@
      
        
          
-         <ul class="estudioss">
+         <ul class="estudioss" >
           
            <li> 
-             
-             Primaria: {{miPorfolio.estudios.primaria}} <br>
+            
+             Primaria: {{miPorfolio1.primaria}} <br>
             
            <br> 
            </li>
        <li>
-        Secundaria: {{miPorfolio.estudios.secundaria}}
+        Secundaria: {{miPorfolio1.secundaria}}
        </li>
              
            <li>
-              {{miPorfolio.estudios.uni}} <br>
-            {{miPorfolio.estudios.desdeuni}} 
+              {{miPorfolio1.universidad}} <br>
+            
            </li> 
            
            <li>
-             {{miPorfolio.estudios.actual}}</li>
+             {{miPorfolio1.actual}}</li>
          </ul>
          
-         <span >
-           <img  class="lapiz-estudios" type="button" src="assets\icons8-lápiz-64.png" routerLink="/boton-estudios">  
-          </span>
+     
+           <input class="lapiz-estudios" type="image" src="assets\icons8-lápiz-64.png" routerLink="/boton-estudios/{{miPorfolio1.id_estudios}}">  
         
+      
         <div class="Boton-editar-estudios">
           
-            <img  class="lapiz-estudios1" type="button" src="assets\icons8-lápiz-64.png" routerLink="/boton-experiencia-laboral">
+            <input class="lapiz-estudios1" type="image" src="assets\icons8-lápiz-64.png" routerLink="/boton-experiencia-laboral">
           
         </div>
   
@@ -160,7 +160,7 @@
         
          <span >
         
-           <img  Id="boton-graficos"  type="button" src="assets\icons8-lápiz-64.png">
+           <input  Id="boton-graficos"  type="image" src="assets\icons8-lápiz-64.png">
    
         </span>
       
@@ -171,13 +171,18 @@
         
 
 
-     <div class="proyectos"> 
-     
+     <div class="proyectos"  > 
        
-        {{miPorfolio.proyectos.proyecto1}}
+      <span> <input  Id="boton-proyectos"  type="image" src="assets\icons8-lápiz-64.png" routerLink="/boton-proyectos"> </span>
+       <ul   > 
+        <tr *ngFor="let datosProyectos of miPorfolio3 "><br><br>
+        <li class="proyectos-datos" > {{datosProyectos.proyecto}} 
+      </li>  
+       </tr>
+      </ul>
       </div>
       
-      <span> <img  Id="boton-proyectos"  type="button" src="assets\icons8-lápiz-64.png" routerLink="/boton-proyectos"> </span>
+    
       
         </div>
         

@@ -6,9 +6,10 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": false, 
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,  //Valor cambiado a false para imagen 64
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
