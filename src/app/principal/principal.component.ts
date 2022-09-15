@@ -1,34 +1,47 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { EquipoService } from '../equipo.service';
-import{ PersonaService} from '../persona.service';
-import { EstudiosService } from'../estudios.service';
+import { PersonaService } from '../persona.service';
+import { EstudiosService } from '../estudios.service';
 import { ExperienciaService } from '../experiencia.service';
 import { ProyectosService } from '../proyectos.service';
-import { experiencia } from '../model/experiencia';
+import { ImagenService } from '../imagen.service';
+import { HardSkillsService } from '../hard-skills.service';
+import { TokenService } from '../token.service';
+
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
-  styleUrls: ['./principal.component.css']
+  styleUrls: ['./principal.component.css'],
 })
 export class PrincipalComponent implements OnInit {
-  public archivos: any =[] 
-  public previsualizacion: String | undefined;
-event: any;
-miPorfolio: any;
-miPorfolio1: any;
-miPorfolio2: any;
-miPorfolio3: any;
-data: any;
-data1: any; 
-data2:  any;
-data3: any;
+  public archivos: any = [];
+  // public previsualizacion: String | undefined;
+  event: any;
+  miPorfolio: any;
+  miPorfolio1: any;
+  miPorfolio2: any;
+  miPorfolio3: any;
+  data: any;
+  data1: any;
+  data2: any;
+  data3: any;
+  data4: any;
+  imagen: any;
+  hard: any;
+  data5: any;
+  isLogged: boolean = false;
 
-
-  constructor(  private sanitizer: DomSanitizer, private datosPersona: PersonaService, private datosEstudios: EstudiosService, 
-    public datosExperiencia: ExperienciaService, public datosProyectos: ProyectosService    ) {
-   }
-
+  constructor(
+    private tokenService: TokenService,
+    private sanitizer: DomSanitizer,
+    private datosPersona: PersonaService,
+    private datosEstudios: EstudiosService,
+    public datosExperiencia: ExperienciaService,
+    public datosProyectos: ProyectosService,
+    private imagenService: ImagenService,
+    private datosHardSkills: HardSkillsService
+  ) {}
+  /*
    capturarFile(event: any) : any
    {
     const archivoCapturado = event.target.files[0]
@@ -67,8 +80,8 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
   }
 })
 
-/*
 
+/*
  subirArchivo(): any{ 
   try{
     const formularioDeDatos = new FormData();
@@ -83,41 +96,56 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
     catch(e) {
       console.log('ERROR', e);
 
-    }
+    }}
   }
 }
 */
 
-
-
-  ngOnInit(): void {  {
-    this.datosPersona.getPersona().subscribe( data =>{
-      console.log(data)
-      this.miPorfolio=data;
-      
-    }) } 
+  ngOnInit(): void {
     {
-      this.datosEstudios.getEstudios().subscribe( data1 =>{
-        console.log(data1)
-        this.miPorfolio1=data1;
-        
-      }) } 
-      {
-        this.datosExperiencia.lista().subscribe( data2 =>{
-          console.log(data2)
-          this.miPorfolio2= data2;
-          
-        }) } 
-        {
-          this.datosProyectos.lista().subscribe( data3 =>{
-            console.log(data3)
-            this.miPorfolio3= data3;
-            
-          }) } 
- 
+    
+      this.datosPersona.getPersona().subscribe((data) => {
+        console.log(data);
+        this.miPorfolio = data;
+      });
+    }
+    {
+      this.datosEstudios.getEstudios().subscribe((data1) => {
+        console.log(data1);
+        this.miPorfolio1 = data1;
+      });
+    }
+    {
+      this.datosExperiencia.lista().subscribe((data2) => {
+        console.log(data2);
+        this.miPorfolio2 = data2;
+      });
+    }
+    {
+      this.datosProyectos.lista().subscribe((data3) => {
+        console.log(data3);
+        this.miPorfolio3 = data3;
+      });
+    }
+    {
+      this.datosHardSkills.getHardSkills().subscribe((data5) => {
+        console.log(data5);
+        this.hard = data5;
+      });
+    }
+
+  /*  {
+      this.imagenService.list().subscribe((data4) => {
+        this.imagen = data4;
+      });  
+    }*/
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
+  // let imagenp:Imagen =  this.imagen[this.imagen.length-1];
 }
-
-
-

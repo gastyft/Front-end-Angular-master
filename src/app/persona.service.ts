@@ -17,8 +17,8 @@ getPersona():Observable<persona>{
   }
 
   
- updatePersona(id:number, persona:persona){
-    return this.http.put<persona>(this.url+ `editar/${id}?`+ persona, persona);
+ updatePersona(id:number, Persona:persona){
+    return this.http.put<persona>(this.url+ `editar/${id}?nombre=${Persona.nombre}&apellido=${Persona.apellido}&edad=${Persona.edad}&ciudad=${Persona.ciudad}&nacionalidad=${Persona.nacionalidad}&estado_civil=${Persona.estado_civil}`, persona);
     
   }
 

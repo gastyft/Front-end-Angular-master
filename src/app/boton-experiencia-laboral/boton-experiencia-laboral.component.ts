@@ -31,7 +31,7 @@ export class BotonExperienciaLaboralComponent implements OnInit {
 
       
   deleteExperiencia(id_exp?: number){
-    if(id_exp != undefined){
+    if(id_exp != null){
       this.datosExperiencia.delete(id_exp).subscribe(
                 data => {
      this.cargarDatos();

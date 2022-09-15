@@ -1,23 +1,20 @@
 export class persona {
    id?: number;
-    nombre: String;
-    apellido: String;
-    edad: String;
-    ciudad: String;
-    nacionalidad: String;
-    estado_civil: String;
-    url_foto: String;
-    url_fondo: String;
+    nombre: string;
+    apellido:string;
+    edad: string;
+    ciudad: string;
+    nacionalidad: string;
+    estado_civil: string;
+
   
     constructor(
-        nombre: String,
-        apellido: String,
-        edad: String,
-        ciudad: String,
-        nacionalidad: String,
-        url_foto: String,
-        url_fondo: String,
-        estado_civil: String) 
+        nombre: string,
+        apellido: string,
+        edad: string,
+        ciudad: string,
+        nacionalidad: string,
+        estado_civil: string) 
         {
             this.nombre=  nombre;
             this.apellido= apellido;
@@ -25,8 +22,7 @@ export class persona {
             this.ciudad = ciudad;
             this.nacionalidad= nacionalidad;
             this.estado_civil= estado_civil;
-            this.url_fondo= url_fondo;
-            this.url_foto= url_foto;
+         
         }
 
 

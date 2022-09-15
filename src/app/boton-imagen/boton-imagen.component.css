@@ -1,15 +1,12 @@
-
 .all{
-font: black;
     margin-top:150px;
-    gap:10;
 }
-
-
-.btn-secondary{
+.btn-outline-success{
     margin:10px;
 
 }
+
+
 .btn-danger{
     margin:10px;
 }

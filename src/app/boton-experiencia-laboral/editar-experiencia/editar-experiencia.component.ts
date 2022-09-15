@@ -36,11 +36,18 @@ data2: any;
     this.datosExperiencia.update(id_exp, this.experiencia).subscribe(
       data =>{
        console.log(data);
-       alert("Experiencia actualizada");
-       this.router.navigate(['']);
+     
         
+      });
+      if(this.experiencia != null){
+        alert("Experiencia agregada"); 
+            
+        this.router.navigate(['boton-experiencia-laboral']);
       }
-    )
+      else{
+        alert("fallo al guardar proyecto");
+        this.router.navigate(['boton-experiencia-laboral']);
+      }
    }
     
  

@@ -1,0 +1,65 @@
+<app-header></app-header>
+<div class="container">
+    <form   (ngSubmit)="onUpdateHardSkills()"  class="was-validated">
+        
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Frontend</label>
+        <input type="number" min="0" max="100" class="form-control" id="frontend" placeholder="Ingrese Frontend" name="frontend"  [(ngModel)]="hard.frontend" required>
+        <div class="invalid-feedback">Complete con numero de porcentaje.</div>
+        <div class="valid-feedback">Valido.</div>
+    
+      </div>
+      
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Backend</label>
+        <input type="number" min="0" max="100" class="form-control" id="backend" placeholder="Ingrese backend" name="backend"  [(ngModel)]="hard.backend" required>
+        <div class="invalid-feedback">Complete con numero de porcentaje.</div>
+        <div class="valid-feedback">Valido.</div>
+    
+      </div>
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Base de datos</label>
+        <input type="number" min="0" max="100" class="form-control" id="base_datos" placeholder="Ingrese base de datos" name="base_datos"  [(ngModel)]="hard.base_datos" required>
+        <div class="invalid-feedback">Complete con numero de porcentaje.</div>
+        <div class="valid-feedback">Valido.</div>
+    
+      </div>
+      
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Inglés</label>
+        <input type="number" min="0" max="100" class="form-control" id="ingles" placeholder="Ingrese ingles" name="ingles"  [(ngModel)]="hard.ingles" required>
+        <div class="invalid-feedback">Complete con numero de porcentaje.</div>
+        <div class="valid-feedback">Valido.</div>
+    
+      </div>
+      
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Italiano</label>
+        <input type="number" min="0" max="100" class="form-control" id="italiano" placeholder="Ingrese italiano" name="italiano"  [(ngModel)]="hard.italiano" required>
+        <div class="invalid-feedback">Complete con numero de porcentaje.</div>
+        <div class="valid-feedback">Valido.</div>
+    
+      </div>
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Trabajo en equipo</label>
+        <input type="number" min="0" max="100" class="form-control" id="trabajo_equipo" placeholder="Ingrese Trabajo en equipo" name="trabajo_equipo"  [(ngModel)]="hard.trabajo_equipo" required>
+        <div class="invalid-feedback">Complete con numero de porcentaje.</div>
+        <div class="valid-feedback">Valido.</div>
+    
+      </div>
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Comunicación</label>
+        <input type="number" min="0" class="form-control" id="Comunicacion" placeholder="Ingrese Comunicacion" name="comunicacion"  [(ngModel)]="hard.comunicacion" required>
+        <div class="invalid-feedback">Complete con numero de porcentaje.</div>
+        <div class="valid-feedback">Valido.</div>
+    
+      </div>
+
+      <input class="btn btn-primary" type="submit"   value="Guardar Cambios" >
+      <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal" >
+    
+    </form>
+</div>

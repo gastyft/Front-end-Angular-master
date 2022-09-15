@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 //servicios
-import { EquipoService } from './equipo.service';
 import { AppRoutingModule } from './app-routing.module';
-import { InterceptorService } from './interceptor.service';
+
 //componente principal
 import { AppComponent } from './app.component';
 //componentes secundarios
@@ -13,7 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { Error404Component } from './error404/error404.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
-import {HttpClientModule, HTTP_INTERCEPTORS, } from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BotonEstudiosComponent } from './boton-estudios/boton-estudios.component';
 
@@ -26,7 +25,12 @@ import { BotonProyectosComponent } from './boton-proyectos/boton-proyectos.compo
 import { AgregarProyectosComponent } from './boton-proyectos/agregar-proyectos/agregar-proyectos.component';
 import { EditarProyectosComponent } from './boton-proyectos/editar-proyectos/editar-proyectos.component';
 
-
+import { NgxSpinnerModule } from 'ngx-spinner';
+import{ BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BotonImagenComponent } from './boton-imagen/boton-imagen.component';
+import {RouterModule} from '@angular/router';
+import { BotonHardSkillsComponent } from './boton-hard-skills/boton-hard-skills.component';
+import{  InterceptorService } from './interceptor.service';
 
 @NgModule({
   declarations: [
@@ -43,22 +47,34 @@ import { EditarProyectosComponent } from './boton-proyectos/editar-proyectos/edi
     BotonProyectosComponent,
     AgregarProyectosComponent,
     EditarProyectosComponent,
+    BotonImagenComponent,
+    BotonHardSkillsComponent,
+ 
    
-    
-  ],
+
+  ], 
+  
   imports: [
-    BrowserModule,
+    RouterModule,
     AppRoutingModule,
   FormsModule,
   ReactiveFormsModule,
   HttpClientModule,
   FontAwesomeModule,
+  NgxSpinnerModule,
+  BrowserAnimationsModule,
 
+  BrowserModule,
   ],
   providers: [
-    EquipoService,{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true},
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: InterceptorService,
+    multi: true
+  },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })
 export class AppModule { 
   

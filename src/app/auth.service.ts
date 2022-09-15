@@ -1,41 +1,35 @@
- import { Injectable } from '@angular/core';
-import { EmailValidator } from '@angular/forms';
+import { Injectable } from '@angular/core';
+
 import { Router } from '@angular/router';
-import{ BehaviorSubject, Observable} from 'rxjs';
-import{ HttpClientModule, HttpClient} from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { loginUsuario } from './model/loginusuario';
+import { nuevousuario } from './model/nuevousuario';
+import { jwtDto } from './model/jwtdto';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
- url = 'https://localhost:8080/';
+  url = "http://localhost:8080/auth/";
 
-  token: any; 
-  currentUserSubject: BehaviorSubject<any>;
-  
-  constructor(private http: HttpClient, private router: Router) {
-    console.log("El servicio de autenticación está corriendo");
-    this.currentUserSubject= new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')|| '{}'))
+  constructor(private http: HttpClient, private router: Router) {}
 
-   }
+  public nuevo(nuevoUsuario: nuevousuario): Observable<any> {
+    return this.http.post<any>(this.url + 'nuevo', nuevousuario);
+  }
 
-
-IniciarSesion(credenciales:any):Observable<any> 
-{
-  return this.http.post(this.url, credenciales).pipe(map(data => {
-    sessionStorage.setItem('currentUser', JSON.stringify(data));
-    this.currentUserSubject.next(data);
-    return data;
- }))
- 
+  public login(loginusuario: loginUsuario): Observable<jwtDto> {
+    return this.http.post<jwtDto>(this.url+ `login`, loginusuario);
+  }
 }
 
+/*
 get UsuarioAutenticado()
  {
    return this.currentUserSubject.value;
  }
-/*
+
   Login(email: string, password: string){
     this.http.post(this.url +'/authenticate', { email: email, password: password})
     .subscribe(( resp: any) =>{
@@ -67,4 +61,3 @@ logout(){
 public get logIn(): boolean {
   return (localStorage.getItem('token') !== null);
 } */
-}

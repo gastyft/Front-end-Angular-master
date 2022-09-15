@@ -3,23 +3,29 @@ import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } fro
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
+import { TokenService } from './token.service';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuard /* implements CanActivate  */ {
+realRol: string;
 
-  constructor(   private authService: AuthService, private rutas: Router) {}
+  constructor(   private tokenService:TokenService, private router: Router) {}
 
+  canActivate(   route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean  {
+   const expectedRol = route.data['expectedRol'];
+   const roles = this.tokenService.getAuthorities();
+   this.realRol= 'user';
+   roles.forEach(rol => {
+    if(rol === 'ROLE_ADMIN'){
+      this.realRol ='admin';
+    }
+   });
+   if(!this.tokenService.getToken() || expectedRol.indexOf(this.realRol) === -1){
 
- /*   canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean> | UrlTree | Promise<boolean> | boolean {
-      let currentUser= this.authService.UsuarioAutenticado;
-      if(currentUser && currentUser.accessToken){
-    return true;
-      }
-     else
-      this.rutas.navigate(['/login1']);
-      return false; 
-  } */
+   this.router.navigate(['']);
+ return false;
 }
+return true;
+  }
+  }

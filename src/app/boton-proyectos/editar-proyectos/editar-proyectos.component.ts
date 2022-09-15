@@ -13,7 +13,7 @@ export class EditarProyectosComponent implements OnInit {
   
   miPorfolio2: any;
 data3: any;
-  proyectos: proyectos= null;
+  proyectos: proyectos = null;
 
     constructor( 
      private datosProyectos: ProyectosService,

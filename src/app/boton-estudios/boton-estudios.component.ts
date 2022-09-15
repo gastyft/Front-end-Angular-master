@@ -20,10 +20,10 @@ miPortfolio: any;
 
 
  Estudios: estudios={
-  primaria:null,
-  secundaria: null,
-  universidad:null,
-  actual: null,
+  primaria:'',
+  secundaria: '',
+  universidad:'',
+  actual: '',
  };
 
 constructor( 
@@ -54,11 +54,15 @@ onUpdateEstudios():void{
       console.log(data);
   
 
-})
-this.cargarDatos();
-
-alert("Datos de la persona actualizada");
-this.router.navigate(['']);
-
+});
+if(this.Estudios != null){
+  alert("Estudios agregados"); 
+      
+  this.router.navigate(['boton-estudios']);
+}
+else{
+  alert("fallo al guardar estudios");
+  this.router.navigate(['boton-estudios']);
+}
  }
 }

@@ -12,8 +12,10 @@ import { AgregarExperienciaComponent} from './boton-experiencia-laboral/agregar-
 import { BotonProyectosComponent } from './boton-proyectos/boton-proyectos.component';
 import { EditarProyectosComponent } from './boton-proyectos/editar-proyectos/editar-proyectos.component';
 import {AgregarProyectosComponent } from './boton-proyectos/agregar-proyectos/agregar-proyectos.component';
-import { AuthGuard } from './auth.guard';
-import { HttpClient, HttpClientModule } from '@angular/common/http' 
+import { BotonImagenComponent } from './boton-imagen/boton-imagen.component';
+import { AuthGuard as guard} from './auth.guard';
+import { BotonHardSkillsComponent } from './boton-hard-skills/boton-hard-skills.component';
+
 
 const routes : Routes = [
   {path: '', 
@@ -23,12 +25,15 @@ const routes : Routes = [
 }, */
   {path: 'agregar-proyectos',
 component: AgregarProyectosComponent},
+{path:'boton-imagen',
+component: BotonImagenComponent },
+
   {path: 'editar-proyectos/:id_proyectos',
 component: EditarProyectosComponent},
 {path:'boton-proyectos',
 component: BotonProyectosComponent},
   {path: 'principal', 
-  component:PrincipalComponent},
+  component:PrincipalComponent},  // oculta componentes hasta que te registres.  canActivate:[guard], data:{expectedRol:['admin','user']} 
   {path:'boton-experiencia-laboral',
   component:BotonExperienciaLaboralComponent },
   {path:'agregar-experiencia',
@@ -41,12 +46,11 @@ component: BotonProyectosComponent},
   component:BotonProfileComponent},
   {path: 'login1', 
   component: Login1Component},
+  {path: 'boton-hard-skills/:id_hards', 
+  component: BotonHardSkillsComponent},
  
-  {path: 'Header', 
+  {path: 'header', 
   component: HeaderComponent},
-  
-  
- 
 { path: '**',  
 component: Error404Component  },
 ];

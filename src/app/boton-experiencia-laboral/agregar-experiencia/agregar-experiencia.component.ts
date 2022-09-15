@@ -32,12 +32,17 @@ private router: Router,
       const exp = new experiencia(this.experiencia_laboral);
       this.datosExperiencia.save(exp).subscribe( data=> {
        
-      },
-       err => {
-        alert("Agregada");
+      });
+      if(this.experiencia_laboral != null){
+        alert("Experiencia agregada"); 
+            
         this.router.navigate(['boton-experiencia-laboral']);
       }
-      )
+      else{
+        alert("fallo al guardar proyecto");
+        this.router.navigate(['boton-experiencia-laboral']);
+      }
+      
      }
     }
 

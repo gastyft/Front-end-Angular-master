@@ -2,7 +2,10 @@
  
     font: white; 
 }
-
+.text-center{
+  
+margin-top: 130px;
+}
 .container{
   
 margin-top: 130px;
@@ -315,12 +318,12 @@ margin-top: 10rem;
   
     {
     .iconos-head{
-  width:12px;
-  height:12px;
+  width:10px;
+  height:10px;
   
     }
         .header{
-            height: 30px;
+            height: 50px;
         width:100%;
     top:0;
     bottom:0;
@@ -336,15 +339,9 @@ margin-top: 10rem;
             
         }
          
-          .Fondo{
-         height:160px;
-         width:100%;
-         
-         gap:0;
-         
-          }
+          
           .botones-head ul{
-           font-size:6px;
+           font-size:4px;
            margin:0; 
            padding-top:0px;
           
@@ -377,7 +374,7 @@ margin-top: 10rem;
     {
     
         .header{
-            height: 30px;
+            height: 40px;
         width:100%;
     top:0;
     bottom:0;
@@ -446,7 +443,7 @@ margin-top: 10rem;
         {
         
           .header{
-            height: 25px;
+            height: 30px;
             width:100%;
             left:0;
             right:0;
@@ -566,13 +563,14 @@ margin-top: 10rem;
         }
             }
 
+         
             @media only screen and (max-width:280px) /* Para pantalla al 500% en crhome */
 
             {
             
               
                 .header{
-                    height: 25px;
+                    height: 30px;
                 width:100%;
             top:0;
             bottom:0;
@@ -596,7 +594,7 @@ margin-top: 10rem;
                  
                   }
                   .botones-head ul{
-                   font-size:3px;
+                   font-size:2px;
                    margin-top:0px; 
                    padding-top:0px;
                 
@@ -606,8 +604,8 @@ margin-top: 10rem;
                  
                    .btn-outline-info{
                  
-                 font-size: 10px;
-               line-height: 25px;
+                 font-size: 4px;
+               line-height: 4px;
                  width:100%;
               
                 
@@ -624,8 +622,8 @@ margin-top: 10rem;
                
                 .iconos-head{
                   line-height:25px;
-                  width: 2px;
-                  height:2px;
+                  width: 5px;
+                  height:5px;
       
                 }
                 }

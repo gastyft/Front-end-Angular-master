@@ -1,34 +1,66 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HTTP_INTERCEPTORS, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AuthService } from './auth.service';
-
+import { TokenService } from './token.service';
+import { catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InterceptorService  implements HttpInterceptor {
+export class InterceptorService implements HttpInterceptor {
+
+  constructor( private tokenService: TokenService,  private router: Router ) { }
 
 
-  constructor(private http: HttpClient, private authService:AuthService) { }
-intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+   
+const token: string = localStorage.getItem('token');
+
+let request = req;
+
+if (token) {
+  request = req.clone({
+    setHeaders: {
+      authorization: `Bearer ${ token }`
+    }
+  });
+}
+
+return next.handle(request).pipe(
+  catchError((err: HttpErrorResponse) => {
+
+    if (err.status === 401) {
+      this.router.navigateByUrl('/login');
+    }
+
+    return throwError( err );
+
+  })
+);
+}
+}
 
 
 
-  var currentUser= this.authService.UsuarioAutenticado;
-  if( currentUser && currentUser.accessToken){
-    req=req.clone({
-      setHeaders:{
-        Authorization: `Bearer ${currentUser.accessToken}`
-      }
-    })
 
+
+
+
+
+/* let intReq = req;
+    const token = this.tokenService.getToken();
+    if(token != null){
+      intReq = req.clone({ headers: req.headers.set('Authorization', 'Bearer '+ token)});
+
+      return next.handle(intReq);
+    }
+    
   }
-  console.log("Interceptor está corriendo "+ JSON.stringify(currentUser));
-  return next.handle(req);
-
 }
 
+export const interceptorProvider =[{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}];  
 
 
-}
+*/

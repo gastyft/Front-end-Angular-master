@@ -34,7 +34,7 @@ export class BotonProyectosComponent implements OnInit {
 
       
   deleteProyecto(id_proyecto?: number){
-    if(id_proyecto != undefined){
+    if(id_proyecto != null){
       this.datosProyectos.delete(id_proyecto).subscribe(
                 data => {
      this.cargarDatos();

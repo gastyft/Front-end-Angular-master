@@ -1,55 +1,67 @@
 import { Component, OnInit } from '@angular/core';
-import{ FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
-import{FormBuilder}from '@angular/forms';
 import { Router } from '@angular/router';
+import { loginUsuario } from '../model/loginusuario';
+import { TokenService } from '../token.service';
+
 @Component({
   selector: 'app-login1',
   templateUrl: './login1.component.html',
   styleUrls: ['./login1.component.css']
 })
 export class Login1Component implements OnInit {
-  email='';
-  password='';
-form: FormGroup;
-constructor(private authService: AuthService,  private formBuilder: FormBuilder, private ruta:Router) { 
+ 
+  nombreUsuario:string;
+  password: string;
 
-//creamos el grupo de controles para el formulario
-this.form= this.formBuilder.group({
-  password:['',[Validators.required, Validators.minLength(8)]],
-  email:['',[Validators.required, Validators.email]],
-  deviceInfo: this.formBuilder.group({
-    /* deviceId:[""],
-    deviceType:[""],
-    notificationToken:[""]*/
-  })
-})
+  isLogged= false;
+  isLoginFail = false;
+  loginUsuario: loginUsuario;
+
+  roles:string[]=[];
+
+  errMsj:string;
+
+
+constructor(private authService: AuthService,   private router:Router,
+  private tokenService:TokenService ) { 
+  }
+
+
+
+
+  ngOnInit(): void {
+
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+      this.isLoginFail=false;
+      this.roles = this.tokenService.getAuthorities();
+    }
+  }
+
+  onLogin():void {
+    this.loginUsuario= new loginUsuario(this.nombreUsuario, this.password);
+    this.authService.login(this.loginUsuario).subscribe(
+      data => {
+      
+  this.isLogged= true;
+  this.isLoginFail=false;
+  this.tokenService.setToken(data.token);
+  this.tokenService.setUserName(data.nombreUsuario);
+  this.tokenService.setAuthorities(data.authorities);
+  this.roles=data.authorities;
+  this.router.navigate(['']);
+      },
+ 
+   err =>{
+  this.isLogged= false;
+  this.isLoginFail= true;
+  this.errMsj = err.error.mensaje;
+  console.log(this.errMsj);
+
 }
-
-/*
-Login(){
-  this.authService.Login(this.email, this.password)
-}*/
-
-  ngOnInit(): void {}
-/*
-   get Email(): any
-  {
-    return this.form.get('email');
+      );
   }
-  get Password(): any
-  {
-    return this.form.get('password');
-  }
-
-  onEnviar(event:Event)
-  {
-    event.preventDefault;
-    this.authService.IniciarSesion(this.form.value).subscribe(data=>{
-      console.log("DATA:" + JSON.stringify(data));
-      this.ruta.navigate(['/portfolio']);
-    })
-  }*/
 }
 
 

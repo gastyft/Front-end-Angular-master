@@ -27,14 +27,16 @@ AgregarProyectos():void{
   this.datosProyectos.save(pro).subscribe( data=> {
    
    
-    alert("Agregada"); // Arreglar problema de guardado que se guarda vacio y siempre tira cartel de alert "fallo" y nunca de alert "agregada"
+  });
+  if(this.proyectos != null){
+    alert("Proyecto agregado"); 
         
-    this.router.navigate(['']);
-  },
-   err => {
-    alert("Agregada");
     this.router.navigate(['boton-proyectos']);
   }
-  )
+  else{
+    alert("fallo al guardar proyecto");
+    this.router.navigate(['boton-proyectos'])
+  }
+  
  }
 }
