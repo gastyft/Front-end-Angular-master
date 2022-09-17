@@ -20,9 +20,6 @@ import { BotonHardSkillsComponent } from './boton-hard-skills/boton-hard-skills.
 const routes : Routes = [
   {path: '', 
   redirectTo: 'principal', pathMatch:'full'},
- /* { path: 'principal', component: PrincipalComponent, 
- canActivate: [AuthGuard] // visit ´principal only if authenticated 
-}, */
   {path: 'agregar-proyectos',
 component: AgregarProyectosComponent},
 {path:'boton-imagen',

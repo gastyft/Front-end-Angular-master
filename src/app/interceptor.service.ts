@@ -32,7 +32,7 @@ return next.handle(request).pipe(
   catchError((err: HttpErrorResponse) => {
 
     if (err.status === 401) {
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/login1');
     }
 
     return throwError( err );
@@ -60,7 +60,6 @@ return next.handle(request).pipe(
   }
 }
 
+*/
 export const interceptorProvider =[{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}];  
 
-
-*/

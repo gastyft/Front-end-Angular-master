@@ -30,7 +30,7 @@ import{ BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BotonImagenComponent } from './boton-imagen/boton-imagen.component';
 import {RouterModule} from '@angular/router';
 import { BotonHardSkillsComponent } from './boton-hard-skills/boton-hard-skills.component';
-import{  InterceptorService } from './interceptor.service';
+import{  interceptorProvider } from './interceptor.service';
 
 @NgModule({
   declarations: [
@@ -67,11 +67,9 @@ import{  InterceptorService } from './interceptor.service';
   BrowserModule,
   ],
   providers: [
-  {
-    provide: HTTP_INTERCEPTORS,
-    useClass: InterceptorService,
-    multi: true
-  },
+  
+    interceptorProvider
+
   ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

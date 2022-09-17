@@ -58,7 +58,7 @@ constructor(private authService: AuthService,   private router:Router,
   this.isLoginFail= true;
   this.errMsj = err.error.mensaje;
   console.log(this.errMsj);
-
+    
 }
       );
   }
