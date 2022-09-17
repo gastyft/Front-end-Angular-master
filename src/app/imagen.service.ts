@@ -21,12 +21,10 @@ export class ImagenService {
   }
 
   public delete(id:number):Observable<any>{
-    return this.http.delete(this.url + `delete/${id}`);
+    return this.http.delete<any>(this.url + `delete/${id}`);
   }
 
-public edit(id:number, imagen:Imagen):Observable<any>{
-return this.http.put(this.url +`editar/${id}`+imagen, imagen );
-}
+
 
 
 }

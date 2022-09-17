@@ -30,6 +30,7 @@ export class PrincipalComponent implements OnInit {
   hard: any;
   data5: any;
   isLogged: boolean = false;
+last: any;
 
   constructor(
     private tokenService: TokenService,
@@ -134,11 +135,13 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
       });
     }
 
-  /*  {
+   {
       this.imagenService.list().subscribe((data4) => {
         this.imagen = data4;
+
+      
       });  
-    }*/
+    }
 
     if (this.tokenService.getToken()) {
       this.isLogged = true;
@@ -147,5 +150,5 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
     }
   }
 
-  // let imagenp:Imagen =  this.imagen[this.imagen.length-1];
+ 
 }

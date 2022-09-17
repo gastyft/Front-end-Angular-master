@@ -2,9 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ImagenService } from '../imagen.service';
-import { Imagen } from '../model/imagen';
+import { Imagen} from '../model/imagen';
 
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-boton-imagen',
@@ -20,6 +19,7 @@ imagenMin: File;
 imagen1: Imagen;
 imagenc: any;
 data4:any;
+img: number;
 
   constructor(private spinner: NgxSpinnerService,
    private router: Router,
@@ -27,17 +27,17 @@ data4:any;
 
 
   ngOnInit() {
-      /* /** spinner starts on init 
+      //* spinner starts on init 
        this.spinner.show();
 
        setTimeout(() => {
-         /** spinner ends after 5 seconds 
+         //* spinner ends after 5 seconds 
          this.spinner.hide();
        })
-       this.cargarImagen();*/
+       this.cargarImagen();
   }
 
- /* onFileChange(event:any) {
+  onFileChange(event:any) {
     this.imagen = event.target.files[0];
     const fr = new FileReader();
     fr.onload = (evento: any) => {
@@ -57,12 +57,12 @@ data4:any;
       
   })
 }
- */
+
      
-/*
+
   onUpload():void{
     this.spinner.show();
-
+ 
     this.imagenService.upload(this.imagen).subscribe(
       data =>{
         
@@ -84,16 +84,9 @@ data4:any;
     this.imagenFile.nativeElement.value ='';
 
   }
-  deleteImagen(id?: number){
-    if(id != undefined){
-      this.imagenService.delete(id).subscribe(
-                data => {
  
-        })
-        alert("Se ha eliminado imagen anterior");
     
-      location.reload();
-    }
   }
-*/
-}
+    
+  
+

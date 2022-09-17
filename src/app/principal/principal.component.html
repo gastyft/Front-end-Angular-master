@@ -20,12 +20,13 @@
     
     
       <div class="Foto-profile">
+       <ng-container *ngFor="let imagenMin of imagen; let last = last" >
         
-       <p *ngFor= "let imagens of imagen">
-        <img type="image"alt="profilee pcture"  class="foto-perfil"> <!--  src="{{imagens.imagen_url}}" -->
+      <p *ngIf="last">
+        <img type="image" alt="profilee pcture" src= "{{imagenMin.imagen_url}}"   class="foto-perfil">
       </p>
-        
-        
+
+    </ng-container>
           <ul   style="list-style-type:none;">
             
           <span > {{miPorfolio?.nombre}}</span>

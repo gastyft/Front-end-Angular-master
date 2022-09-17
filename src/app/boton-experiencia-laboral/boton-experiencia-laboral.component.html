@@ -8,7 +8,7 @@
   <table class="table">
     <tbody>
          <tr  *ngFor="let datosExperiencia of miPorfolio2" > 
-               <td class="col-7">   {{datosExperiencia.experiencia_laboral}}  </td>  
+               <td class="col-7">   {{datosExperiencia?.experiencia_laboral}}  </td>  
 
                <td>   <input class="btn btn-dark" type="button"  value="editar" routerLink="/editar-experiencia/{{datosExperiencia.id_exp}}">
                    <input class="btn btn-danger" type="button" value="Borrar" (click)="deleteExperiencia(datosExperiencia.id_exp)"  >  </td>

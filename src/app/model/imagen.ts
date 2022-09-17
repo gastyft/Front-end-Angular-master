@@ -1,5 +1,5 @@
 export class Imagen {
-    id?:number;
+    id_imagen?:number;
     name: String;
     imagen_url: String;
     imagen_id: String;
