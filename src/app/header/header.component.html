@@ -61,11 +61,11 @@
               <li  class="nav-item"  >  <a   routerLink="/login1" 
                  type="button" class="btn btn-outline-info"   *ngIf="!isLogged"> Login  
               </a> </li>
-              <li *ngIf="isLogged"  routerLink="/principal" >
+            <!--  <li *ngIf="isLogged"  routerLink="/principal" >
                 <a class="nav-link" >
                  <button type="button"  class="btn btn-outline-info" >Inicio</button>
                 </a> 
-               </li>
+               </li>  -->
               <li *ngIf="isLogged"  (click)="onLogOut()" >
                <a class="nav-link" >
                 <button type="button"  class="btn btn-outline-info" >Logout</button>

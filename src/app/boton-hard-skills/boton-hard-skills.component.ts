@@ -31,7 +31,7 @@ export class BotonHardSkillsComponent implements OnInit {
      'ingles':['',[Validators.required ]],
      'italiano':['',[Validators.required ]],
      'trabajo_equipo':['',[Validators.required ]],
-     'comunicacion':['',[Validators.required ]],
+     'comunicacion':['',[Validators.required ]]
     
     })
   }
