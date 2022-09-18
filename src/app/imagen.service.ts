@@ -7,11 +7,11 @@ import { Imagen } from './model/imagen';
 })
 export class ImagenService {
 
-  url= 'https://mi-porfolio-back-end.herokuapp.com/cloudinary/';
+  url= "https://mi-porfolio-back-end.herokuapp.com/cloudinary/";
   constructor(private http: HttpClient) { }
 
   public list():Observable<Imagen[]>{
-    return this.http.get<Imagen[]>(this.url+'list');
+    return this.http.get<Imagen[]>(this.url + 'list');
   }
 
   public upload(imagen: File): Observable<Imagen[]>{
