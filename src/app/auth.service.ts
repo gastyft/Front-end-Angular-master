@@ -11,15 +11,15 @@ import { jwtDto } from './model/jwtdto';
   providedIn: 'root',
 })
 export class AuthService {
-  url = "http://localhost:8080/auth";
+  url = "https://mi-portfolio-back.herokuapp.com/";
 
   constructor(private http: HttpClient, private router: Router) {}
 
   public nuevo(nuevoUsuario: nuevousuario): Observable<any> {
-    return this.http.post<any>(this.url + '/nuevo', nuevousuario);
+    return this.http.post<any>(this.url + 'auth/nuevo', nuevousuario);
   }
 
   public login(loginusuario: loginUsuario): Observable<jwtDto> {
-    return this.http.post<jwtDto>(this.url+ '/login', loginusuario);
+    return this.http.post<jwtDto>(this.url+ 'auth/login', loginusuario);
   }
 }
