@@ -9,16 +9,16 @@ import { persona } from './model/persona';
   providedIn: 'root'
 })
 export class PersonaService {
- url = "https://mi-portfolio-back.herokuapp.com/";
+ url = "https://mi-portfolio-back.herokuapp.com/personas/";
   constructor( private http: HttpClient) { }
 
 getPersona():Observable<persona>{
-   return this.http.get<persona>(this.url + 'personas/traer/perfil');
+   return this.http.get<persona>(this.url + 'traer/perfil');
   }
 
   
  updatePersona(id:number, Persona:persona){
-    return this.http.put<persona>(this.url+ `personas/editar/${id}?nombre=${Persona.nombre}&apellido=${Persona.apellido}&edad=${Persona.edad}&ciudad=${Persona.ciudad}&nacionalidad=${Persona.nacionalidad}&estado_civil=${Persona.estado_civil}`, persona);
+    return this.http.put<persona>(this.url+ `editar/${id}?nombre=${Persona.nombre}&apellido=${Persona.apellido}&edad=${Persona.edad}&ciudad=${Persona.ciudad}&nacionalidad=${Persona.nacionalidad}&estado_civil=${Persona.estado_civil}`, persona);
     
   }
 

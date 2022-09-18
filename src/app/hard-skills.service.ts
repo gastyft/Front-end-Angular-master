@@ -7,16 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class HardSkillsService {
 
-url = "https://mi-portfolio-back.herokuapp.com/";
+url = "https://mi-portfolio-back.herokuapp.com/hardskills/";
   constructor( private http: HttpClient) { }
 
 getHardSkills():Observable<hardSkills>{
-   return this.http.get<hardSkills>(this.url + 'hardskills/traer/perfil');
+   return this.http.get<hardSkills>(this.url + 'traer/perfil');
   }
 
   
  updateHardSkills(id:number, hard:hardSkills):Observable<hardSkills>{
-    return this.http.put<hardSkills>(this.url+ `hardskills/editar/${id}?frontend=${hard.frontend}&backend=${hard.backend}&base_datos=${hard.base_datos}&ingles=${hard.ingles}&italiano=${hard.italiano}&trabajo_equipo=${hard.trabajo_equipo}&comunicacion=${hard.comunicacion}`, hard);
+    return this.http.put<hardSkills>(this.url+ `editar/${id}?frontend=${hard.frontend}&backend=${hard.backend}&base_datos=${hard.base_datos}&ingles=${hard.ingles}&italiano=${hard.italiano}&trabajo_equipo=${hard.trabajo_equipo}&comunicacion=${hard.comunicacion}`, hard);
     
   }
 
