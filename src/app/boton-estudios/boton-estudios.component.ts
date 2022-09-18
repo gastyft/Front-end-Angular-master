@@ -58,11 +58,11 @@ onUpdateEstudios():void{
 if(this.Estudios != null){
   alert("Estudios agregados"); 
       
-  this.router.navigate(['boton-estudios']);
+  this.router.navigate(['']);
 }
 else{
   alert("fallo al guardar estudios");
-  this.router.navigate(['boton-estudios']);
+  this.router.navigate(['']);
 }
  }
 }

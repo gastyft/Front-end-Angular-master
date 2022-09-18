@@ -23,7 +23,7 @@
        <ng-container *ngFor="let imagenMin of imagen; let last = last" >
         
       <p *ngIf="last">
-        <img type="image" alt="profilee pcture" src="{{imagenMin?.imagen_url}}"   class="foto-perfil">
+        <img type="image" alt="profilee pcture" src="{{imagenMin.imagen_url}}"   class="foto-perfil">
       </p>
 
     </ng-container>
@@ -168,7 +168,7 @@
         
          <span >
         
-            <input  Id="boton-graficos" *ngIf="isLogged"  type="image" src="assets\icons8-lápiz-64.png" routerLink="/boton-hard-skills/ {{hard?.id_hards}}">
+            <input  Id="boton-graficos" *ngIf="isLogged"  type="image" src="assets\icons8-lápiz-64.png" routerLink="/boton-hard-skills/{{hard?.id}}">
    
         </span>
       

@@ -7,21 +7,21 @@ import { Imagen } from './model/imagen';
 })
 export class ImagenService {
 
-  url= "https://mi-porfolio-back-end.herokuapp.com/cloudinary/";
+  url= "https://mi-porfolio-back-end.herokuapp.com/";
   constructor(private http: HttpClient) { }
 
   public list():Observable<Imagen[]>{
-    return this.http.get<Imagen[]>(this.url + 'list');
+    return this.http.get<Imagen[]>(this.url + 'cloudinary/list');
   }
 
   public upload(imagen: File): Observable<Imagen[]>{
     const formData = new FormData();
     formData.append('multipartFile', imagen);
-    return this.http.post<Imagen[]>(this.url +'upload', formData);
+    return this.http.post<Imagen[]>(this.url +'cloudinary/upload', formData);
   }
 
   public delete(id:number):Observable<any>{
-    return this.http.delete<any>(this.url + `delete/${id}`);
+    return this.http.delete<any>(this.url + `cloudinary/delete/${id}`);
   }
 
 

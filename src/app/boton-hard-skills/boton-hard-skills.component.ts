@@ -24,7 +24,8 @@ export class BotonHardSkillsComponent implements OnInit {
     private FormBuilder: FormBuilder
   ) { 
     this.form= this.FormBuilder.group({
-      'frontend':['',[Validators.required]],
+      
+      'frontend':['',[Validators.required ]],
       'backend':['',[Validators.required ]],
       'base_datos':['',[Validators.required ]],
      'ingles':['',[Validators.required ]],
@@ -55,7 +56,7 @@ cargarDatos()
       
       const id = this.activatedRoute.snapshot.params['id'];
     if(this.form.value){
-      this.datosHardSkills.updateHardSkills(id, this.hard).subscribe(
+      this.datosHardSkills.updateHardSkills(id, this.hard).subscribe( 
         data =>{
           console.log(data);
       

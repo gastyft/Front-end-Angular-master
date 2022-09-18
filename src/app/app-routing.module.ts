@@ -43,7 +43,7 @@ component: BotonProyectosComponent},
   component:BotonProfileComponent},
   {path: 'login1', 
   component: Login1Component},
-  {path: 'boton-hard-skills/:id_hards', 
+  {path: 'boton-hard-skills/:id', 
   component: BotonHardSkillsComponent},
  
   {path: 'header', 

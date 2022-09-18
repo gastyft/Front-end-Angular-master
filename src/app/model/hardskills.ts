@@ -1,6 +1,6 @@
 export class hardSkills {
-    id_hard?: number;
-    frontend: number ;
+    id?:number;
+    frontend:number;
     backend:number;
     base_datos:number;
     italiano:number;
@@ -10,7 +10,7 @@ export class hardSkills {
 
 
     constructor(
-        frontend: number ,
+        frontend:number,
         backend:number,
         base_datos:number,
         italiano:number,
