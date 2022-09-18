@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class HardSkillsService {
 
-url = "https://mi-portfolio-back.herokuapp.com/hardskills/";
+url = "https://mi-porfolio-back-end.herokuapp.com/hardskills/";
   constructor( private http: HttpClient) { }
 
 getHardSkills():Observable<hardSkills>{

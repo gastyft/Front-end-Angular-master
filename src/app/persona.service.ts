@@ -9,7 +9,7 @@ import { persona } from './model/persona';
   providedIn: 'root'
 })
 export class PersonaService {
- url = "https://mi-portfolio-back.herokuapp.com/personas/";
+ url = "https://mi-porfolio-back-end.herokuapp.com/personas/";
   constructor( private http: HttpClient) { }
 
 getPersona():Observable<persona>{

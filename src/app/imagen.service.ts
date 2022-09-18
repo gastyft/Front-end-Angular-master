@@ -7,7 +7,7 @@ import { Imagen } from './model/imagen';
 })
 export class ImagenService {
 
-  url= 'https://mi-portfolio-back.herokuapp.com/cloudinary/';
+  url= 'https://mi-porfolio-back-end.herokuapp.com/cloudinary/';
   constructor(private http: HttpClient) { }
 
   public list():Observable<Imagen[]>{

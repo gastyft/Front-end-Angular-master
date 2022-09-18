@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProyectosService {
 
 
-  url = "https://mi-portfolio-back.herokuapp.com/proyectos/";
+  url = "https://mi-porfolio-back-end.herokuapp.com/proyectos/";
   constructor( private http: HttpClient) { }
 
   getProyectos():Observable<proyectos[]>{
