@@ -1341,7 +1341,7 @@ margin-right: -100px;
            word-spacing: 1px;
           padding-top:0px;
          display:grid;
-         margin-left:0px;
+         margin-left:-40px;
          }
          #lapiz-foto{
            position:absolute;
@@ -1522,9 +1522,9 @@ margin-right: -100px;
              gap:0;
                letter-spacing: 1px;
                word-spacing: 1px;
-              padding-top:0px;
+             padding:0;
              display:grid;
-             margin-left:-90px;
+             margin-left:-10px;
              }
              #lapiz-foto{
         
@@ -1627,7 +1627,7 @@ margin-right: -100px;
             padding-left: 50px;
            }
            #boton-graficos{
-             margin-left:-50px;
+             margin-left:-10px;
              margin-top:-5px;
                width:10px;
                height:10px;
@@ -1719,7 +1719,7 @@ margin-right: -100px;
                word-spacing: 1px;
               margin-top:100px;
              display:grid;
-             margin-left:-260px;
+             margin-left:-220px;
              }
              #lapiz-foto{
                position:absolute;
