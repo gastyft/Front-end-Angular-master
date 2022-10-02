@@ -20,7 +20,7 @@ export class Login1Component implements OnInit {
 
   roles:string[]=[];
 
-  errMsj:string;
+  errMsj:string="Usuario o contraseña mal colocada. Intente de nuevo";
 
 
 constructor(private authService: AuthService,   private router:Router,
