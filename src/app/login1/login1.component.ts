@@ -20,7 +20,7 @@ export class Login1Component implements OnInit {
 
   roles:string[]=[];
 
-  errMsj:string="Usuario o contraseña mal colocada. Intente de nuevo";
+  errMsj: string;
 
 
 constructor(private authService: AuthService,   private router:Router,
@@ -56,11 +56,11 @@ constructor(private authService: AuthService,   private router:Router,
    err =>{
   this.isLogged= false;
   this.isLoginFail= true;
-  this.errMsj = err.error.mensaje;
+  this.errMsj = " Usuario o contraseña mal colocada. Intente de nuevo";
   console.log(this.errMsj);
     
-}
-      );
+});
+      
   }
 }
 
