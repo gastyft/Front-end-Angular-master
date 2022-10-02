@@ -45,7 +45,7 @@ data2: any;
         this.router.navigate(['boton-experiencia-laboral']);
       }
       else{
-        alert("fallo al guardar proyecto");
+        alert("fallo al guardar experiencia");
         this.router.navigate(['boton-experiencia-laboral']);
       }
    }

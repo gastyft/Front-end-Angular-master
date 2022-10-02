@@ -42,7 +42,7 @@
         <div class="invalid-feedback">Complete con estado civil.</div>
         <div class="valid-feedback">Valido.</div>
       </div>
-      <input class="btn btn-primary" type="submit"   value="Guardar Cambios" >
+      <input class="btn btn-primary" type="submit"   value="Guardar Cambios" [disabled]="!persona.nacionalidad || !persona.nombre || !persona.apellido || !persona.edad || !persona.ciudad || !persona.estado_civil">
       <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal" >
     
     </form>

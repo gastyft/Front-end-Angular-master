@@ -59,7 +59,7 @@
     
       </div>
 
-      <input class="btn btn-primary" type="submit"   value="Guardar Cambios" >
+      <input class="btn btn-primary" type="submit"   value="Guardar Cambios" [disabled]="!hard.frontend || !hard.backend || !hard.base_datos || !hard.ingles || !hard.italiano || !hard.trabajo_equipo || !hard.comunicacion">
       <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal" >
     
     </form>

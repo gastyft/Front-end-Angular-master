@@ -37,11 +37,18 @@ data3: any;
       this.datosProyectos.update(id_proyectos, this.proyectos).subscribe(
         data => {
          console.log(data);
-         alert("Proyecto actualizado");
-         this.router.navigate(['']);
+     
           
+        });
+        if(this.proyectos != null){
+          alert("Proyecto agregado"); 
+              
+          this.router.navigate(['boton-proyectos']);
         }
-      )
+        else{
+          alert("fallo al guardar proyecto");
+          this.router.navigate(['boton-proyectos']);
+        }
      }
      
    

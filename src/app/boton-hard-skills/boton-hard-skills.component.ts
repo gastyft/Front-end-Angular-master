@@ -61,10 +61,16 @@ cargarDatos()
           console.log(data);
       
       
-      })
-      this.cargarDatos();
-      alert("Datos de Hard Skills actualizados");
+      });
+      if(this.hard != null){
+      alert("datos de Hard-Skills editados"); 
+          
       this.router.navigate(['']);
+    }
+    else{
+      alert("fallo al guardar experiencia");
+      this.router.navigate(['boton-hard-skills']);
+    }
        
     
    }
