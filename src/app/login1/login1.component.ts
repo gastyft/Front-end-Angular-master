@@ -17,11 +17,9 @@ export class Login1Component implements OnInit {
   isLogged= false;
   isLoginFail = false;
   loginUsuario: loginUsuario;
-
   roles:string[]=[];
-
-  errMsj: string;
-
+  errMsj:string;
+  
 
 constructor(private authService: AuthService,   private router:Router,
   private tokenService:TokenService ) { 
@@ -43,7 +41,6 @@ constructor(private authService: AuthService,   private router:Router,
     this.loginUsuario= new loginUsuario(this.nombreUsuario, this.password);
     this.authService.login(this.loginUsuario).subscribe(
       data => {
-      
   this.isLogged= true;
   this.isLoginFail=false;
   this.tokenService.setToken(data.token);
@@ -51,17 +48,15 @@ constructor(private authService: AuthService,   private router:Router,
   this.tokenService.setAuthorities(data.authorities);
   this.roles=data.authorities;
   this.router.navigate(['']);
-      },
- 
+ },
    err =>{
   this.isLogged= false;
   this.isLoginFail= true;
-  this.errMsj = " Usuario o contraseña mal colocada. Intente de nuevo.";
+  this.errMsj = err.error.mensaje=" Usuario o contraseña mal colocada. Intente de nuevo.";
   console.log(this.errMsj);
-    
-});
-      
-  }
+   }
+)}
+  
 }
 
 
