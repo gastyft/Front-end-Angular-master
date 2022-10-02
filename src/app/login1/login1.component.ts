@@ -56,7 +56,7 @@ constructor(private authService: AuthService,   private router:Router,
    err =>{
   this.isLogged= false;
   this.isLoginFail= true;
-  this.errMsj = " Usuario o contraseña mal colocada. Intente de nuevo";
+  this.errMsj = " Usuario o contraseña mal colocada. Intente de nuevo.";
   console.log(this.errMsj);
     
 });
