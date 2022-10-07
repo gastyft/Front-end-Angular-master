@@ -343,13 +343,7 @@ height:12px;
           line-height:30px;
            
        }
-       .conteiner-fluid{
-         padding-top: 0px;
-         margin-top:0px;
-         top:0;
-         bottom:0;
-       }
-     
+      
       }
 
       @media only screen and (max-width:600px) /* Para pantalla al 250% en crhome */
