@@ -25,13 +25,8 @@ export class BotonHardSkillsComponent implements OnInit {
   ) { 
     this.form= this.FormBuilder.group({
       
-      'frontend':['',[Validators.required ]],
-      'backend':['',[Validators.required ]],
-      'base_datos':['',[Validators.required ]],
-     'ingles':['',[Validators.required ]],
-     'italiano':['',[Validators.required ]],
-     'trabajo_equipo':['',[Validators.required ]],
-     'comunicacion':['',[Validators.required ]]
+      'nombre_hard':['',[Validators.required ]],
+      'number_hard':['',[Validators.required ]]
     
     })
   }
@@ -51,6 +46,22 @@ cargarDatos()
     
   }) } 
 
+  
+  deleteHard(id_hard?: number){
+    if(id_hard != null){
+      this.datosHardSkills.deleteHard(id_hard).subscribe(
+                data => {
+     this.cargarDatos();
+      
+          
+        })
+        alert("Se ha eliminado Hard Skill");
+    
+      location.reload();
+    }
+  }
+
+
   onUpdateHardSkills():void{
     {
       
@@ -68,7 +79,7 @@ cargarDatos()
       this.router.navigate(['']);
     }
     else{
-      alert("fallo al guardar experiencia");
+      alert("fallo al guardar hard skills");
       this.router.navigate(['boton-hard-skills']);
     }
        

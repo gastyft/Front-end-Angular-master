@@ -96,24 +96,14 @@
        
          
          <ul class="estudioss" >
+          <tr *ngFor="let datosEstudios of miPorfolio1" >
           
-           <li> 
             
-             Primaria: {{miPorfolio1?.primaria}} <br>
-            
-           <br> 
-           </li>
-       <li>
-        Secundaria: {{miPorfolio1?.secundaria}}
-       </li>
-             
-           <li>
-              {{miPorfolio1?.universidad}} <br>
-            
-           </li> 
-           
-           <li>
-             {{miPorfolio1?.actual}}</li>
+             <b> {{miPorfolio1?.nombre_estudio}}:</b> <br>
+  
+              {{miPorfolio1?.estudio_detail}}
+  
+            <br> <br>
          </ul>
          
      
@@ -132,38 +122,20 @@
         <p> 
           <span class="descript">Hard Skills</span>
           <ul>
-          
+            <ul   > 
+              <tr *ngFor="let datosProyectos of miPorfolio3 "><br><br>
+              <li class="proyectos-datos" > {{datosProyectos?.proyecto}} 
+            </li>  
+             </tr>
+           
 
-            <div class="progress">
+            <div class="progress" *ngFor="let datosHardSkills of hard">
             
-              <div class="progress-bar" role="progressbar" [style.width]="hard?.frontend+'%'" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" [style.width]="hard?.number_hard+'%'" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
              
             </div>
-          <span class="type">  Frontend</span>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" [style.width]="hard?.backend+'%'" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <span class="type">Backend </span>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" [style.width]="hard?.base_datos+'%'" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <span class="type"> Base de datos</span>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" [style.width]="hard?.ingles+'%'" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <span class="type"> Inglés</span>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" [style.width]="hard?.italiano+'%'" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <span class="type">  Italiano</span>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" [style.width]="hard?.trabajo_equipo+'%'" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <span class="type">  Trabajo en equipo</span>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" [style.width]="hard?.comunicacion+'%'" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <span class="type">  Comunicación</span>
+          <span class="type">  {{hard?.nombre_hard}}</span>
+            
           </ul>
         
          <span >

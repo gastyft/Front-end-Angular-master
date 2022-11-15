@@ -41,7 +41,7 @@ export class BotonProfileComponent implements OnInit {
         'apellido':['',[Validators.required ]],
         'ciudad':['',[Validators.required ]],
        'nacionalidad':['',[Validators.required ]],
-       'estado_civil':['',[Validators.required ]]
+       'estado_civil':['',[Validators.required ]],
        
     })
   }

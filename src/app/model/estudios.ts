@@ -1,21 +1,18 @@
 export class estudios {
     id_estudios?: number;
-     primaria: String;
-     secundaria: String;
-     universidad: String;
-     actual: String;
+     nombre_estudio: String;
+     estudio_detail: String;
+  
 
 
 constructor(  
-    primaria: String,
-    secundaria: String,
-    universidad: String,
-    actual: String ){
+    nombre_estudio: String,
+    estudio_detail: String,
+    ){
 
-    this.primaria= primaria;
-    this.secundaria= secundaria;
-    this.universidad= universidad;
-    this.actual= actual;
+    this. nombre_estudio=  nombre_estudio;
+    this. estudio_detail=  estudio_detail;
+    
 
     }
     }

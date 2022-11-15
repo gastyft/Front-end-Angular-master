@@ -1,32 +1,30 @@
-
-
-  <app-header></app-header>
+<app-header></app-header>
 <div class="container">
+<div class="all"     >
+<h1>Hard Skills</h1>
 
-  <form (ngSubmit)="onUpdateEstudios()" class="form-Group" novalidate #f="ngForm" >
-    <div class="form-group">
-      <label for="form-group">Primaria: </label>
-      <input type="text" class="form-control"  placeholder="Complete sus estudios"  id="primaria" name="primaria" [(ngModel)]="Estudios.primaria" required>
-    </div>
-    <div class="form-group">
-      <label for="form-group">Secundaria: </label>
-      <input  class="form-control"  placeholder="Complete sus estudios"id="secundaria" name="secundaria" [(ngModel)]="Estudios.secundaria" required>
-    </div>
-    <div class="form-group">
-      <label for="form-group">Universitario/terciario: </label>
-      <input  class="form-control" id="universidad"  placeholder="Complete sus estudios" name="universidad" [(ngModel)]="Estudios.universidad" required>
-    </div>
-    <div class="form-group">
-      <label for="form-group">Actual: </label>
-      <input  type="text" class="form-control" id="actual" placeholder="Complete sus estudios" name="actual" [(ngModel)]="Estudios.actual" required >
-      
-    </div>
-    <a routerLink="/principal" > 
-    <input class="btn btn-danger" type="button" value="Volver">
-    </a>
-    
-    <input class="btn btn-primary" type="submit" value="Guardar Cambios" [disabled]="!Estudios.primaria || !Estudios.secundaria || !Estudios.universidad || !Estudios.actual">
+<div class="col lg 1"> </div>
+<div class="col-lg-11">
+  <table class="table">
+    <tbody>
+         <tr  *ngFor="let datosEstudios of Estudios" > 
+               <td class="col-7">   {{datosEstudios?.nombre_estudio}  </td>  
+               <td class="col-7">   {{datosEstudios?.EstudioDetail}  </td>  
+               <td>   <input class="btn btn-dark" type="button"  value="editar" routerLink="/editar-hard-skills/{{datosEstudios?.id_estudios}}">
+                   <input class="btn btn-danger" type="button" value="Borrar" (click)="deleteEstudio(datosEstudios.id_estudio)"  >  </td>
 
+ 
+         </tr>
+
+     
+      </tbody>
+
+    </table>
     
-  </form>
-  </div>
+      <input class="btn btn-primary" type="edit" value="Agregar estudios" routerLink="/agregar-estudios"> 
+    
+    <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal">
+</div>
+</div>
+</div>
+

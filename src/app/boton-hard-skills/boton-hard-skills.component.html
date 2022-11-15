@@ -1,66 +1,33 @@
 <app-header></app-header>
 <div class="container">
-    <form   (ngSubmit)="onUpdateHardSkills()"  class="was-validated">
+<div class="all"     >
+<h1>Hard Skills</h1>
+
+<div class="col lg 1"> </div>
+<div class="col-lg-11">
+  <table class="table">
+    <tbody>
+         <tr  *ngFor="let datosHards of hard" > 
+               <td class="col-7">   {{datosHards?.nombre_hard}  </td>  
+               <td class="col-7">   {{datosHards?.number_hard}  </td>  
+               <td>   <input class="btn btn-dark" type="button"  value="editar" routerLink="/editar-hard-skills/{{datosHards?.id_hard}}">
+                   <input class="btn btn-danger" type="button" value="Borrar" (click)="deleteHard(datosHards.id_hard)"  >  </td>
+
+ 
+         </tr>
+
+     
+      
         
-      <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Frontend</label>
-        <input type="number" min="0" max="100" class="form-control" id="frontend" placeholder="Ingrese frontend" name="frontend"  [(ngModel)]="hard.frontend" required>
-        <div class="invalid-feedback">Complete con numero de porcentaje.</div>
-        <div class="valid-feedback">Valido.</div>
-    
-      </div>
-      
-      <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Backend</label>
-        <input type="number" min="0" max="100" class="form-control" id="backend" placeholder="Ingrese backend" name="backend"  [(ngModel)]="hard.backend" required>
-        <div class="invalid-feedback">Complete con numero de porcentaje.</div>
-        <div class="valid-feedback">Valido.</div>
-    
-      </div>
+     
+      </tbody>
 
-      <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Base de datos</label>
-        <input type="number" min="0" max="100" class="form-control" id="base_datos" placeholder="Ingrese base de datos" name="base_datos"  [(ngModel)]="hard.base_datos" required>
-        <div class="invalid-feedback">Complete con numero de porcentaje 0 a 100. Más de 100 será considerado como 100.</div>
-        <div class="valid-feedback">Valido.</div>
+    </table>
     
-      </div>
-      
-      <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Inglés</label>
-        <input type="number" min="0" max="100" class="form-control" id="ingles" placeholder="Ingrese ingles" name="ingles"  [(ngModel)]="hard.ingles" required>
-        <div class="invalid-feedback">Complete con numero de porcentaje 0 a 100. Más de 100 será considerado como 100.</div>
-        <div class="valid-feedback">Valido.</div>
+      <input class="btn btn-primary" type="edit" value="Agregar experiencia" routerLink="/agregar-hard-skills"> 
     
-      </div>
-      
-      <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Italiano</label>
-        <input type="number" min="0" max="100" class="form-control" id="italiano" placeholder="Ingrese italiano" name="italiano"  [(ngModel)]="hard.italiano" required>
-        <div class="invalid-feedback">Complete con numero de porcentaje 0 a 100. Más de 100 será considerado como 100.
-        </div>
-        <div class="valid-feedback">Valido.</div>
-    
-      </div>
-
-      <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Trabajo en equipo</label>
-        <input type="number" min="0" max="100" class="form-control" id="trabajo_equipo" placeholder="Ingrese Trabajo en equipo" name="trabajo_equipo"  [(ngModel)]="hard.trabajo_equipo" required>
-        <div class="invalid-feedback">Complete con numero de porcentaje 0 a 100. Más de 100 será considerado como 100.</div>
-        <div class="valid-feedback">Valido.</div>
-    
-      </div>
-
-      <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Comunicación</label>
-        <input type="number" min="0" max="100" class="form-control" id="comunicacion" placeholder="Ingrese Comunicacion" name="comunicacion"  [(ngModel)]="hard.comunicacion" required>
-        <div class="invalid-feedback">Complete con numero de porcentaje 0 a 100. Más de 100 será considerado como 100.</div>
-        <div class="valid-feedback">Valido.</div>
-    
-      </div>
-
-      <input class="btn btn-primary" type="submit"   value="Guardar Cambios" [disabled]="!hard.frontend || !hard.backend || !hard.base_datos || !hard.ingles || !hard.italiano || !hard.trabajo_equipo || !hard.comunicacion">
-      <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal" >
-    
-    </form>
+    <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal">
 </div>
+</div>
+</div>
+

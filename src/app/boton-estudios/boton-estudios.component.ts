@@ -1,10 +1,5 @@
 import { Component, Injectable, OnInit } from '@angular/core';
-
-
-import { EquipoService} from '../equipo.service';
-import {FormsModule, } from '@angular/forms';
 import { EstudiosService } from '../estudios.service';
-import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { estudios } from '../model/estudios';
 @Component({
@@ -16,19 +11,11 @@ export class BotonEstudiosComponent implements OnInit {
  
 
 data: any;
-miPortfolio: any;
-
-
- Estudios: estudios={
-  primaria:'',
-  secundaria: '',
-  universidad:'',
-  actual: '',
- };
+Estudios: any;
 
 constructor( 
   private router: Router,
-  private datosPortfolio: EstudiosService,
+  private datosEstudios: EstudiosService,
   private activatedRoute: ActivatedRoute
   ) { }
 
@@ -40,16 +27,16 @@ constructor(
 
 cargarDatos(){
   {
-    this.datosPortfolio.getEstudios().subscribe( data => {
+    this.datosEstudios.getEstudios().subscribe( data => {
       console.log(data)
-      this.miPortfolio= data;
+      this.Estudios= data;
       
     }) } 
 }
 onUpdateEstudios():void{
   const id_estudios = this.activatedRoute.snapshot.params['id_estudios'];
 
-  this.datosPortfolio.update(id_estudios, this.Estudios).subscribe(
+  this.datosEstudios.update(id_estudios, this.Estudios).subscribe(
     data =>{
       console.log(data);
   
@@ -65,4 +52,19 @@ else{
   this.router.navigate(['']);
 }
  }
+
+ 
+ deleteEstudio(id_estudio?: number){
+  if(id_estudio != null){
+    this.datosEstudios.deleteEstudios(id_estudio).subscribe(
+              data => {
+   this.cargarDatos();
+    
+        
+      })
+      alert("Se ha eliminado experiencia");
+  
+    location.reload();
+  }
+}
 }

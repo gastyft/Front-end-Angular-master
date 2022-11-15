@@ -15,6 +15,10 @@ import {AgregarProyectosComponent } from './boton-proyectos/agregar-proyectos/ag
 import { BotonImagenComponent } from './boton-imagen/boton-imagen.component';
 import { AuthGuard as guard} from './auth.guard';
 import { BotonHardSkillsComponent } from './boton-hard-skills/boton-hard-skills.component';
+import { EditarHardSkillsComponent } from './boton-hard-skills/editar-hard-skills/editar-hard-skills.component';
+import { AgregarHardSkillsComponent } from './boton-hard-skills/agregar-hard-skills/agregar-hard-skills.component';
+import { AgregarEstudiosComponent } from './boton-estudios/agregar-estudios/agregar-estudios.component';
+import { EditarEstudiosComponent } from './boton-estudios/editar-estudios/editar-estudios.component';
 
 
 const routes : Routes = [
@@ -22,9 +26,16 @@ const routes : Routes = [
   redirectTo: 'principal', pathMatch:'full'},
   {path: 'agregar-proyectos',
 component: AgregarProyectosComponent,  canActivate:[guard], data:{expectedRol:['admin','user']} },
+{path: 'agregar-hard-skills',
+component: AgregarHardSkillsComponent, /* canActivate:[guard], data:{expectedRol:['admin','user']} */},
 {path:'boton-imagen',
 component: BotonImagenComponent,  canActivate:[guard], data:{expectedRol:['admin','user']}  },
-
+{path:'editar-hard-skills/:id_hard',
+component: EditarHardSkillsComponent, /* canActivate:[guard], data:{expectedRol:['admin','user']} */ },
+{path:'agregar-estudios',
+component: AgregarEstudiosComponent, /* canActivate:[guard], data:{expectedRol:['admin','user']} */ },
+{path:'editar-estudios/:id_estudios',
+component: EditarEstudiosComponent, /* canActivate:[guard], data:{expectedRol:['admin','user']} */ },
   {path: 'editar-proyectos/:id_proyectos',
 component: EditarProyectosComponent, canActivate:[guard], data:{expectedRol:['admin','user']} },
 {path:'boton-proyectos',
@@ -35,7 +46,7 @@ component: BotonProyectosComponent, canActivate:[guard], data:{expectedRol:['adm
   component:BotonExperienciaLaboralComponent, canActivate:[guard], data:{expectedRol:['admin','user']}  },
   {path:'agregar-experiencia',
   component:AgregarExperienciaComponent, canActivate:[guard], data:{expectedRol:['admin','user']}  },
-  {path:'boton-estudios/:id_estudios',
+  {path:'boton-estudios',
   component:BotonEstudiosComponent, canActivate:[guard], data:{expectedRol:['admin','user']}  },
   {path:'editar-experiencia/:id_exp',
   component: EditarExperienciaComponent, canActivate:[guard], data:{expectedRol:['admin','user']} },
@@ -43,8 +54,8 @@ component: BotonProyectosComponent, canActivate:[guard], data:{expectedRol:['adm
   component:BotonProfileComponent, canActivate:[guard], data:{expectedRol:['admin','user']} },
   {path: 'login1', 
   component: Login1Component},
-  {path: 'boton-hard-skills/:id', 
-  component: BotonHardSkillsComponent, canActivate:[guard], data:{expectedRol:['admin','user']} },
+  {path: 'boton-hard-skills', 
+  component: BotonHardSkillsComponent, /* canActivate:[guard], data:{expectedRol:['admin','user']}*/ },
  
   {path: 'header', 
   component: HeaderComponent},

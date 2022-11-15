@@ -15,10 +15,13 @@ export class EstudiosService {
    return this.http.get<estudios>(this.url + 'traer/estudios');
   }
 public update( id_estudios:number , Estudios:estudios): Observable<estudios>{
-  return this.http.put<estudios>(`${this.url}editar/${id_estudios}?primaria=${Estudios.primaria}&secundaria=${Estudios.secundaria}&universidad=${Estudios.universidad}&actual=${Estudios.actual}`,estudios); //"primaria="+estudios.primaria+"&secundaria="+estudios.secundaria+"&universidad="+estudios.universidad+"&actual="+estudios.actual
+  return this.http.put<estudios>(`${this.url}editar/${id_estudios}?primaria=${Estudios.nombre_estudio}&secundaria=${Estudios.estudio_detail}`,estudios); 
 }
 
-public delete(id: number): Observable<any>{
+public deleteEstudios(id: number): Observable<any>{
   return this.http.delete<any>(this.url +`borrar/${id}`);
 }
+public getEstudiosId():Observable<estudios>{
+  return this.http.get<estudios>(this.url + 'estudios/traer/estudios');
+ }
 }

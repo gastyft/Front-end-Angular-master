@@ -1,0 +1,22 @@
+
+
+<app-header></app-header>
+<div class="container">
+<div class="all">
+
+  <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+<div class="form-group" >
+    <label for="comment"><h2> Editar Hard Skill:</h2> </label>
+    <input  type="text"   class="form-control"  id="experiencia_laboral"  name="experiencia_laboral" [(ngModel)]="hardskill" required >  
+
+  </div>
+  <a routerLink="/boton-experiencia-laboral" > 
+    <input class="btn btn-danger" type="button" value="Volver">
+    </a>
+ 
+    <input class="btn btn-primary" type="submit" value="Guardar Cambios" [disabled]="!hardskill">
+
+  </form>
+  </div>
+
+</div>

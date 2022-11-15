@@ -31,6 +31,10 @@ import { BotonImagenComponent } from './boton-imagen/boton-imagen.component';
 import {RouterModule} from '@angular/router';
 import { BotonHardSkillsComponent } from './boton-hard-skills/boton-hard-skills.component';
 import{  interceptorProvider } from './interceptor.service';
+import { AgregarHardSkillsComponent } from './boton-hard-skills/agregar-hard-skills/agregar-hard-skills.component';
+import { EditarHardSkillsComponent } from './boton-hard-skills/editar-hard-skills/editar-hard-skills.component';
+import { AgregarEstudiosComponent } from './boton-estudios/agregar-estudios/agregar-estudios.component';
+import { EditarEstudiosComponent } from './boton-estudios/editar-estudios/editar-estudios.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +53,10 @@ import{  interceptorProvider } from './interceptor.service';
     EditarProyectosComponent,
     BotonImagenComponent,
     BotonHardSkillsComponent,
+    AgregarHardSkillsComponent,
+    EditarHardSkillsComponent,
+    AgregarEstudiosComponent,
+    EditarEstudiosComponent,
  
    
 

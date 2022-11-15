@@ -14,10 +14,17 @@ getHardSkills():Observable<hardSkills>{
    return this.http.get<hardSkills>(this.url + 'traer/perfil');
   }
 
-  
+  getById(id_hard: hardSkills):Observable<hardSkills>{
+    return this.http.get<hardSkills>(this.url +`traer/perfil/${id_hard}`)
+   }
  updateHardSkills(id:number, hard:hardSkills):Observable<hardSkills>{
-    return this.http.put<hardSkills>(this.url+ `editar/${id}?frontend=${hard.frontend}&backend=${hard.backend}&base_datos=${hard.base_datos}&ingles=${hard.ingles}&italiano=${hard.italiano}&trabajo_equipo=${hard.trabajo_equipo}&comunicacion=${hard.comunicacion}`, hard);
+    return this.http.put<hardSkills>(this.url+ `editar/${id}?nombre_hard=${hard.nombre_hard}&number_hard=${hard.number_hard}`, hard);
     
   }
-
+  deleteHard(id:number):Observable<hardSkills>{
+    return this.http.delete<hardSkills>(this.url+ `borrar/${id}?nombre_hard`)
+  }
+  save(hard: hardSkills): Observable<hardSkills>{
+    return this.http.post<hardSkills>(this.url + 'crear', hard);
+}
 }
