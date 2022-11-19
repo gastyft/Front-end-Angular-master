@@ -373,14 +373,14 @@ background-color: aquamarine;
 }
 .proyects{
   margin-top:30px;
-
+margin-left: -740px;
   font-size: 30px;
   height: 50px;
  
 }
 .proyectos{
   margin-top:30px;
-margin-left: 200px;
+margin-left: -760px;
   font-size: 30px;
   height: 50px;
   padding-left: 50px;
@@ -388,6 +388,7 @@ margin-left: 200px;
 }
 .proyectos-datos{
   margin-left: -150px;
+  padding-right: 100px;
 }
 
 @keyframes fondoanimado{

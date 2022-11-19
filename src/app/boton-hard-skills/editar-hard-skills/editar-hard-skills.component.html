@@ -7,14 +7,16 @@
   <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
 <div class="form-group" >
     <label for="comment"><h2> Editar Hard Skill:</h2> </label>
-    <input  type="text"   class="form-control"  id="nombre_hard"  name="nombre_hard" [(ngModel)]="hardskill.nombre_hard" required >  
-    <input  type="number"  min="0" max="100" class="form-control"  id="number_hard"  name="number_hard" [(ngModel)]="hardskill.number_hard" required >  
+    <label for="comment"> Editar nombre de habilidad</label>
+    <input  type="text"   class="form-control"  id="nombre_hard"  name="nombre_hard" [value]="nombre_hard1" [(ngModel)]="miPorfolio2.nombre_hard" required >  
+    <label for="comment">Editar porcentaje de 0 a 100</label>
+    <input  type="number"  min="0" max="100" class="form-control"  id="number_hard"  name="number_hard" [value]="number_hard1" [(ngModel)]="miPorfolio2.number_hard" required >  
   </div>
   <a routerLink="/boton-hard-skills"> 
     <input class="btn btn-danger" type="button" value="Volver">
     </a>
  
-    <input class="btn btn-primary" type="submit" value="Guardar Cambios" [disabled]="!hardskill?.nombre_hard || !hardskill?.number_hard">
+    <input class="btn btn-primary" type="submit" value="Guardar Cambios">
 
   </form>
   </div>

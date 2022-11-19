@@ -15,6 +15,8 @@ export class EditarHardSkillsComponent implements OnInit {
 
 miPorfolio2: any;
 data2: any;
+nombre_hard1: String ='';
+number_hard1: number;
 
   constructor(  private datosHard: HardSkillsService,
     private activatedRoute: ActivatedRoute,
@@ -24,24 +26,35 @@ data2: any;
   }
 
   ngOnInit(): void {
+    {
+    const id_hard = this.activatedRoute.snapshot.params['id_hard'];
+    this.datosHard.getById(id_hard).subscribe(
+      data => { 
+        console.log(data);
+        this.miPorfolio2=data;
+        this.nombre_hard1 = this.miPorfolio2.nombre_hard;
+        this.number_hard1 = this.miPorfolio2.number_hard;
+      }  );
+       
+    }  
   }
 
   onUpdate():void{
     const id_hard = this.activatedRoute.snapshot.params['id_hard'];
-    this.datosHard.updateHardSkills(id_hard, this.hardskill).subscribe(
+    this.datosHard.updateHardSkills(id_hard, this.miPorfolio2).subscribe(
       data =>{
        console.log(data);
      
         
       });
-      if(this.hardskill != null){
+      if(this.miPorfolio2 != null){
         alert("Hard Skill agregado"); 
             
-        this.router.navigate(['boton-hard-skill']);
+        this.router.navigate(['/boton-hard-skills']);
       }
       else{
         alert("fallo al guardar Hard Skill");
-        this.router.navigate(['boton-hard-skill']);
+        this.router.navigate(['/boton-hard-skills']);
       }
    }
     

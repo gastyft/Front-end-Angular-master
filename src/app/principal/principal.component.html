@@ -130,25 +130,26 @@
      
           </span>
 
-            <div class="progress">
-              <ul   > 
+            <ul> 
                 <tr *ngFor="let hards of hardSkill">
-                <td><li><div class="progress-bar" role="progressbar" [style.width]="hardSkill?.number_hard+'%'" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                 
-              </li>  
-              <li>
-              {{hardSkill?.nombre_hard}} 
+
                
-            </li> </td>
+                  <div class="progress">
+                  <div class="progress-bar" role="progressbar" [style.width]="hards?.number_hard+'%'" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                  
+                </div>
+                {{hards?.nombre_hard}}
+            
+         
           </tr>
-              </ul>
+              
              
-            </div>
+            </ul>
           
         
      
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+        
         <div class="proyects">
       
             <span>  Proyectos

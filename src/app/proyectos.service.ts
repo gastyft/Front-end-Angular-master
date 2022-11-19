@@ -22,7 +22,7 @@ export class ProyectosService {
    return this.http.post<proyectos>(this.url + 'crear', proyectos);
   }
   update(id_proyecto:number, proyecto:proyectos):Observable<proyectos>{
-   return this.http.put<proyectos>(this.url + `editar/${id_proyecto}?proyectos=`+proyecto,proyectos);
+   return this.http.put<proyectos>(this.url + `editar/${id_proyecto}?proyectos=${proyecto.proyecto}`,proyectos);
   }
   delete(id_proyecto:number):Observable<any>{
    return this.http.delete<any>(this.url + `borrar/${id_proyecto}`);

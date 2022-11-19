@@ -10,10 +10,13 @@ import { hardSkills } from 'src/app/model/hardskills';
   styleUrls: ['./agregar-hard-skills.component.css']
 })
 export class AgregarHardSkillsComponent implements OnInit {
-data5: any;
-  hard:  String = '' ;
-hardss: hardSkills;
+
+  nombre_hard:  String = '' ;
+  number_hard: number ;
+hards: hardSkills = null;
    data: any;
+ 
+  
   constructor(private router : Router,
     private datosHard : HardSkillsService) { }
 
@@ -23,12 +26,12 @@ hardss: hardSkills;
 
 
   AgregarHardSkills():void{
-    const hards= new hardSkills(this.hardss.nombre_hard, this.hardss.number_hard)
-    this.datosHard.saveHard(hards).subscribe( data=> {
-     
+    const hards1 = new hardSkills(this.nombre_hard, this.number_hard);
+    this.datosHard.saveHard(hards1).subscribe( data=> {
+     console.log(data);
     }
     )
-    if(this.hardss.nombre_hard != null && this.hardss.number_hard !=null){
+    if( this.nombre_hard  !=null && this.number_hard !=null){
 
       alert("Hard Skill agregado"); 
           
@@ -38,6 +41,9 @@ hardss: hardSkills;
       alert("fallo al guardar Hard Skill");
       this.router.navigate(['boton-hard-skills'])
     }
-  
+   
    }
+   hards1(hards1: any) {
+    throw new Error('Method not implemented.');
+  }
 }

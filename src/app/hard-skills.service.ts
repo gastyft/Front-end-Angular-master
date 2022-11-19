@@ -24,7 +24,7 @@ getHardSkills():Observable<hardSkills>{
   deleteHard(id_hard:number):Observable<hardSkills>{
     return this.http.delete<hardSkills>(this.url+`borrar/${id_hard}`);
   }
-  saveHard(hard: hardSkills): Observable<hardSkills>{
-    return this.http.post<hardSkills>(this.url + 'crear', hard);
+  saveHard(hard: hardSkills): Observable<any>{
+    return this.http.post<any>(this.url + 'crear', hard);
 }
 }

@@ -42,11 +42,11 @@ estudiodetail: String='';
   if(this.est != null){
     alert("Estudios agregados"); 
         
-    this.router.navigate(['']);
+    this.router.navigate(['/boton-estudios']);
   }
   else{
     alert("fallo al guardar estudios");
-    this.router.navigate(['']);
+    this.router.navigate(['/boton-estudios']);
   }
    }
   est(est: any) {

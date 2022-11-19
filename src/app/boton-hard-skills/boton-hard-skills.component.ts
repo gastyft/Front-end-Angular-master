@@ -21,14 +21,8 @@ export class BotonHardSkillsComponent implements OnInit {
     private router: Router,
     private datosHardSkills: HardSkillsService,
     private activatedRoute: ActivatedRoute,
-    private FormBuilder: FormBuilder
+
   ) { 
-    this.form= this.FormBuilder.group({
-      
-      'nombre_hard':['',[Validators.required ]],
-      'number_hard':['',[Validators.required ]]
-    
-    })
   }
 
   ngOnInit(): void {

@@ -6,7 +6,7 @@
   <form (ngSubmit)="onUpdateProyecto()"  novalidate #f="ngForm">
 <div class="form-group" >
     <label for="comment"><h2> Editar Proyectos:</h2> </label>
-    <input   type="text"   id="proyecto"  class="form-control" name="proyecto" [(ngModel)]="proyectos" [value]="proyecto"  required >  
+    <input   type="text"   id="proyecto"  class="form-control" name="proyecto" [value]="proyecto1" [(ngModel)]="miPorfolio2.proyecto"   required >  
   
   </div>
 
@@ -14,7 +14,7 @@
     <input class="btn btn-danger" type="button" value="Volver">
     </a>
  
-    <input class="btn btn-primary" type="submit" value="Guardar Cambios" [disabled]="!proyectos">
+    <input class="btn btn-primary" type="submit" value="Guardar Cambios" >
 
   </form>
   </div>
