@@ -1,20 +1,20 @@
 export class persona {
    id?: number;
-    nombre: string;
-    apellido:string;
-    edad: string;
-    ciudad: string;
-    nacionalidad: string;
-    estado_civil: string;
+    nombre: String;
+    apellido: String;
+    edad: String;
+    ciudad: String;
+    nacionalidad: String;
+    estado_civil: String;
 
   
     constructor(
-        nombre: string,
-        apellido: string,
-        edad: string,
-        ciudad: string,
-        nacionalidad: string,
-        estado_civil: string) 
+        nombre: String,
+        apellido: String,
+        edad: String,
+        ciudad: String,
+        nacionalidad:String,
+        estado_civil: String) 
         {
             this.nombre=  nombre;
             this.apellido= apellido;

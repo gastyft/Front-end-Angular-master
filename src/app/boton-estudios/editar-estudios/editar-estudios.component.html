@@ -1,1 +1,22 @@
-<p>editar-estudios works!</p>
+<app-header></app-header>
+<div class="container">
+<div class="all">
+
+  <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+<div class="form-group" >
+    <label for="comment"><h2> Editar Estudios:</h2> </label> <br> <br>
+    <label for="comment">Nombre de estudio:</label> 
+    <input  type="text"   class="form-control"  id="nombreestudio"  name="nombreestudio" [value]="nombreestudios" [(ngModel)]="estudios1.nombreestudio" required >  
+   <label for="comment"> Detalle de estudio:</label>
+    <input  type="text" class="form-control"  id="estudiodetail"  name="estudiodetail" [value]="estudiodetails" [(ngModel)]="estudios1.estudiodetail" required >  
+  </div>
+  <a routerLink="/boton-estudios"> 
+    <input class="btn btn-danger" type="button" value="Volver">
+    </a>
+ 
+    <input class="btn btn-primary" type="submit" value="Guardar Cambios" >
+
+  </form>
+  </div>
+
+</div>

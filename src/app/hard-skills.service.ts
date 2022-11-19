@@ -11,7 +11,7 @@ url = "https://mi-porfolio-back-end.herokuapp.com/hardskills/";
   constructor( private http: HttpClient) { }
 
 getHardSkills():Observable<hardSkills>{
-   return this.http.get<hardSkills>(this.url + 'traer/perfil');
+   return this.http.get<hardSkills>(this.url + 'traer');
   }
 
   getById(id_hard: hardSkills):Observable<hardSkills>{
@@ -21,10 +21,10 @@ getHardSkills():Observable<hardSkills>{
     return this.http.put<hardSkills>(this.url+ `editar/${id}?nombre_hard=${hard.nombre_hard}&number_hard=${hard.number_hard}`, hard);
     
   }
-  deleteHard(id:number):Observable<hardSkills>{
-    return this.http.delete<hardSkills>(this.url+ `borrar/${id}?nombre_hard`)
+  deleteHard(id_hard:number):Observable<hardSkills>{
+    return this.http.delete<hardSkills>(this.url+`borrar/${id_hard}`);
   }
-  save(hard: hardSkills): Observable<hardSkills>{
+  saveHard(hard: hardSkills): Observable<hardSkills>{
     return this.http.post<hardSkills>(this.url + 'crear', hard);
 }
 }

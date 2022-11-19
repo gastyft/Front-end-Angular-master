@@ -7,14 +7,14 @@
   <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
 <div class="form-group" >
     <label for="comment"><h2> Editar Hard Skill:</h2> </label>
-    <input  type="text"   class="form-control"  id="experiencia_laboral"  name="experiencia_laboral" [(ngModel)]="hardskill" required >  
-
+    <input  type="text"   class="form-control"  id="nombre_hard"  name="nombre_hard" [(ngModel)]="hardskill.nombre_hard" required >  
+    <input  type="number"  min="0" max="100" class="form-control"  id="number_hard"  name="number_hard" [(ngModel)]="hardskill.number_hard" required >  
   </div>
-  <a routerLink="/boton-experiencia-laboral" > 
+  <a routerLink="/boton-hard-skills"> 
     <input class="btn btn-danger" type="button" value="Volver">
     </a>
  
-    <input class="btn btn-primary" type="submit" value="Guardar Cambios" [disabled]="!hardskill">
+    <input class="btn btn-primary" type="submit" value="Guardar Cambios" [disabled]="!hardskill?.nombre_hard || !hardskill?.number_hard">
 
   </form>
   </div>

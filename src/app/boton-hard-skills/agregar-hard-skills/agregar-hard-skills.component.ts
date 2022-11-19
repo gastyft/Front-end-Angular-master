@@ -10,32 +10,34 @@ import { hardSkills } from 'src/app/model/hardskills';
   styleUrls: ['./agregar-hard-skills.component.css']
 })
 export class AgregarHardSkillsComponent implements OnInit {
-
-  hard: string='';
-  nombre_hard : any ;
-   number_hard:any;
+data5: any;
+  hard:  String = '' ;
+hardss: hardSkills;
+   data: any;
   constructor(private router : Router,
     private datosHard : HardSkillsService) { }
 
   ngOnInit(): void {
+    
   }
 
 
   AgregarHardSkills():void{
-    const hard = new hardSkills(this.nombre_hard  , this.number_hard);
-    this.datosHard.save(hard).subscribe( data=> {
+    const hards= new hardSkills(this.hardss.nombre_hard, this.hardss.number_hard)
+    this.datosHard.saveHard(hards).subscribe( data=> {
      
-     
-    });
-    if(this.hard != null){
+    }
+    )
+    if(this.hardss.nombre_hard != null && this.hardss.number_hard !=null){
+
       alert("Hard Skill agregado"); 
           
-      this.router.navigate(['boton-proyectos']);
+      this.router.navigate(['boton-hard-skills']);
     }
     else{
       alert("fallo al guardar Hard Skill");
       this.router.navigate(['boton-hard-skills'])
     }
-    
+  
    }
 }

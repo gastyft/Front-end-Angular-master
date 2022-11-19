@@ -9,6 +9,6 @@ export class hardSkills {
         number_hard: number ) 
         {
             this.nombre_hard= nombre_hard;
-            this.number_hard=number_hard;
+            this.number_hard= number_hard;
         }
 }

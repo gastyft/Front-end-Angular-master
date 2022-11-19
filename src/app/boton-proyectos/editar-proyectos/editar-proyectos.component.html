@@ -3,12 +3,13 @@
 <div class="container">
 <div class="all">
 
-  <form (ngSubmit)="onUpdateProyecto()" novalidate #f="ngForm">
+  <form (ngSubmit)="onUpdateProyecto()"  novalidate #f="ngForm">
 <div class="form-group" >
     <label for="comment"><h2> Editar Proyectos:</h2> </label>
-    <input  type="text"   class="form-control"  id="proyecto"  name="proyecto" [(ngModel)]="proyectos" required >  
-
+    <input   type="text"   id="proyecto"  class="form-control" name="proyecto" [(ngModel)]="proyectos" [value]="proyecto"  required >  
+  
   </div>
+
   <a routerLink="/boton-proyectos" > 
     <input class="btn btn-danger" type="button" value="Volver">
     </a>

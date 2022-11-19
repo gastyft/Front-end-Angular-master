@@ -8,10 +8,10 @@
   <table class="table">
     <tbody>
          <tr  *ngFor="let datosHards of hard" > 
-               <td class="col-7">   {{datosHards?.nombre_hard}  </td>  
-               <td class="col-7">   {{datosHards?.number_hard}  </td>  
-               <td>   <input class="btn btn-dark" type="button"  value="editar" routerLink="/editar-hard-skills/{{datosHards?.id_hard}}">
-                   <input class="btn btn-danger" type="button" value="Borrar" (click)="deleteHard(datosHards.id_hard)"  >  </td>
+               <td class="col-7">   {{datosHards?.nombre_hard}}  </td>  
+               <td class="col-7">   {{datosHards?.number_hard}} </td>  
+               <td>   <input class="btn btn-dark" type="button"  value="editar" routerLink="/editar-hard-skills/{{datosHards.id}}">
+                   <input class="btn btn-danger" type="button" value="Borrar" (click)="deleteHard(datosHards.id)"  >  </td>
 
  
          </tr>
@@ -24,7 +24,7 @@
 
     </table>
     
-      <input class="btn btn-primary" type="edit" value="Agregar experiencia" routerLink="/agregar-hard-skills"> 
+      <input class="btn btn-primary" type="edit" value="Agregar HardSkill" routerLink="/agregar-hard-skills"> 
     
     <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal">
 </div>

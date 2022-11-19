@@ -9,8 +9,10 @@ import {  experiencia } from '../../model/experiencia';
 })
 export class EditarExperienciaComponent implements OnInit {
 
-experiencia: experiencia = null; 
+experiencia: any;
 
+experiencia_laboral: experiencia = null;
+id_exp:number;
 miPorfolio2: any;
 data2: any;
 
@@ -18,18 +20,28 @@ data2: any;
    private datosExperiencia: ExperienciaService,
    private activatedRoute: ActivatedRoute,
     private router: Router
-  ) { }  
+  ) { 
+    
+
+  }  
 
   ngOnInit() {
+
     {
-      this.datosExperiencia.lista().subscribe( data2 =>{
-        console.log(data2)
-        this.miPorfolio2= data2;
-        
-      }) } 
+      const id_exp = this.activatedRoute.snapshot.params['id_exp'];
+      this.datosExperiencia.getExperiencia(id_exp).subscribe(
+        data => { 
+          console.log(data);
+          this.experiencia =data;
+          
+          this.experiencia_laboral= this.experiencia.experiencia_laboral;
+        }  );
+       
+    }  
 
 
 }
+
 
    onUpdate():void{
     const id_exp = this.activatedRoute.snapshot.params['id_exp'];

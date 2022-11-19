@@ -3,13 +3,13 @@
     <form   (ngSubmit)="onUpdatePersona()"  class="was-validated">
          <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nombre/s</label>
-        <input type="text" class="form-control"  id="nombre" placeholder="persona.nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+        <input type="text" class="form-control"  id="nombre" placeholder="Ingrese nombre" name="nombre"  [value]="nombre" [(ngModel)]="miPorfolio2.nombre" required>
         <div class="invalid-feedback">Complete con nombre.</div>
    
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Apellido</label>
-        <input type="text" class="form-control" id="apellido" placeholder="Ingrese Apellido"  name="apellido" [(ngModel)]="persona.apellido" required>
+        <input type="text" class="form-control" id="apellido" placeholder="Ingrese Apellido"  name="apellido"  [value]="apellido" [(ngModel)]="miPorfolio2.apellido" required>
         <div class="invalid-feedback">Complete con apellido.</div>
         <div class="valid-feedback">Valido.</div>
      
@@ -18,31 +18,31 @@
     
       <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Edad</label>
-        <input type="number" min="1" max="100" class="form-control" id="edad" placeholder="Ingrese Edad" name="edad"  [(ngModel)]="persona.edad" required>
+        <input type="number" min="1" max="100" class="form-control" id="edad" placeholder="Ingrese Edad" name="edad" [value]="edad" [(ngModel)]="miPorfolio2.edad" required>
         <div class="invalid-feedback">Complete con edad.</div>
         <div class="valid-feedback">Valido.</div>
     
       </div>
       <div class="mb-3">
         <label  for="formGroupExampleInput2" class="form-label">Ciudad</label>
-        <input  type="text" class="form-control" id="ciudad" placeholder="Ingrese ciudad de residencia" name="ciudad" [(ngModel)]="persona.ciudad" required>
+        <input  type="text" class="form-control" id="ciudad" placeholder="Ingrese ciudad de residencia" name="ciudad"  [value]="ciudad" [(ngModel)]="miPorfolio2.ciudad" required>
         <div class="invalid-feedback">Complete con ciudad.</div>
         <div class="valid-feedback">Valido.</div>
     
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nacionalidad</label>
-        <input type="text" class="form-control" id="nacionalidad" placeholder="Ingrese Nacionalidad"  name="nacionalidad" [(ngModel)]="persona.nacionalidad" required>
+        <input type="text" class="form-control" id="nacionalidad" placeholder="Ingrese Nacionalidad"  name="nacionalidad"   [value]="nacionalidad" [(ngModel)]="miPorfolio2.nacionalidad" required>
         <div class="invalid-feedback">Complete con nacionalidad.</div>
         <div class="valid-feedback">Valido.</div>
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Estado civil</label>
-        <input type="text" class="form-control" id="estado_civil" placeholder="Ingrese Estado civil"  name="estado_civil" [(ngModel)]="persona.estado_civil" required>
+        <input type="text" class="form-control" id="estado_civil" placeholder="Ingrese Estado civil"  name="estado_civil"  [value]="estado_civil" [(ngModel)]="miPorfolio2.estado_civil" required>
         <div class="invalid-feedback">Complete con estado civil.</div>
         <div class="valid-feedback">Valido.</div>
       </div>
-      <input class="btn btn-primary" type="submit"   value="Guardar Cambios" [disabled]="!persona.nacionalidad || !persona.nombre || !persona.apellido || !persona.edad || !persona.ciudad || !persona.estado_civil">
+      <input class="btn btn-primary" type="submit"   value="Guardar Cambios"  >
       <input class="btn btn-danger" type="button" value="Volver" routerLink="/principal" >
     
     </form>

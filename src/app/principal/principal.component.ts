@@ -7,6 +7,7 @@ import { ProyectosService } from '../proyectos.service';
 import { ImagenService } from '../imagen.service';
 import { HardSkillsService } from '../hard-skills.service';
 import { TokenService } from '../token.service';
+import { hardSkills } from '../model/hardskills';
 
 @Component({
   selector: 'app-principal',
@@ -27,7 +28,7 @@ export class PrincipalComponent implements OnInit {
   data3: any;
   data4: any;
   imagen: any;
-  hard: any;
+  hardSkill: any;
   data5: any;
   isLogged: boolean = false;
 last: any;
@@ -131,7 +132,7 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
     {
       this.datosHardSkills.getHardSkills().subscribe((data5) => {
         console.log(data5);
-        this.hard = data5;
+        this.hardSkill = data5;
       });
     }
 

@@ -12,8 +12,8 @@ export class ProyectosService {
   url = "https://mi-porfolio-back-end.herokuapp.com/proyectos/";
   constructor( private http: HttpClient) { }
 
-  getProyectos():Observable<proyectos[]>{
-    return this.http.get<proyectos[]>(this.url + 'traer/proyectos');
+  getProyectos(id_proyecto:number):Observable<proyectos[]>{
+    return this.http.get<proyectos[]>(this.url + `traer/proyectos/${id_proyecto}`);
    }
     public lista():Observable<any>{
      return this.http.get<proyectos>(this.url + 'traer');

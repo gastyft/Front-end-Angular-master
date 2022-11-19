@@ -13,12 +13,12 @@ export class PersonaService {
   constructor( private http: HttpClient) { }
 
 getPersona():Observable<persona>{
-   return this.http.get<persona>(this.url + 'traer/perfil');
+   return this.http.get<persona>(this.url + `traer/perfil`);
   }
 
   
- updatePersona(id:number, Persona:persona){
-    return this.http.put<persona>(this.url+ `editar/${id}?nombre=${Persona.nombre}&apellido=${Persona.apellido}&edad=${Persona.edad}&ciudad=${Persona.ciudad}&nacionalidad=${Persona.nacionalidad}&estado_civil=${Persona.estado_civil}`, persona);
+ updatePersona(id:number, persona1 :persona):Observable<persona>{
+    return this.http.put<persona>(this.url+ `editar/${id}?nombre=${persona1.nombre}&apellido=${persona1.apellido}&edad=${persona1.edad}&ciudad=${persona1.ciudad}&nacionalidad=${persona1.nacionalidad}&estado_civil=${persona1.estado_civil}`, persona);
     
   }
 

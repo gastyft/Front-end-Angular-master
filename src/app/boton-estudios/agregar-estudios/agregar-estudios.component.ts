@@ -13,9 +13,10 @@ export class AgregarEstudiosComponent implements OnInit {
 
 
 data: any;
-  Estudios: estudios;
+  Estudios: estudios ;
   
-
+nombreestudio: String='';
+estudiodetail: String='';
    
   
   constructor( 
@@ -26,28 +27,19 @@ data: any;
   
     ngOnInit() {
   
-   this.cargarDatos();  
+
   }
   
   
-  cargarDatos(){
-    {
-      this.datosEstudios.getEstudios().subscribe( data => {
-        console.log(data)
-        this.Estudios= data;
-        
-      }) } 
-  }
   onUpdateEstudios():void{
-    const id_estudios = this.activatedRoute.snapshot.params['id_estudios'];
-  
-    this.datosEstudios.update(id_estudios, this.Estudios).subscribe(
+    const est = new estudios(this.nombreestudio, this.estudiodetail);
+    this.datosEstudios.save(est).subscribe(
       data =>{
         console.log(data);
     
   
   });
-  if(this.Estudios != null){
+  if(this.est != null){
     alert("Estudios agregados"); 
         
     this.router.navigate(['']);
@@ -57,5 +49,8 @@ data: any;
     this.router.navigate(['']);
   }
    }
+  est(est: any) {
+    throw new Error('Method not implemented.');
+  }
     
 }

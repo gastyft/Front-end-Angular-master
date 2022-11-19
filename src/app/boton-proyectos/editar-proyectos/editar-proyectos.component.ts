@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditarProyectosComponent implements OnInit {
   
-  
+proyecto: proyectos = null;
   miPorfolio2: any;
 data3: any;
   proyectos: proyectos = null;
@@ -23,10 +23,11 @@ data3: any;
   
     ngOnInit() {
       {
-        this.datosProyectos.lista().subscribe( data3 => {
+        const id_proyectos = this.activatedRoute.snapshot.params['id_proyectos'];
+        this.datosProyectos.getProyectos(id_proyectos).subscribe( data3 => {
           console.log(data3)
           this.miPorfolio2= data3;
-          
+         this.proyecto= this.miPorfolio2.proyecto;
         }) } 
   
   

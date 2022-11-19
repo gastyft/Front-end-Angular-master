@@ -47,9 +47,9 @@ cargarDatos()
   }) } 
 
   
-  deleteHard(id_hard?: number){
-    if(id_hard != null){
-      this.datosHardSkills.deleteHard(id_hard).subscribe(
+  deleteHard(id?: number){
+    if(id != null){
+      this.datosHardSkills.deleteHard(id).subscribe(
                 data => {
      this.cargarDatos();
       

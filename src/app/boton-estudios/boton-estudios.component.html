@@ -1,17 +1,17 @@
 <app-header></app-header>
 <div class="container">
 <div class="all"     >
-<h1>Hard Skills</h1>
+<h1>Estudios</h1>
 
 <div class="col lg 1"> </div>
 <div class="col-lg-11">
   <table class="table">
     <tbody>
          <tr  *ngFor="let datosEstudios of Estudios" > 
-               <td class="col-7">   {{datosEstudios?.nombre_estudio}  </td>  
-               <td class="col-7">   {{datosEstudios?.EstudioDetail}  </td>  
-               <td>   <input class="btn btn-dark" type="button"  value="editar" routerLink="/editar-hard-skills/{{datosEstudios?.id_estudios}}">
-                   <input class="btn btn-danger" type="button" value="Borrar" (click)="deleteEstudio(datosEstudios.id_estudio)"  >  </td>
+               <td class="col-7">   {{datosEstudios?.nombreestudio}}  </td>  
+               <td class="col-7">   {{datosEstudios?.estudiodetail}} </td>  
+               <td>   <input class="btn btn-dark" type="button"  value="editar" routerLink="/editar-estudios/{{datosEstudios?.id_estudios}}">
+                   <input class="btn btn-danger" type="button" value="Borrar" (click)="deleteEstudio(datosEstudios?.id_estudios)"  >  </td>
 
  
          </tr>

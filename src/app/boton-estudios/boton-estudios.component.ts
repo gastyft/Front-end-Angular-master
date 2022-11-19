@@ -62,7 +62,7 @@ else{
     
         
       })
-      alert("Se ha eliminado experiencia");
+      alert("Se ha eliminado estudios");
   
     location.reload();
   }

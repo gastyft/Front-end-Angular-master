@@ -5,18 +5,18 @@
     <form (ngSubmit)="onUpdateEstudios()" class="form-Group" novalidate #f="ngForm" >
       <div class="form-group">
         <label for="form-group">Ingrese nombre de estudio: </label>
-        <input type="text" class="form-control"  placeholder="Complete sus estudios"  id="nombre_estudio" name="nombre_estudio" [(ngModel)]="Estudios.nombre_estudio" required>
+        <input type="text" class="form-control"  placeholder="Complete sus estudios"  id="nombreestudio" name="nombreestudio" [(ngModel)]="nombreestudio" required>
       </div>
       <div class="form-group">
         <label for="form-group">Ingrese detalle de estudio: </label>
-        <input type="text" class="form-control"  placeholder="Complete sus estudios"  id="estudio_detail" name="estudio_detail" [(ngModel)]="Estudios.estudio_detail" required>
+        <input type="text" class="form-control"  placeholder="Complete sus estudios"  id="estudiodetail" name="estudiodetail" [(ngModel)]="estudiodetail" required>
       </div>
       
       <a routerLink="/principal" > 
       <input class="btn btn-danger" type="button" value="Volver">
       </a>
       
-      <input class="btn btn-primary" type="submit" value="Guardar Cambios" [disabled]="!Estudios.nombre_estudio || !Estudios.estudio_detail">
+      <input class="btn btn-primary" type="submit" value="Guardar Cambios">
   
       
     </form>

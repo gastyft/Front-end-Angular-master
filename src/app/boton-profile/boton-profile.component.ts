@@ -14,21 +14,18 @@ import { FormBuilder } from '@angular/forms';
 })
 export class BotonProfileComponent implements OnInit {
 
-
-  miPorfolio2: any;
+  miPorfolio2:any;
   data3: any;
- data:any;
-  persona: persona={
-    nombre:'',
-    apellido:'',
-    edad:'',
-    ciudad:'',
-    nacionalidad:'',
-    estado_civil:'',
 
-  }
-  
-  form:FormGroup;
+  persona: persona = null;
+
+  nombre: persona = null;
+  apellido:persona = null;
+edad:persona = null;
+ciudad:persona = null;
+nacionalidad:persona = null;
+estado_civil:persona = null;
+
 
     constructor( 
       private router: Router,
@@ -36,48 +33,40 @@ export class BotonProfileComponent implements OnInit {
       private activatedRoute: ActivatedRoute,
       private FormBuilder: FormBuilder
     ) {
-      this.form= this.FormBuilder.group({
-        'nombre':['',[Validators.required]],
-        'apellido':['',[Validators.required ]],
-        'ciudad':['',[Validators.required ]],
-       'nacionalidad':['',[Validators.required ]],
-       'estado_civil':['',[Validators.required ]],
-       
-    })
+    
   }
     ngOnInit() {
-  
-
-this.cargarDatos();
-
-      }
-cargarDatos()
       {
-        this.datosPorfolio.getPersona().subscribe( data3 => {
-          console.log(data3)
-          this.miPorfolio2= data3;
-          
-        }) } 
+        
+      this.datosPorfolio.getPersona().subscribe( data => {
+        console.log(data)
+        this.miPorfolio2= data;
+
+     this.nombre = this.miPorfolio2?.nombre;
+     this.apellido = this.miPorfolio2?.apellido;
+     this.edad= this.miPorfolio2?.edad;
+     this.ciudad= this.miPorfolio2?.ciudad;
+     this.nacionalidad= this.miPorfolio2?.nacionalidad;
+     this.estado_civil= this.miPorfolio2?.estado_civil;
+      });
+    }
+  }
     
-  onUpdatePersona():void{
-    {
-      
-      const id = this.activatedRoute.snapshot.params['id'];
-    if(this.form.value){
-      this.datosPorfolio.updatePersona(id, this.persona).subscribe(
+  onUpdatePersona():void {
+       const id= this.activatedRoute.snapshot.params['id'];
+   
+      this.datosPorfolio.updatePersona(id, this.miPorfolio2).subscribe(
         data =>{
           console.log(data);
-      
-      
-      })
-      this.cargarDatos();
-      alert("Datos de la persona actualizada");
-      this.router.navigate(['']);
-       
-    
-   }
+        });
+        if(this.miPorfolio2 != null){
+          alert("Persona editada"); 
+              
+          this.router.navigate(['/principal']);
+        }
+        else{
+          alert("fallo al guardar persona");
+          this.router.navigate(['/principal']);
+        }
 }
 }
-}
-
-  
