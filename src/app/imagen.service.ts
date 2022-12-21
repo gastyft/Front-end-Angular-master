@@ -7,7 +7,7 @@ import { Imagen } from './model/imagen';
 })
 export class ImagenService {
 
-  url= "https://mi-porfolio-back-end.herokuapp.com/";
+  url= "https://back-heroku-production.up.railway.app/";
   constructor(private http: HttpClient) { }
 
   public list():Observable<Imagen[]>{

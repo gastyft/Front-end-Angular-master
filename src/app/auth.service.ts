@@ -11,7 +11,7 @@ import { jwtDto } from './model/jwtdto';
   providedIn: 'root',
 })
 export class AuthService {
-  url = "https://mi-porfolio-back-end.herokuapp.com/";
+  url = "https://back-heroku-production.up.railway.app/";
 
   constructor(private http: HttpClient, private router: Router) {}
 
