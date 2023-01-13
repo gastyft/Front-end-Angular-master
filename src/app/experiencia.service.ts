@@ -11,7 +11,7 @@ export class ExperienciaService {
 
 
 
-  url = "https://back-heroku-production.up.railway.app/experiencia/";
+  url = "https://back-render.onrender.com";
   constructor( private http: HttpClient) { }
 
   getExperiencia(id_exp: number):Observable<experiencia[]>{

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class EstudiosService {
 
-  url = "https://back-heroku-production.up.railway.app/estudios/";
+  url = "https://back-render.onrender.com/estudios/";
   constructor( private http: HttpClient) { }
 
   public getEstudios():Observable<estudios>{

@@ -9,7 +9,7 @@ import { persona } from './model/persona';
   providedIn: 'root'
 })
 export class PersonaService {
- url = "https://back-heroku-production.up.railway.app/personas/";
+ url = "https://back-render.onrender.com/personas/";
   constructor( private http: HttpClient) { }
 
 getPersona():Observable<persona>{

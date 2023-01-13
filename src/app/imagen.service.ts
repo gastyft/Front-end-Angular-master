@@ -7,7 +7,7 @@ import { Imagen } from './model/imagen';
 })
 export class ImagenService {
 
-  url= "https://back-heroku-production.up.railway.app/";
+  url= "https://back-render.onrender.com/";
   constructor(private http: HttpClient) { }
 
   public list():Observable<Imagen[]>{
