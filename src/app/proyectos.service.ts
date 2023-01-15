@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProyectosService {
 
 
-  url = "https://back-render.onrender.com/proyectos/";
+  url = "https://portfolio-gastyft.koyeb.app/proyectos/";
   constructor( private http: HttpClient) { }
 
   getProyectos(id_proyecto:number):Observable<proyectos[]>{

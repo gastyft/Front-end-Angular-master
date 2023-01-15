@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class HardSkillsService {
 
-url = "https://portfolio-gastyft.koyeb.app/";
+url = "https://portfolio-gastyft.koyeb.app/hardskills/";
   constructor( private http: HttpClient) { }
 
 getHardSkills():Observable<hardSkills>{
