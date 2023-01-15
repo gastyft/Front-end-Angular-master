@@ -7,7 +7,7 @@ import { Imagen } from './model/imagen';
 })
 export class ImagenService {
 
-  url= "https://back-render.onrender.com/";
+  url= "https://portfolio-gastyft.koyeb.app/";
   constructor(private http: HttpClient) { }
 
   public list():Observable<Imagen[]>{

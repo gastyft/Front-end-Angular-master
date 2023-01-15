@@ -11,7 +11,7 @@ export class ExperienciaService {
 
 
 
-  url = "https://back-render.onrender.com";
+  url = "https://portfolio-gastyft.koyeb.app";
   constructor( private http: HttpClient) { }
 
   getExperiencia(id_exp: number):Observable<experiencia[]>{

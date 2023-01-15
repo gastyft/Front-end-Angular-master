@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class EstudiosService {
 
-  url = "https://back-render.onrender.com/estudios/";
+  url = "https://portfolio-gastyft.koyeb.app/estudios/";
   constructor( private http: HttpClient) { }
 
   public getEstudios():Observable<estudios>{

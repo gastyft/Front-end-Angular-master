@@ -11,7 +11,7 @@ import { jwtDto } from './model/jwtdto';
   providedIn: 'root',
 })
 export class AuthService {
-  url = "https://back-render.onrender.com";
+  url = "https://portfolio-gastyft.koyeb.app";
 
   constructor(private http: HttpClient, private router: Router) {}
 

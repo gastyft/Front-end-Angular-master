@@ -9,7 +9,7 @@ import { persona } from './model/persona';
   providedIn: 'root'
 })
 export class PersonaService {
- url = "https://back-render.onrender.com/personas/";
+ url = "https://portfolio-gastyft.koyeb.app/personas/";
   constructor( private http: HttpClient) { }
 
 getPersona():Observable<persona>{
