@@ -8,7 +8,7 @@ import { ImagenService } from '../imagen.service';
 import { HardSkillsService } from '../hard-skills.service';
 import { TokenService } from '../token.service';
 import { hardSkills } from '../model/hardskills';
-
+import { persona } from '../model/persona';
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
@@ -32,6 +32,13 @@ export class PrincipalComponent implements OnInit {
   data5: any;
   isLogged: boolean = false;
 last: any;
+id:any;
+nombre: persona = null;
+apellido:persona = null;
+edad:persona = null;
+ciudad:persona = null;
+nacionalidad:persona = null;
+estado_civil:persona = null;
 
   constructor(
     private tokenService: TokenService,
@@ -109,6 +116,13 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
       this.datosPersona.getPersona().subscribe((data) => {
         console.log(data);
         this.miPorfolio = data;
+        
+        this.nombre = this.miPorfolio?.nombre;
+     this.apellido = this.miPorfolio?.apellido;
+     this.edad= this.miPorfolio?.edad;
+     this.ciudad= this.miPorfolio?.ciudad;
+     this.nacionalidad= this.miPorfolio?.nacionalidad;
+     this.estado_civil= this.miPorfolio?.estado_civil;
       });
     }
     {

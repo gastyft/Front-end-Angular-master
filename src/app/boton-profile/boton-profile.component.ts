@@ -16,7 +16,6 @@ export class BotonProfileComponent implements OnInit {
 
   miPorfolio2:any;
   data3: any;
-
   persona: persona = null;
 
   nombre: persona = null;
@@ -25,7 +24,7 @@ edad:persona = null;
 ciudad:persona = null;
 nacionalidad:persona = null;
 estado_civil:persona = null;
-
+id=1;
 
     constructor( 
       private router: Router,
@@ -41,8 +40,8 @@ estado_civil:persona = null;
       this.datosPorfolio.getPersona().subscribe( data => {
         console.log(data)
         this.miPorfolio2= data;
-
-     this.nombre = this.miPorfolio2?.nombre;
+         const id=1;
+     this.nombre = this.miPorfolio2?.id.nombre;
      this.apellido = this.miPorfolio2?.apellido;
      this.edad= this.miPorfolio2?.edad;
      this.ciudad= this.miPorfolio2?.ciudad;
@@ -53,9 +52,9 @@ estado_civil:persona = null;
   }
     
   onUpdatePersona():void {
-       const id= this.activatedRoute.snapshot.params['id'];
+       //const id= this.activatedRoute.snapshot.params['id'];
    
-      this.datosPorfolio.updatePersona(id, this.miPorfolio2).subscribe(
+      this.datosPorfolio.updatePersona(this.id, this.miPorfolio2).subscribe(
         data =>{
           console.log(data);
         });
