@@ -373,22 +373,22 @@ background-color: aquamarine;
 }
 .proyects{
   margin-top:30px;
-margin-left: -740px;
+margin-left: -780px;
   font-size: 30px;
   height: 50px;
  
 }
 .proyectos{
   margin-top:30px;
-margin-left: -760px;
+margin-left: -150px;
   font-size: 30px;
   height: 50px;
   padding-left: 50px;
  
 }
 .proyectos-datos{
-  margin-left: -150px;
-  padding-right: 100px;
+  margin-left:200px;
+  padding-right: 50px;
 }
 
 @keyframes fondoanimado{
@@ -721,14 +721,14 @@ bottom:0;
    }
    .proyects{
     margin-top:20px;
-  
+  margin-left: -290px;
     font-size: 30px;
     height: 50px;
    
   }
   .proyectos{
     margin-top:30px;
-  margin-left: 250px;
+  margin-left: 20px;
     font-size: 20px;
     height: 50px;
    
@@ -937,9 +937,14 @@ bottom:0;
 }
 .proyects{
  margin-top:20px;
-
+margin-left: -120px;
  font-size: 15px;
 
+
+}
+.proyectos-datos{
+  margin-left:-200px;
+  padding-right: 100px;
 
 }
 .type{
@@ -948,8 +953,8 @@ bottom:0;
   }
 .proyectos{
  margin-top:30px;
-margin-left: 190px;
-margin-right: -100px;
+margin-left: 20px;
+
  font-size:15px;
 
 
@@ -1104,15 +1109,19 @@ margin-right: -100px;
   }
   .proyects{
    margin-top:20px;
- margin-left: -350px;
+ margin-left: -100px;
    font-size: 10px;
  
   
  }
+ .proyectos-datos{
+  margin-left:-200px;
+  padding-right: 100px;
 
+}
  .proyectos{
    margin-top:30px;
- margin-left: -280px;
+ margin-left: 20px;
 
    font-size:10px;
  }
@@ -1275,15 +1284,20 @@ margin-right: -100px;
       }
       .proyects{
        margin-top:20px;
-     
+       margin-left: -180px;
        font-size: 9px;
      
       
      }
+     .proyectos-datos{
+      margin-left:-200px;
+      padding-right: 100px;
+    
+   }
   
      .proyectos{
        margin-top:30px;
-     margin-left: 20px;
+     margin-left: 100px;
        font-size:9px;
     
       
@@ -1447,8 +1461,8 @@ margin-right: -100px;
         width:100%;
       }
       .proyects{
-       margin-top:20px;
-     
+       margin-top:70px;
+     margin-left: -140px;
        font-size: 10px;
      
       
@@ -1456,11 +1470,17 @@ margin-right: -100px;
     
      .proyectos{
        margin-top:30px;
-     margin-left: 20px;
+     margin-left: 120px;
        font-size:7px;
+       padding-right: 20px;
     
       
      }
+     .proyectos-datos{
+      margin-left:-200px;
+      padding-right: 100px;
+    
+   }
      #boton-proyectos{
       margin-left:320px;                           
         width:15px;
@@ -1640,7 +1660,7 @@ margin-right: -100px;
           }
           .proyects{
            margin-top:20px;
-         
+            margin-left: -90px;
            font-size: 9px;
          
           
@@ -1657,6 +1677,11 @@ margin-right: -100px;
         
           
          }
+         .proyectos-datos{
+          margin-left:-150px;
+          padding-right: 50px;
+        
+       }
          #boton-proyectos{
           margin-left:220px;                         
             width:10px;
@@ -1827,9 +1852,8 @@ margin-right: -100px;
           }
           .proyects{
            margin-top:20px;
-         
-           font-size: 10px;
-         
+            margin-left: -30px;
+           font-size: 10px;       
           
          }
          
@@ -1839,9 +1863,12 @@ margin-right: -100px;
         }
          .proyectos{
            margin-top:30px;
-         margin-left: 80px;
+         margin-left: 150px;
            font-size:10px;
-        
+         }
+           .proyectos-datos{
+            margin-left:-300px;
+            padding-right: 50px;
           
          }
          #boton-proyectos{
