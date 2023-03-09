@@ -405,13 +405,13 @@ margin-left: -150px;
 
 
 
+/*
 
-
-@media only screen and (max-width:600px){ /*para pantalla a 75% ??*/
+@media only screen and (max-width:600px){ para pantalla a 75% ??
  
  
 
-.Profile{
+/*.Profile{
   border-radius: 27px 27px 27px 27px;
     border: 1px solid #1C6EA4;
 
@@ -535,6 +535,7 @@ margin-left:70px;
     
 }
 }
+*/
 
 @media only screen and (max-width:1920px) /* Para pantalla al 80% en crhome */
 
@@ -1545,7 +1546,7 @@ margin-left: 20px;
                word-spacing: 1px;
              padding:0;
              display:grid;
-             margin-left:-10px;
+             margin-left:5px;
              }
              #lapiz-foto{
         
