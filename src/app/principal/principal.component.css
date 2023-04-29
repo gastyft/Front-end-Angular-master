@@ -77,7 +77,7 @@ border-radius: 70px; }
 
     width:100%;
     height:auto;
-    position:relative;
+   
 background-image: url("src\assets\code-coding-programming-css.webp");
 animation:movimiento 10s infinite linear alternate;
 background-repeat: no-repeat;
