@@ -9,6 +9,7 @@ import { HardSkillsService } from '../hard-skills.service';
 import { TokenService } from '../token.service';
 import { hardSkills } from '../model/hardskills';
 import { persona } from '../model/persona';
+import swal from 'sweetalert';
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
@@ -112,7 +113,7 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
 
   ngOnInit(): void {
     {
-    
+      
       this.datosPersona.getPersona().subscribe((data) => {
         console.log(data);
         this.miPorfolio = data;
@@ -167,3 +168,7 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
 
  
 }
+swal("Problemas con el servidor", "Pagina en mantenimiento. No se cargaran mis datos. Disculpen las molestias", "error");
+
+
+

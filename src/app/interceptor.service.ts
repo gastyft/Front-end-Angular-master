@@ -35,7 +35,7 @@ return next.handle(request).pipe(
       this.router.navigateByUrl('/login1');
     }
 
-    return throwError( err );
+    return throwError(() => err);
 
   })
 );
