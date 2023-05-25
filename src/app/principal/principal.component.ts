@@ -168,7 +168,7 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
 
  
 }
-swal("Problemas con el servidor", "Pagina en mantenimiento. No se cargaran mis datos. Disculpen las molestias", "error");
+// swal("Problemas con el servidor", "Pagina en mantenimiento. No se cargaran mis datos. Disculpen las molestias", "error");
 
 
 
