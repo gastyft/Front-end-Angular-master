@@ -77,7 +77,7 @@ import { GoogleAnalyticsService } from './google-analytics.service';
   providers: [
   
     interceptorProvider,
-    [GoogleAnalyticsService],
+    GoogleAnalyticsService,
 
   ],
   bootstrap: [AppComponent],
