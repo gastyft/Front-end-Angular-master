@@ -35,7 +35,7 @@ import { AgregarHardSkillsComponent } from './boton-hard-skills/agregar-hard-ski
 import { EditarHardSkillsComponent } from './boton-hard-skills/editar-hard-skills/editar-hard-skills.component';
 import { AgregarEstudiosComponent } from './boton-estudios/agregar-estudios/agregar-estudios.component';
 import { EditarEstudiosComponent } from './boton-estudios/editar-estudios/editar-estudios.component';
-
+import { GoogleAnalyticsService } from './google-analytics.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +76,8 @@ import { EditarEstudiosComponent } from './boton-estudios/editar-estudios/editar
   ],
   providers: [
   
-    interceptorProvider
+    interceptorProvider,
+    [GoogleAnalyticsService],
 
   ],
   bootstrap: [AppComponent],

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ErrorHandler, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { PersonaService } from '../persona.service';
 import { EstudiosService } from '../estudios.service';
@@ -115,6 +115,9 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
     {
       
       this.datosPersona.getPersona().subscribe((data) => {
+        if(data){
+          swal("Bienvenido a mi portfolio","Soy Desarrollador Full-Stack Jr y Tester Manual Trainee en busca de mi primer trabajo IT con ganas de trabajar y seguir aprendiendo en el mundo de la programación ","");
+
         console.log(data);
         this.miPorfolio = data;
         
@@ -124,8 +127,17 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
      this.ciudad= this.miPorfolio?.ciudad;
      this.nacionalidad= this.miPorfolio?.nacionalidad;
      this.estado_civil= this.miPorfolio?.estado_civil;
-      });
+      } 
+    else
+  {
+    console.log("Error al cargar datos");
+    swal("Bienvenido a mi portfolio", "Soy Desarrollador Full-Stack Jr y Tester Manual Trainee en busca de mi primer trabajo IT con ganas de trabajar y seguir aprendiendo en el mundo de la programación", "")
+    .then(() => {
+      swal("Problemas con el servidor", "Página en mantenimiento. No se cargarán mis datos. Disculpen las molestias", "error");
+  });
+} });
     }
+   
     {
       this.datosEstudios.getEstudios().subscribe((data1) => {
         console.log(data1);
@@ -169,6 +181,6 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
  
 }
 // swal("Problemas con el servidor", "Pagina en mantenimiento. No se cargaran mis datos. Disculpen las molestias", "error");
-
+// swal("Bienvenido a mi portfolio","Soy Desarrollador Full-Stack Jr y Tester Manual Trainee en busca de mi primer trabajo IT con ganas de trabajar y seguir aprendiendo en el mundo de la programación ","");
 
 
