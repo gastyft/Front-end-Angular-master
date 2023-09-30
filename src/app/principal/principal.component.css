@@ -2,7 +2,7 @@
 .container-fluid{  display: grid;
     align-content:center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.5fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.01fr 0.1fr;
     gap: 10px;
     grid-auto-flow: row;
     background-color: whitesmoke;
@@ -184,7 +184,7 @@ from{
 
   .Intereses-estudios {  display: grid;
     grid-template-columns: 0.2fr 0.5fr 0.5fr;
-    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 0.2fr 0.2fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -267,7 +267,7 @@ from{
 
 .Intereses-estudios  ul li{
  
-  margin-top:50px;
+  margin-top:0px;
   padding-top:10px;
   
 }
