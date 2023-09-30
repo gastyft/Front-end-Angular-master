@@ -1489,211 +1489,203 @@ margin-left: 20px;
      }
     
         }
+ 
 
-
-        @media only screen and (max-width:468px) /* Para pantalla al 300% en crhome */
-
-        { 
-          .container-fluid{
-            width: 100%;
-          }
-          .Fondo{
-            height:100px;
-            width:100%;
-            
-            gap:0;
-            
-             }
-             .Profile{
-               border-radius: 27px 27px 27px 27px;
-                 border: 1px solid #1C6EA4;
-             
-             }
-             .foto-perfil{
-              
-             width:60px;
-             height:60px;
-             padding-right:0px;
-             margin-top:40px;
-             border-radius:50%;
-    
-   
-             
-            
-              border-radius:50%;
-              -webkit-border-radius:50%;
-              box-shadow: 0px 0px 4px 4px black;
-              -webkit-box-shadow: 00px 0px 4px 4px black;
-              transform: rotate(360deg);
-                -webkit-transform: rotate(360deg);
-             }
-             
-             .Foto-profile ul{
-               font-size:12px;
-               width: max-content;
-               letter-spacing: 1px;
-               word-spacing: 1px;
-                margin-right: 0px;
-                margin-top:55px;
-              padding-top:0px;
-              padding-left:10px;
-              }
-             #Edad{
-               font-size:8px;
-               width:max-content;
-             gap:0;
-               letter-spacing: 1px;
-               word-spacing: 1px;
-             padding:0;
-             display:grid;
-             margin-left:5px;
-             }
-             #lapiz-foto{
-        
-               position:absolute;
-               
-               
-             margin-top:130px;
-             margin-left:50px;
-               width: 10px;
-               height:10px;
-               border-radius: 50px; 
-              
-             
-             }
-             
-             #lapiz-nombre{
-               width: 10px;
-               height:10px;
-               border-radius: 10px; 
-              
-             }
-           
-             .Intereses-estudios{
-             padding-top: 2px;
-             padding-left:-10px;
-               font-size: 10px;
-               border-radius: 27px 27px 27px 27px;
-                 border: 1px solid #1C6EA4;
-                 width:100%;
-                 
-             }
-             .descript{
-                 font-size: 9px;
-               margin-right: 10px;
-               letter-spacing: 2px;
-               word-spacing: 2px;
-                width:100%;
-            
-               font-weight: 700;
-             }
-          
-             .p{
-              
-               letter-spacing: 2px;
-               word-spacing: 2px;
-             
-               font-weight: 700;
-               
-             }
-             
-             .estudioss{
-       
-               margin: 0px;
-                width:50%;
-            
-              }
-             
-             
-             .lapiz-estudios{
-               width: 10px;
-               height:10px;
-             
-               margin-left: -100px;
-               
-             }
-             
-             .lapiz-estudios1{  
-                width:10px;
-                height:10px;
-              margin-top:15px;
-              margin-left:-400px;
-    
-    
-                
-              }
-        
-        
-         
-          
-        .progress{
-            margin-top:10px;
-          margin-left:00px;
-           font-size: 9px;
-           height: 10px;
-           width:80%;
-           }
-           .mas-info {
-             padding-left:5px;
-             padding-top: 20px;
-               font-size: 9px;
-               border: 1px solid #1C6EA4;
-               
-           }
-           .span{
-            padding-left:-100px;
-
-           }
-           .mas-info ul {
-            right:20px;
-            padding-left: 50px;
-           }
-           #boton-graficos{
-             margin-left:-10px;
-             margin-top:-5px;
-               width:10px;
-               height:10px;
-    
-           }
-           .progress-bar{
-            width:100%;
-           
-          }
-          .proyects{
-           margin-top:20px;
-            margin-left: -90px;
-           font-size: 9px;
-         
-          
-         }
-       .type{
-        margin-left: 5px;
-
-       }
+/* Estilos para pantallas de 400px a 470px */
+@media screen and (max-width: 470px) {
+  .Fondo {
+    height: 160px;
+    margin-top: -140px;
+    width: 100%;
+    gap: 0;
+  }
+ 
+     .Profile{
+       border-radius: 27px 27px 27px 27px;
+         border: 1px solid #1C6EA4;
      
-         .proyectos{
-           margin-top:30px;
-         margin-left: 90px;
-           font-size:9px;
+     }
+     .foto-perfil{
+      
+     width:70px;
+     height:70px;
+     margin-right:20px;
+     margin-top:20px;
+     
+     }
+     .foto-perfil:hover{
+      border-radius:50%;
+      -webkit-border-radius:50%;
+      box-shadow: 0px 0px 4px 4px black;
+      -webkit-box-shadow: 00px 0px 4px 4px black;
+      transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+     }
+     
+     .Foto-profile ul{
+       font-size:14px;
+       width: max-content;
+       letter-spacing: 1px;
+       word-spacing: 1px;
+        margin-right: 0px;
+        margin-top:30px;
+      
+      padding-left:10px;
+      }
+     #Edad{
+       font-size:10px;
+       width:max-content;
+     gap:0;
+       letter-spacing: 1px;
+       word-spacing: 1px;
+      margin-top:100px;
+     display:grid;
+     margin-left:-220px;
+     }
+     #lapiz-foto{
+       position:absolute;
+     
+       
+     margin-top:80px;
+     margin-left:47px;
+       width: 10px;
+       height:10px;
+       border-radius: 50px; 
+      
+      display: flex;
+     }
+     
+     #lapiz-nombre{
+       width: 10px;
+       height:10px;
+       border-radius: 10px; 
+     }
+    
+
+     .descript{
+         font-size: 15px;
+       margin-right: 10px;
+       letter-spacing: 2px;
+       word-spacing: 2px;
+        width:100%;
+    
+       font-weight: 100;
+     }
+     .estudioss{
+font-size: 10px;
+     }
+     .span{
+      font-size: 10px;
+     }
+     .p{
+    
+       letter-spacing: 2px;
+       word-spacing: 2px;
+     
+       font-weight: 700;
+       
+     }
+    
+     
+     
+     .lapiz-estudios{
+       width: 10px;
+       height:10px;
+     margin-top:10px;
+       margin-left: -210px;
+     }
+     
+     .lapiz-estudios1{  
+        width:10px;
+        height:10px;
+      margin-top:15px;
+      margin-left:-520px;
+
+
         
-          
-         }
-         .proyectos-datos{
-          margin-left:-150px;
-          padding-right: 50px;
-        
-       }
-         #boton-proyectos{
-          margin-left:220px;                         
-            width:10px;
-            height:10px;
-         }
-        
-            }
+      }
+
+
+  
+
+  
+.progress{
+    margin-top:30px;
+  margin-left:-25px;
+   font-size: 10px;
+   height: 5px;
+   width:80%;
+   }
+   .mas-info {
+    padding-left: 25px;
+    padding-top: 20px;
+    font-size: 10px;
+    border: 1px solid #1C6EA4;
+    max-width: 100%; /* Agregar un ancho máximo */
+  }
+  
+  .mas-info ul {
+    margin-top: 20px;
+    margin-left:-75px; /* Ajusta este valor según sea necesario */
+    /* Elimina el padding-left */
+    /* padding-left: 200px; */
+  /* Este valor parece no ser necesario */
+  max-width: 30%;
+  }
+    
+ 
+
+
+  
+   #boton-graficos{
+     margin-left:-120px;
+     margin-top:-20px;
+       width:10px;
+       height:10px;
+
+   }
    
+   .progress-bar{
+    width:100%;
+    padding-left: 50px ;
+    height: 170px;
+  }
+.li{
+  font-size: 10px;
+}
+  .proyects{
+   margin-top:20px;
+    margin-left: -30px;
+   font-size: 15px;       
+  
+ }
+ 
+ .type{
+  font-size:15px;
+  margin-left:-25px;
+}
+ .proyectos{
+   margin-top:30px;
+ margin-left: 150px;
+   font-size:10px;
+   max-width: 70%;
+ }
+ 
+   .proyectos-datos{
+    margin-left:-275px;
+  padding-left:-15px ;
+    padding-right: 10px;
+ }
+ 
+ #boton-proyectos{
+  margin-left:100px;                           
+    width:10px;
+    height:10px;
+    margin-top:-10px;
+}
+}
 
-            
-
+       
             
         @media only screen and (max-width:400px) 
 
@@ -1878,6 +1870,28 @@ margin-left: 20px;
             height:10px;
             margin-top:-10px;
         }
+
+        .mas-info {
+          
+          padding-top: 20px;
+          font-size: 10px;
+          border: 1px solid #1C6EA4;
+          max-width: 100%; /* Agregar un ancho máximo */
+        }
+        
+        .mas-info ul {
+          margin-top: 20px;
+          margin-left: 20px; /* Ajusta este valor según sea necesario */
+          /* Elimina el padding-left */
+          /* padding-left: 200px; */
+        /* Este valor parece no ser necesario */
+        max-width: 10%;
+        }
+        .proyectos-datos{
+          margin-left:-310px;
+        padding-left:-10px ;
+          padding-right: 5px;
+       }
             }
 
 

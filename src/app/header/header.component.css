@@ -350,10 +350,15 @@ height:12px;
 
   {
   
-    
+    .iconos-head{
+      width:25px;
+      height:25px;
+      justify-content: center;
+      align-content: center;
+    }
   
       .header{
-          height: 30px;
+          height: 35px;
           max-width:100%;
         
           display:hidden;
@@ -410,11 +415,7 @@ height:12px;
          top:0;
          bottom:0;
        }
-       .iconos-head{
-        width:6px;
-        height:6px;
-        
-          }
+       
      
   
       }
@@ -423,10 +424,15 @@ height:12px;
       @media only screen and (max-width:412px) /* Para pantalla al 300% en crhome */
 
       {
-        
+        .iconos-head{
+          width:20px;
+          height:20px;
+          justify-content: center;
+          align-content: center;
+        }
         
           .header{
-              height: 25px;
+              height: 35px;
               width:100%;
               left:0;
               
@@ -491,7 +497,12 @@ height:12px;
         .container{
           width:100%;
         }
-        
+        .iconos-head{
+          width:20px;
+          height:20px;
+          justify-content: center;
+          align-content: center;
+        }
           .header{
               height: 25px;
               width:100%;
