@@ -1,184 +1,166 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="Fondo"></div>
 
-<app-header ></app-header>
-    <div class="container-fluid">
-      
-      <div class="Fondo">
-    
-  
-      </div>
+  <div class="Profile">
+    <input
+      src="assets\icons8-lápiz-64.png"
+      *ngIf="isLogged"
+      Id="lapiz-foto"
+      routerLink="/boton-imagen"
+      type="image"
+    />
+    <!--(change)="capturarFile($event)"-->
 
-    
-    <div class="Profile">
-  
-      
-     <input  src="assets\icons8-lápiz-64.png" *ngIf="isLogged" Id="lapiz-foto" routerLink="/boton-imagen" type="image"  >      <!--(change)="capturarFile($event)"-->
+    <div class="Foto-profile">
+      <ng-container *ngFor="let imagenMin of imagen; let last = last">
+        <p *ngIf="last">
+          <img
+            type="image"
+            alt="profilee pcture"
+            src="{{ imagenMin.imagen_url }}"
+            class="foto-perfil"
+          />
+        </p>
+      </ng-container>
+      <ul style="list-style-type: none">
+        <span> {{ miPorfolio?.nombre }}</span>
+        <li>{{ miPorfolio?.apellido }}</li>
 
-      
-
-      
-      
-    
-    
-      <div class="Foto-profile">
-       <ng-container *ngFor="let imagenMin of imagen; let last = last" >
-        
-      <p *ngIf="last">
-        <img type="image" alt="profilee pcture" src="{{imagenMin.imagen_url}}"   class="foto-perfil">
-      </p>
-
-    </ng-container >
-          <ul   style="list-style-type:none;">
-           
-          <span > {{miPorfolio?.nombre}}</span>
-            <li> {{miPorfolio?.apellido}} 
-              
-            </li>
-            
-          
-            <input type="image"  Id="lapiz-nombre" *ngIf="isLogged" src="assets\icons8-lápiz-64.png" routerLink="/boton-profile/1" >
-            
-          
-          
-            
-         </ul>
-     
-         <ul Id="Edad"> 
-           
-          <li>
-          Edad: {{miPorfolio?.edad}} años 
-        </li>
-           
-           <li>
-             Ciudad: {{miPorfolio?.ciudad}}
-           </li>
-           <li> 
-             Nacionalidad: {{miPorfolio?.nacionalidad}}
-           </li>
-           <li>  
-             {{miPorfolio?.estado_civil}}
-             
-           </li>
-           <li> </li>
-          </ul>
-        
-      </div>
-      <div class="botones-profile">
-        
-        <div class="boton-edit-name">
-          
-        
-          <div class="boton-cambiar-foto">
-            
-          </div>
-        </div>
-     
-      </div>
-     
-    </div>
-      
-      <div class="Intereses-estudios" >
-        <p> 
-          <span class="descript">Mi experiencia laboral:</span>
-         
-          <ul class="estudioss"    >
-           <tr *ngFor="let datosExperiencia of miPorfolio2 " >
-            <td>  <li>
-           {{datosExperiencia?.experiencia_laboral}}  <br> 
-            
-           </li>  </td>
-          
-          </tr>
-          </ul>
-          
-          
-         
-         <span class="descript">Mis estudios:</span>
-     
-       
-         
-         <ul class="estudioss">
-          <tr *ngFor="let miPorfolio1 of miPorfolio1"   >
-          
-           <td> <li> 
-            
-             {{miPorfolio1?.nombreestudio}}: <br> {{miPorfolio1?.estudiodetail}} 
-            
-           </li> </td>
-       
-          </tr>
-          
-         </ul>
-         
-     
-           <input class="lapiz-estudios" *ngIf="isLogged" type="image" src="assets\icons8-lápiz-64.png" routerLink="/boton-estudios/{{miPorfolio1?.id_estudios}}">  
-        
-      
-        <div class="Boton-editar-estudios">
-          
-            <input class="lapiz-estudios1"  *ngIf="isLogged" type="image" src="assets\icons8-lápiz-64.png" routerLink="/boton-experiencia-laboral">
-          
-        </div>
-  
-  
-      </div>
-      <div class="mas-info">
-        <p> 
-          <span class="descript">Hard Skills</span>
-          <ul>
-            <span >
-        
-              <input  Id="boton-graficos" *ngIf="isLogged"  type="image" src="assets\icons8-lápiz-64.png" routerLink="/boton-hard-skills/{{hardSkill?.id}}">
-     
-          </span>
-
-            <ul> 
-                <tr *ngFor="let hards of hardSkill">
-
-               
-                  <div class="progress">
-                  <div class="progress-bar" role="progressbar" [style.width]="hards?.number_hard+'%'" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                  
-                </div>
-                {{hards?.nombre_hard}}
-            
-         
-          </tr>
-              
-          
-            </ul>
-          
-        
-     
-        
-        <div class="proyects">
-      
-            <span>  Proyectos
-
-      </span>
-        
-      
-
-     <div class="proyectos"  > 
-       
-      <span> <input  Id="boton-proyectos" *ngIf="isLogged" type="image" src="assets\icons8-lápiz-64.png" routerLink="/boton-proyectos"> </span>
-       <ul   > 
-        <tr *ngFor="let datosProyectos of miPorfolio3 "><br><br>
-        <li class="proyectos-datos" > {{datosProyectos?.proyecto}} 
-      </li>  
-       </tr>
+        <input
+          type="image"
+          Id="lapiz-nombre"
+          *ngIf="isLogged"
+          src="assets\icons8-lápiz-64.png"
+          routerLink="/boton-profile/1"
+        />
       </ul>
+
+      <ul Id="Edad">
+        <li>Edad: {{ miPorfolio?.edad }} años</li>
+
+        <li>Ciudad: {{ miPorfolio?.ciudad }}</li>
+        <li>Nacionalidad: {{ miPorfolio?.nacionalidad }}</li>
+        <li>
+          {{ miPorfolio?.estado_civil }}
+        </li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="botones-profile">
+      <div class="boton-edit-name">
+        <div class="boton-cambiar-foto"></div>
       </div>
-      
-    
-      
-        </div>
-        
-        <div class="body-progress">
-        
-        
+    </div>
   </div>
 
+  <div class="Intereses-estudios">
+    <p>
+      <span class="descript">Mi experiencia laboral:</span>
+    </p>
 
+    <ul class="estudioss">
+      <tr *ngFor="let datosExperiencia of miPorfolio2">
+        <td>
+          <li>{{ datosExperiencia?.experiencia_laboral }} <br /></li>
+        </td>
+      </tr>
+    </ul>
 
+    <span class="descript">Mis estudios:</span>
 
+    <ul class="estudioss">
+      <tr *ngFor="let miPorfolio1 of miPorfolio1">
+        <td>
+          <li>
+            {{ miPorfolio1?.nombreestudio }}: <br />
+            {{ miPorfolio1?.estudiodetail }}
+          </li>
+        </td>
+      </tr>
+    </ul>
+
+    <input
+      class="lapiz-estudios"
+      *ngIf="isLogged"
+      type="image"
+      src="assets\icons8-lápiz-64.png"
+      routerLink="/boton-estudios/{{ miPorfolio1?.id_estudios }}"
+    />
+
+    <div class="Boton-editar-estudios">
+      <input
+        class="lapiz-estudios1"
+        *ngIf="isLogged"
+        type="image"
+        src="assets\icons8-lápiz-64.png"
+        routerLink="/boton-experiencia-laboral"
+      />
+    </div>
+  </div>
+  <div class="mas-info">
+    <p>
+      <span class="descript">Hard Skills</span>
+    </p>
+
+    <ul>
+      <span>
+        <input
+          Id="boton-graficos"
+          *ngIf="isLogged"
+          type="image"
+          src="assets\icons8-lápiz-64.png"
+          routerLink="/boton-hard-skills/{{ hardSkill?.id }}"
+        />
+      </span>
+
+      <ul>
+        <tr *ngFor="let hards of hardSkill">
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              [style.width]="hards?.number_hard + '%'"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <span class="nombre-hard">{{ hards?.nombre_hard }}</span>
+            </div>
+            <span
+              class="nombre-hard1"
+              style="display: flexbox"
+              style="color: transparent"
+              style="visibility: hidden"
+              >{{ hards?.nombre_hard }}</span
+            >
+          </div>
+        </tr>
+      </ul>
+
+      <div class="proyects">
+        <span class="titulo-proyecto"> Proyectos </span>
+
+        <div class="proyectos">
+          <span>
+            <input
+              Id="boton-proyectos"
+              *ngIf="isLogged"
+              type="image"
+              src="assets\icons8-lápiz-64.png"
+              routerLink="/boton-proyectos"
+            />
+          </span>
+          <ul>
+            <tr *ngFor="let datosProyectos of miPorfolio3">
+              <br /><br />
+              <li class="proyectos-datos">{{ datosProyectos?.proyecto }}</li>
+            </tr>
+          </ul>
+        </div>
+      </div>
+
+      <div class="body-progress"></div>
+    </ul>
+  </div>
+</div>

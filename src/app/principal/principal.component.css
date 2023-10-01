@@ -26,6 +26,8 @@
   font-weight: 700;
     }
   
+
+
 #lapiz-nombre{
   display:flex;
 width: 50px;
@@ -344,7 +346,7 @@ border-radius: 50px; }
 .mas-info {  
   display: grid;
     grid-template-columns: 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.2fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -359,6 +361,7 @@ border-radius: 50px; }
     font-family: "Comic Sans MS";
     padding-top: 27px;
     color:whitesmoke;
+    
   }
  
 .progress{
@@ -366,11 +369,17 @@ border-radius: 50px; }
  border-radius: 30px;
 font-size: 30px;
 height: 50px;
+z-index: 1;
 }
 .progress-bar{
-background-color: aquamarine;
-
+z-index: 2;
+  background-color: aquamarine;
 }
+.nombre-hard{
+  color: black;
+z-index: 3;
+}
+
 .proyects{
   margin-top:30px;
 margin-left: -780px;
@@ -765,7 +774,19 @@ bottom:0;
 top:0;
 bottom:0;
     }
-
+    .progress{
+      width: auto;
+      height: 25px;
+      margin-left: -50px;
+     }
+     .progress-bar{
+      width:auto;
+      padding-left: 50px ;
+      height: 25px;
+    }
+    .nombre-hard{
+      font-size: 15px;
+    }
 
     #LOGO{
         width:100%;
@@ -917,14 +938,7 @@ bottom:0;
 
 }   
 
-.progress{
-  margin-top:50px;
 
- font-size: 50px;
- height: 10px;
- width:200px;
-
- }
 .descript{
   font-size:15px;
 }
@@ -933,9 +947,7 @@ bottom:0;
      height:20px;
      margin-right:120px;
  }
- .progress-bar{
-  width:100%;
-}
+ 
 .proyects{
  margin-top:20px;
 margin-left: -120px;
@@ -985,7 +997,19 @@ margin-left: 20px;
      @media only screen and (max-width:992px) /* Para pantalla al 175% crhome */
 
 {
-
+  .progress{
+    width: auto;
+    height: 25px;
+    margin-left: -50px;
+   }
+   .progress-bar{
+    width:auto;
+    padding-left: 50px ;
+    height: 25px;
+  }
+  .nombre-hard{
+    font-size: 10px;
+  }
      .conteiner-fluid{
        padding-top: 0px;
        margin-top:0px;
@@ -1022,7 +1046,7 @@ margin-left: 20px;
        word-spacing: 1px;
       padding-top:0px;
      display:grid;
-     margin-left:90px;
+     margin-left: 60px;
      }
      #lapiz-foto{
        position:absolute;
@@ -1105,8 +1129,18 @@ margin-left: 20px;
        height:20px;
        margin-right:120px;
    }
+   .progress{
+    width: auto;
+    height: 20px;
+    margin-left: -120px;
+   }
    .progress-bar{
-    width:100%;
+    width:auto;
+    padding-left: 20px ;
+    height: 25px;
+  }
+  .nombre-hard{
+    font-size: 15px;
   }
   .proyects{
    margin-top:20px;
@@ -1142,7 +1176,19 @@ margin-left: 20px;
     @media only screen and (max-width:768px) /* Para pantalla al 200% en crhome */
 
     {
-      
+      .progress{
+        width: auto;
+        height: 20px;
+        margin-left: -50px;
+       }
+       .progress-bar{
+        width:auto;
+        padding-left: 50px ;
+        height: 25px;
+      }
+      .nombre-hard{
+        font-size: 10px;
+      }
   
          
          .Profile{
@@ -1176,7 +1222,7 @@ margin-left: 20px;
            word-spacing: 1px;
           padding-top:0px;
          display:grid;
-         margin-left:90px;
+         margin-left:65px;
          }
          #lapiz-foto{
            position:absolute;
@@ -1280,8 +1326,18 @@ margin-left: 20px;
           height:15px;
         margin-top:-50px;
        }
+       .progress{
+        width: auto;
+        height: 25px;
+        margin-left: -50px;
+       }
        .progress-bar{
-        width:100%;
+        width:auto;
+        padding-left: 50px ;
+        height: 25px;
+      }
+      .nombre-hard{
+        font-size: 10px;
       }
       .proyects{
        margin-top:20px;
@@ -1322,7 +1378,19 @@ margin-left: 20px;
          
           }
           
-    
+          .progress{
+            width: auto;
+            height: 25px;
+            margin-left: -120px;
+           }
+           .progress-bar{
+            width:auto;
+            padding-left: 20px ;
+            height: 25px;
+          }
+          .nombre-hard{
+            font-size: 8px;
+          }
      
          .Profile{
            border-radius: 27px 27px 27px 27px;
@@ -1434,13 +1502,7 @@ margin-left: 20px;
           }
    
       
-    .progress{
-        margin-top:10px;
-      left:30px;
-       font-size: 7px;
-       height: 10px;
-       width:100%;
-       }
+    
        .mas-info {
          padding-top: 20px;
            font-size: 7px;
@@ -1458,9 +1520,7 @@ margin-left: 20px;
        margin-left:0;
 
        }
-       .progress-bar{
-        width:100%;
-      }
+    
       .proyects{
        margin-top:70px;
      margin-left: -140px;
@@ -1644,11 +1704,18 @@ font-size: 10px;
        height:10px;
 
    }
-   
+   .progress{
+    width: auto;
+    height: 20px;
+    margin-left: -90px;
+   }
    .progress-bar{
-    width:100%;
+    width:auto;
     padding-left: 50px ;
-    height: 170px;
+    height: 20px;
+  }
+  .nombre-hard{
+    font-size: 10px;
   }
 .li{
   font-size: 10px;
@@ -1814,38 +1881,41 @@ font-size: 10px;
     grid-area: Intereses-estudios;
   }
           
-        .progress{
-            margin-top:30px;
-          margin-left:-25px;
-           font-size: 10px;
-           height: 5px;
-           width:80%;
-           }
-           .mas-info {
-             padding-left:15px;
-             padding-top: 20px;
-               font-size: 5px;
-               border: 1px solid #1C6EA4;
-               
-           }
-           .mas-info ul {
-            
+  .mas-info {
+    padding-left:15px;
+    padding-top: 20px;
+    font-size: 5px;
+    border: 1px solid #1C6EA4;
+    
+  }
+  .mas-info ul {
+    
             padding-left: 30px;
-           }
+          }
            #boton-graficos{
              margin-left:-120px;
              margin-top:-20px;
                width:10px;
                height:10px;
-    
-           }
-           
-           .progress-bar{
-            width:100%;
-          }
-          .proyects{
-           margin-top:20px;
-            margin-left: -30px;
+               
+              }
+              
+              .progress{
+                width: auto;
+                height: 20px;
+                margin-left: -70px;
+               }
+               .progress-bar{
+                width:auto;
+                padding-left: 50px ;
+                height: 20px;
+              }
+              .nombre-hard{
+                font-size: 10px;
+              }
+              .proyects{
+                margin-top:20px;
+                margin-left: -30px;
            font-size: 10px;       
           
          }
