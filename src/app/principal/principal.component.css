@@ -1902,13 +1902,13 @@ font-size: 10px;
               
               .progress{
                 width: auto;
-                height: 20px;
-                margin-left: -70px;
+                height: 15px;
+                margin-left: -150px;
                }
                .progress-bar{
                 width:auto;
-                padding-left: 50px ;
-                height: 20px;
+                
+                height: 15px;
               }
               .nombre-hard{
                 font-size: 10px;
@@ -1930,9 +1930,10 @@ font-size: 10px;
            font-size:10px;
          }
            .proyectos-datos{
-            margin-left:-300px;
-            padding-right: 50px;
-          
+            margin-left:-315px;
+            margin-right: 0px;
+            padding-right: -1px;
+          letter-spacing: 1px;
          }
          #boton-proyectos{
           margin-left:100px;                           
@@ -1957,11 +1958,7 @@ font-size: 10px;
         /* Este valor parece no ser necesario */
         max-width: 10%;
         }
-        .proyectos-datos{
-          margin-left:-310px;
-        padding-left:-10px ;
-          padding-right: 5px;
-       }
+       
             }
 
 

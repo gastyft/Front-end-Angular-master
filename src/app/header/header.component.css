@@ -96,6 +96,7 @@ line-height: 130px;
 }
 
 
+
 @media only screen and (max-width:1920px) /* Para pantalla al 90% en crhome */
 
 {
@@ -496,15 +497,16 @@ height:12px;
       {
         .container{
           width:100%;
-        }
+        }  
         .iconos-head{
+          font-size: 6px;
           width:20px;
           height:20px;
           justify-content: center;
           align-content: center;
         }
           .header{
-              height: 25px;
+              height: 30px;
               width:100%;
               left:0;
               right:0;
@@ -530,7 +532,7 @@ height:12px;
            
             }
             .botones-head ul{
-             font-size:2px;
+             font-size:10px;
              margin-top:0px; 
              padding-top:0px;
           
@@ -556,12 +558,7 @@ height:12px;
                
            }
           
-          .iconos-head{
-            line-height:25px;
-            width: 5px;
-            height:5px;
-
-          }
+         
           }
 
           
@@ -572,7 +569,7 @@ height:12px;
           
             
               .header{
-                  height: 25px;
+                  height: 30px;
               width:100%;
           top:0;
           bottom:0;
@@ -596,7 +593,7 @@ height:12px;
                
                 }
                 .botones-head ul{
-                 font-size:2px;
+                 font-size:6px;
                  margin-top:0px; 
                  padding-top:0px;
               
@@ -623,6 +620,7 @@ height:12px;
                }
              
               .iconos-head{
+                font-size: 6px;
                 line-height:25px;
                 width: 5px;
                 height:5px;
