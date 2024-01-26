@@ -2,7 +2,7 @@
 .container-fluid{  display: grid;
     align-content:center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.01fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.01fr 0.8fr;
     gap: 10px;
     grid-auto-flow: row;
     background-color: whitesmoke;

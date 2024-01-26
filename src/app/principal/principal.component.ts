@@ -116,7 +116,7 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
       
       this.datosPersona.getPersona().subscribe((data) => {
         if(data){
-          swal("Bienvenido a mi portfolio","Soy Desarrollador Full-Stack Jr y Tester Manual Trainee en busca de mi primer trabajo IT con ganas de trabajar y seguir aprendiendo en el mundo de la programación ","");
+          swal("Bienvenido a mi portfolio","Soy Desarrollador Full-Stack Jr, Tester Manual Tr y estudiante avanzado de programación en la UTN de Mar del Plata. Estoy en busca de mi primer trabajo IT con ganas de trabajar y dedicarme a lo que tanto me gusta.","");
 
         console.log(data);
         this.miPorfolio = data;
@@ -131,7 +131,7 @@ extraerBase64 =async ($event: any) => new Promise((resolve, reject) => {
     else
   {
     console.log("Error al cargar datos");
-    swal("Bienvenido a mi portfolio", "Soy Desarrollador Full-Stack Jr y Tester Manual Trainee en busca de mi primer trabajo IT con ganas de trabajar y seguir aprendiendo en el mundo de la programación", "")
+    swal("Bienvenido a mi portfolio", "Soy Desarrollador Full-Stack Jr y Tester Manual Tr y estudiante avanzado de la carrera Tecnicatura Universitaria en Programación", "")
     .then(() => {
       swal("Problemas con el servidor", "Página en mantenimiento. No se cargarán mis datos. Disculpen las molestias", "error");
   });
