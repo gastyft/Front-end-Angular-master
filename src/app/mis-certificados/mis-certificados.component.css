@@ -1,3 +1,9 @@
+ .container-fluid{
+  background-image: linear-gradient(135deg,#00b7d4,#505488, #2f3f80,#161569, #5a4894);
+  background-size:100%;
+animation: fondoanimado 4s infinite ;
+padding-bottom: 20px;
+ }
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
