@@ -19,6 +19,7 @@ import { EditarHardSkillsComponent } from './boton-hard-skills/editar-hard-skill
 import { AgregarHardSkillsComponent } from './boton-hard-skills/agregar-hard-skills/agregar-hard-skills.component';
 import { AgregarEstudiosComponent } from './boton-estudios/agregar-estudios/agregar-estudios.component';
 import { EditarEstudiosComponent } from './boton-estudios/editar-estudios/editar-estudios.component';
+import { MisCertificadosComponent } from './mis-certificados/mis-certificados.component';
 
 
 const routes : Routes = [
@@ -56,7 +57,8 @@ component: BotonProyectosComponent, canActivate:[guard], data:{expectedRol:['adm
   component: Login1Component},
   {path: 'boton-hard-skills', 
   component: BotonHardSkillsComponent,  canActivate:[guard], data:{expectedRol:['admin','user']} },
- 
+ {path:'mis-certificados',
+  component: MisCertificadosComponent},
   {path: 'header', 
   component: HeaderComponent},
 { path: '**',  

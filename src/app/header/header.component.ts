@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { TokenService } from '../token.service'; 
-import { Router } from '@angular/router'; 
+import { NavigationEnd, Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   isLogged : boolean= false;
-  constructor(public tokenService: TokenService, private router: Router ) {}
+  showInicio: boolean = true;
+  
+  constructor(public tokenService: TokenService, private router: Router ) {   
+    this.showInicio = !this.router.url.includes('mis-certificados');
+
+  // Suscripción a cambios en la URL para actualizar la visibilidad del enlace "Inicio"
+  this.router.events.subscribe(() => {
+    this.showInicio = !this.router.url.includes('mis-certificados');
+  });
+}
 
   ngOnInit(): void {
     if (this.tokenService.getToken()) {
@@ -18,7 +27,14 @@ export class HeaderComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Verificar la URL actual y mostrar u ocultar el título "Inicio" según corresponda
+        this.showInicio = !event.url.includes('mis-certificados');
+      }
+    });
   }
+  
   onLogOut(): void {
     this.tokenService.logOut();
     window.location.reload();
